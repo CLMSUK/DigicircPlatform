@@ -1,0 +1,128 @@
+.jumbotron {
+    /*background-color: var(--jumbotron-bg-color) !important;*/
+    background-color: transparent !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    display: flex !important;
+    align-items: center;
+}
+
+.jumbotron [jb-type="tHeader"] {
+    display: none;
+}
+
+.jumbotron [jb-type="tFooter"] {
+    display: none;
+}
+
+.address-label {
+    font-size: 16px;
+}
+
+.contact-cell {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.read-only-form-control {
+    /*display: flex !important;*/
+    align-items: start;
+}
+
+/*.jumbotron [jb-type="ResponsiveColumn"] {*/
+/*    padding-left: 20px;*/
+/*    padding-right: 20px !important;*/
+/*}*/
+
+.jumbotron [jb-type="Grid"] {
+    margin-bottom: 0px;
+    border: 0px !important;
+}
+
+.jumbotron [jb-type="Cell"] {
+    padding: 0px !important;
+    border: none !important;
+}
+
+.jumbotron [jb-type="Row"] {
+    display: table-cell;
+}
+
+.jumpbotron  tr:hover {
+    background-color: transparency !important;
+}
+
+.jumbotron [jb-type="FormGroupLabelContainer"] {
+    font-weight: initial !important;
+}
+
+.jumbotron [jb-type="FormGroupInputContainer"] {
+    font-weight: bold !important;
+}
+
+.jumbotron [jb-type="FormGroupInputContainer"] [jb-type="Label"]{
+    font-weight: bold !important;
+    margin-right: 5px !important;
+}
+
+.jumbotron [jb-id="Cell14"] {
+    background-color: var(--jumbotron-bg-color) !important;
+    border-radius: 4px;
+}
+
+.jumbotron [jb-type="Button"][ui-role-color="default"] {
+    background-color: var(--main-default-color) !important;
+    padding: 10px 30px;
+}
+
+.jumbotron [jb-type="Button"][ui-role-color="default"]:hover {
+    background-color: var(--main-default-color) !important;
+}
+
+.jumbotron [jb-type="Button"][ui-role-color="default"] [jb-type="Label"] {
+    color: white !important;
+}
+
+
+.jumbotron .jb-control[jb-type='FormGroup'].jb-horizontal > [jb-type='FormGroupLabelContainer'] > [jb-type='Label'] {
+    text-align: left;
+    padding-top: unset;
+    height: unset;
+}
+
+.jumbotron .jb-control[jb-type='FormGroup'].jb-horizontal > [jb-type='FormGroupLabelContainer'] {
+    min-width: unset;
+}
+
+.jumbotron .jb-control[jb-id="MasterTitle1"] {
+    margin-top: 10px;
+    /*padding-top: 35px;*/
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.jumbotron [jb-id="Panel1"] {
+    width: 256px;
+    height: 128px;
+    margin-top: 50px;
+}
+
+.jumbotron [jb-id="Panel1"] [jb-id="PanelContainer1"] {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron [jb-id="Panel1"] [jb-id="PanelContainer1"] [jb-type="ImageBox"] {
+    max-height: 80%;
+    max-width: 100%;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold !important;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
+}

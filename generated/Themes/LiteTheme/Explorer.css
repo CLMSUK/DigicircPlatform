@@ -1,0 +1,27 @@
+#viz {
+  width: 100%;
+  height: 72vh;
+}
+
+[jb-id="Row"] {
+    display: flex;
+}
+
+[jb-id="Cell"] {
+    max-width: 460px;
+}
+
+[jb-id="PanelHeader1"] {
+    text-align: center;
+    padding: 0;
+}
+
+.vis-active {
+    /*box-shadow: 0 0 10px #86d5f8;*/
+    box-shadow: none !important;
+}
+
+[jb-id="PanelHeader"] {
+    text-align: center;
+    padding: 0;
+}

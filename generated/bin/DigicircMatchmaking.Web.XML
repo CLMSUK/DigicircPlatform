@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DigicircMatchmaking.Web</name>
+    </assembly>
+    <members>
+        <member name="M:DigicircMatchmaking.Web.Code.WebApi.ActorAPIController.AddResource(DigicircMatchmaking.Web.Code.WebApi.ActorAPIAddResourceDto)">
+             <summary>
+            
+             </summary>
+             <returns>Response</returns>
+        </member>
+    </members>
+</doc>

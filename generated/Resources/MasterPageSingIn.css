@@ -1,0 +1,53 @@
+.help-link-button 
+{
+    padding: 6px 0px !important;
+}
+
+.sign-in-panel {
+    max-width: 460px;
+    padding: 20px;
+    margin: 0px auto;
+    margin-top: 100px;
+    margin-bottom: 30px !important;
+}
+
+.error-code-label {
+    font-size: 46px !important;
+}
+
+.sign-in-panel .sign-in-form-group {
+    margin-right: 0px;
+    margin-bottom: 15px;
+}
+
+.sign-in-panel .sign-in-row {
+    padding-bottom: 10px!important;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+
+.sign-in-panel .sign-in-form-label {
+    font-size: 14px;
+}
+
+.sign-in-panel-masterpage {
+    max-width: 350px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(90deg, rgba(243,107,28,1) 9%, rgba(4,44,113,1) 40%);
+    color: white !important;
+}
+
+[jb-id="FieldSetHeader"] {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+}
+
+[jb-id="ImageBox"] {
+    width: 140px !important;
+    align-self: center !important;
+    margin-bottom: 20px;
+}
