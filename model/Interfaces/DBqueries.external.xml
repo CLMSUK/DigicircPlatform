@@ -1,0 +1,20 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<ExternalApi DateCreated="11/24/2021" Model_Name="DBqueries" Model_Description="" Version="" Comments="">
+  <Endpoint TransportType="HTTP" ProtocolType="DATABASE">
+    <Security SecurityType="None" />
+    <Class Name="NewQuery" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Value" OriginalName="Value" Description="" Datatype="string" Length="255" IsPrimary="false" IsEncrypted="false" OriginalDataType="nvarchar" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Count" OriginalName="Count" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="int" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Operation Name="ActorsByEntityType" Description="" Datatype="Collection[Interfaces.DBqueries.NewQuery]" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="GET" Text="select ValueTypes.[Value], Count(*) as [Count] From Actors inner join ValueTypes &#xD;&#xA;on ValueTypes.Id = Actors.EntityType&#xD;&#xA;Group By ValueTypes.[Value]" ContentType="JSON" Route="" Notes="" UserDefinedUrlMethod="false">
+      <Parameters />
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">
+      </CachingOptions>
+    </Operation>
+  </Endpoint>
+  <DatabaseEndpointDetails IsExternalDatabase="false" ServerAddress="" ConnectionString="" />
+</ExternalApi>

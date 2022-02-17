@@ -1,0 +1,372 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<BusinessObject DateCreated="01/21/2021" Model_Name="Suggestions" Model_Description="" Version="" Comments="" Model_Creator="">
+  <Associations>
+    <Association ModelName="Suggestions" Class1="Match" Class2="Actor" Role1="Match" Role2="ActorOffer" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Right" Percent1="0.032432432432432434" Percent2="0.36" Path="M 605 355 L 605 101 L 519 101" />
+    </Association>
+    <Association ModelName="Suggestions" Class1="Match" Class2="Actor" Role1="Match_1" Role2="ActorRequest" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Right" Percent1="0.005405405405405406" Percent2="0.7" Path="M 600 355 L 600 118 L 519 118" />
+    </Association>
+    <Association ModelName="Suggestions" Class1="Match" Class2="Material" Role1="Match" Role2="Resource" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.518918918918919" Percent2="0.34797297297297297" Path="M 695 355 L 695 200 L 715 200 L 715 54" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="Address" Role1="Company" Role2="Address" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.5882367245357948" Percent2="0.33456334563345635" Path="M 626.8507080078125 655.272216796875 L 626.8507080078125 433.875244140625" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="DigicircUser" Role1="Company" Role2="AddedBy" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.9750746944709606" Percent2="0.1826806640625" Path="M 369 1262 L 307 1262" />
+    </Association>
+    <Association ModelName="Actors" Class1="CircularEconomyReport" Class2="Actor" Role1="CircularEconomyRequirements" Role2="Actor" Multiplicity1="One" Multiplicity2="One" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.7569624405333449" Percent2="0.14388498386002813" Path="M 1107.6688232421875 745 L 806.0347900390625 745" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="CircularEconomyProviderReport" Role1="Actor" Role2="CircularEconomyProviderReport" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.9873885046599407" Percent2="0.006244123778767935" Path="M 801.1740112304688 1279.5089111328125 L 801.1740112304688 1339.837158203125" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="FileData" Role1="Actor" Role2="ActorLogo" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.401119710548131" Percent2="0.520157470703125" Path="M 369.8247985839844 905 L 306.27099609375 905" />
+      <DefaultFolderPath>function string DefaultFolderPathActorLogo() {
+	return "ActorActorLogo"; 
+}</DefaultFolderPath>
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="Actor" Role1="Cluster" Role2="Actors" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.49915924296089587" Percent2="0.49915924296089587" Path="M 301 83 L 301 133" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="DigicircUser" Role1="ActorsCanManage" Role2="Administrators" Multiplicity1="Many" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.9895441478471664" Percent2="0.3626806640625" Path="M 369 1271 L 369 1280 L 330 1280 L 330 1271 L 307 1271" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="Address" Role1="Actor" Role2="Sites" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.7439377727988266" Percent2="0.6691266912669127" Path="M 694.8507080078125 655.272216796875 L 694.8507080078125 433.875244140625" />
+    </Association>
+    <Association ModelName="ValueList" Class1="Actor" Class2="EntityType" Role1="Actor" Role2="EntityType" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.39596273291925466" Percent2="0.5047169811320755" Path="M 686.3333129882812 600 L 746.1469116210938 600" />
+    </Association>
+    <Association ModelName="ValueList" Class1="SectorType" Class2="Actor" Role1="SectorTypes" Role2="Actor" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.5053191489361702" Percent2="0.4052795031055901" Path="M 190.085693359375 606 L 250.10459899902344 606" />
+    </Association>
+    <Association ModelName="GraphQuery" Class1="GraphQuery" Class2="Actor" Role1="GraphQuery" Role2="SelectedActor" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Bottom" Percent1="0.08878504672897196" Percent2="0.7956781510500519" Path="M 734.8347778320312 279 L 424.5 279 L 424.5 123.076171875" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="Process" Role1="Product" Role2="ConvertedBy" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.7022900763358778" Percent2="0.6962616822429907" Path="M 702 599 L 720 599 L 720 511 L 741 511" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="Process" Role1="Source" Role2="ConvertBy" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.35877862595419846" Percent2="0.3878504672897196" Path="M 702 477 L 720 477 L 720 445 L 741 445" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="DigicircUser" Role1="Material" Role2="RequestedBy" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.15267175572519084" Percent2="0.1" Path="M 406 403 L 360 403 L 360 323 L 326 323" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="ProductType" Role1="Material" Role2="Type" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Top" Percent1="0.7793296089385475" Percent2="0.38243804252107183" Path="M 406 630 L 340 630 L 340 440 L 149 440 L 149 475" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="PhysicalForm" Role1="Material" Role2="PhysicalForm" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Top" Percent1="0.9357541899441341" Percent2="0.4956837434449375" Path="M 702 686 L 720 686 L 720 750 L 340 750 L 340 600 L 178 600 L 178 631" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="UnitOfMeasurement" Role1="Material" Role2="UnitOfMeasurement" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.5934668071654373" Percent2="0.542975835234919" Path="M 582 709 L 582 760 L 552 760 L 552 812" />
+    </Association>
+    <Association ModelName="Product" Class1="Product" Class2="Material" Role1="Product" Role2="Resource" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.963245288745777" Percent2="0.046335856119791664" Path="M 450 358 L 558 358 L 558 517" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="Suggestions" Name="Match" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="185.0625" Height="238" Top="355" Left="599" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ValidFrom" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ValidTo" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="QuantityLack" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="MatchProducts" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void MatchProducts(Domain.Actor actor) 
+{
+	foreach Domain.Product product in actor.CircularEconomyRequirements.Resources 
+	{
+		var possibleMatches = Domain.Product.Find(p =&gt; 
+										p.IsDesired 
+									&amp;&amp; p.Resource.Id == product.Resource.Id
+									&amp;&amp; p.ValidTo &gt;= product.ValidFrom 
+									&amp;&amp; p.ValidFrom &lt;= product.ValidTo);
+		if(possibleMatches.Length == 0)
+		{
+			continue;
+		}
+		Domain.Match match = Domain.Match.Create();
+		var matchedProduct = possibleMatches.First();
+		var actorRequested = Domain.Actor.Find(a =&gt; a.CircularEconomyRequirements.DesiredResources.Any(p =&gt; p.Id == matchedProduct.Id)).First();
+		if(actorRequested == null)
+		{
+			continue;
+		}
+		if(Domain.Match.Find(x =&gt; x.ActorOffer.Id == actor.Id &amp;&amp; x.ActorRequest.Id == actorRequested.Id &amp;&amp; x.Resource == matchedProduct.Resource).Any())
+		{
+			continue;
+		}
+		match.Resource = matchedProduct.Resource;
+		match.ValidFrom = DateTime.Compare(product.ValidFrom, matchedProduct.ValidFrom) &lt;= 0 ? matchedProduct.ValidFrom : product.ValidFrom;
+		match.ValidTo = DateTime.Compare(product.ValidTo, matchedProduct.ValidTo) &lt;= 0 ? product.ValidTo : matchedProduct.ValidTo;
+		match.ActorOffer = actor;
+		match.ActorRequest = actorRequested;
+		match.QuantityLack = product.Quantity - matchedProduct.Quantity;
+		
+		match.Save();
+	}
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="Actors" Name="Actor" ShadowModel="Actors" ShadowClass="Actor" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="false" Width="436.734375" Height="50" Top="83" Left="83" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ShortDescription" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="GetShortDescription" Setter="" />
+        <Attribute Name="Url" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Email" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SpecifiedEnityType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="250" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MemberOfCluster" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="GetCountOfClusterMembers" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="GetGetCountOfClusterMembers" Setter="" />
+        <Attribute Name="ClusterName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Keywords" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="HasSites" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetActorsDataset" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="true">static function Collection[Domain.Actor] GetActorsDataset(Collection[string] names) 
+{
+	Collection[Domain.Actor] actors;
+	if(names.Length == 0)
+	{
+		actors = Domain.Actor.GetAll();
+	}else
+	{
+		//var onlyNames = names.Select(n =&gt; n.Name);
+		actors = Domain.Actor.GetAll().Where(a =&gt; names.Contains(a.Name));
+		
+	}
+	
+//	foreach Domain.ActorNames actorName in names 
+//	{
+//		var actor = Domain.Actor.Find(a =&gt; a.Name == actorName.Name).First();
+//		if(actor == null)
+//		{
+//			continue;
+//		}
+//		actors.Add(actor);
+//	}
+	return actors;
+	
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetActorsFromGraphResponse" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="true">static function Collection[Domain.Actor] GetActorsFromGraphResponse(Domain.GraphBackendResponse response) 
+{
+	Collection[Domain.Actor] actors;
+	foreach Domain.Nodes node in response.Nodes.Where(n =&gt; n.Label == "Company") 
+	{
+		var actor = Domain.Actor.Find(a =&gt; a.Name == node.Name).First();
+		if(actor == null)
+		{
+			continue;
+		}
+		actors.Add(actor);
+	} 
+	return actors;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="InitNewActor" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="true">static function Domain.Actor InitNewActor() 
+{
+	Domain.Actor actor;
+	
+	actor.CircularEconomyRequirements = Domain.CircularEconomyReport.Create();
+	actor.EntityType = Domain.EntityType.GetAll().First();
+	
+	return actor;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetShortDescription" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="true">function string GetShortDescription() 
+{
+
+	var descLength =  this.Description.Length;
+	if(descLength &lt;  250)
+	{
+		return this.Description;
+	}
+	return this.Description.Substring(0, 250) + "...";
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetActorNamesFromGraphResponse" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="true">static function Collection[Domain.ActorNames] GetActorNamesFromGraphResponse(Domain.GraphBackendResponse response) 
+{
+	Collection[Domain.ActorNames] actorNames;
+	Collection[string] types = Domain.EntityType.GetAll().Select(a =&gt; a.Code);
+	foreach Domain.Nodes node in response.Nodes.Where(n =&gt; types.Contains(n.Label)) 
+	{
+		Domain.ActorNames actorName = Domain.ActorNames.Create();
+		actorName.Name = node.Name;
+		actorNames.Add(actorName);
+	} 
+	return actorNames;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetGetCountOfClusterMembers" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="true">function int GetGetCountOfClusterMembers() 
+{
+
+	if(this.EntityType.IsCluster)
+	{
+		return this.Actors.Length;
+	}
+	return 0;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="AddProductFromAPI" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="true">function void AddProductFromAPI(Domain.Product product, bool desired) 
+{
+	//product type
+	if(product.Resource.Type != null &amp;&amp; Domain.ProductType.Find(a =&gt; a.Name == product.Resource.Type.Name).Length &gt; 0)
+	{
+		var productTypeDb = Domain.ProductType.Find(a =&gt; a.Name == product.Resource.Type.Name).First();
+		product.Resource.Type = productTypeDb;
+	}
+	//unit of measurement
+	if(product.Resource.UnitOfMeasurement != null &amp;&amp; Domain.UnitOfMeasurement.Find(a =&gt; a.Code == product.Resource.UnitOfMeasurement.Code).Length &gt; 0)
+	{
+		var unitOfMeasurementDb = Domain.UnitOfMeasurement.Find(a =&gt; a.Code == product.Resource.UnitOfMeasurement.Code).First();
+		product.Resource.UnitOfMeasurement = unitOfMeasurementDb;
+	}
+	//material
+	if(product.Resource != null &amp;&amp; Domain.Material.Find(a =&gt; a.Name == product.Resource.Name).Length &gt; 0)
+	{
+		var materialDb = Domain.Material.Find(a =&gt; a.Name == product.Resource.Name).First();
+		product.Resource = materialDb;
+	}
+	//physical Form
+	if(product.Resource.PhysicalForm != null &amp;&amp; Domain.PhysicalForm.Find(a =&gt; a.Code == product.Resource.PhysicalForm.Code).Length &gt; 0)
+	{
+		var physicalFormDb = Domain.PhysicalForm.Find(a =&gt; a.Code == product.Resource.PhysicalForm.Code).First();
+		product.Resource.PhysicalForm = physicalFormDb;
+	}
+	if(product.Site != null &amp;&amp; Domain.Address.Find(a =&gt; a.Alias == product.Site.Alias).Length &gt; 0)
+	{
+		var siteDb = Domain.Address.Find(a =&gt; a.Alias == product.Site.Alias).First();
+		product.Site = siteDb;
+	}
+	//site
+	if(desired)
+	{
+		this.CircularEconomyRequirements.DesiredResources.Add(product);
+	}
+	else
+	{
+		this.CircularEconomyRequirements.Resources.Add(product);
+	}
+	this.Save();
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetAddresses" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="true">static function Collection[Domain.Address] GetAddresses(int id) 
+{
+	Collection[Domain.Address] addresses;
+	Domain.Actor actor = Domain.Actor.GetByKey(id);
+	if(actor.Address != null)
+	{
+		addresses.Add(actor.Address);
+	}
+	if(actor.HasSites)
+	{
+		addresses.AddRange(actor.Sites);
+	}
+	return addresses;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetActorNamesFromElasticResponse" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="true">static function Collection[Domain.ActorNames] GetActorNamesFromElasticResponse(Interfaces.ElasticSearch.SearchResponse response) 
+{
+	Collection[Domain.ActorNames] actorNames;
+	var actors = response.Hits.Hits.ToCollection().Select(a =&gt; a.Source.Name);
+	foreach string name in actors) 
+	{
+		Domain.ActorNames actorName = Domain.ActorNames.Create();
+		actorName.Name = name;
+		actorNames.Add(actorName);
+	} 
+	return actorNames;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="Match" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="true">function void Match() 
+{
+//	foreach Domain.Product product in this.CircularEconomyRequirements.DesiredResources 
+//	{
+//		Domain.ListProducersMaterialRequest req;
+//		Domain.ListProducersMaterialStatements stat;
+//		
+//		stat.Statement = "MATCH p= (producer:Actor)-[*]-&gt;(:Material {Id: $props.MaterialId})-[*]-&gt;(consumer:Actor {Id: $props.ActorId}) WHERE NOT (consumer)--&gt;() RETURN producer";
+//		
+//		stat.Parameters = Domain.ListProducersMaterialParameters.Create();
+//		stat.Parameters.Properties = Domain.ListProducersMaterialProps.Create();
+//		
+//		stat.Parameters.Properties.ActorId = this.Id;
+//		stat.Parameters.Properties.MaterialId = product.Resource.Id;
+//		
+//		req.Statements.Add(stat);
+//		
+//		var reqParsed = DataTransformations.KnowledgeBase.ListProducersMaterialRequest_To_ListProducersMaterialRequest(req);
+//	
+//		CommonLib.Serializer[Interfaces.KnowledgeBase.ListProducersMaterialRequest] ser;
+//		DebugLib.Logger.WriteInfoLine("request " +  ser.ToJson(reqParsed));
+//	
+//		Interfaces.KnowledgeBase.KnowledgeBaseResult result = Interfaces.KnowledgeBase.API.ListPossibleProducersForMaterial(reqParsed);
+//		
+//		CommonLib.Serializer[Interfaces.KnowledgeBase.KnowledgeBaseResult] serRes;
+//		DebugLib.Logger.WriteInfoLine("result " +  result.Results.Get(0).Data.Get(0).Row.Get(0).Name);
+//	}
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="ListPossibleMatches" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="true">function Collection[Domain.ActorNames] ListPossibleMatches(bool offers) 
+{
+		Domain.ListProducersMaterialRequest req;
+		Domain.ListProducersMaterialStatements stat;
+		
+		if(offers)
+		{
+			stat.Statement = "MATCH p=(:Actor{Id: $props.ActorId})-[*]-&gt;(:Material)-[*]-&gt;(a:Actor) RETURN a";
+		}
+		else
+		{
+			stat.Statement = "MATCH p=(a:Actor)-[*]-&gt;(:Material)-[*]-&gt;(:Actor {Id: $props.ActorId}) RETURN a";
+			
+		}
+		
+		stat.Parameters = Domain.ListProducersMaterialParameters.Create();
+		stat.Parameters.Properties = Domain.ListProducersMaterialProps.Create();
+		
+		stat.Parameters.Properties.ActorId = this.Id;
+		
+		req.Statements.Add(stat);
+		
+		var reqParsed = DataTransformations.KnowledgeBase.ListProducersMaterialRequest_To_ListProducersMaterialRequest(req);
+	
+		CommonLib.Serializer[Interfaces.KnowledgeBase.ListProducersMaterialRequest] ser;
+		DebugLib.Logger.WriteInfoLine("request " +  ser.ToJson(reqParsed));
+	
+		Interfaces.KnowledgeBase.KnowledgeBaseResult result = Interfaces.KnowledgeBase.API.ListPossibleMatches(reqParsed);
+		
+		CommonLib.Serializer[Interfaces.KnowledgeBase.KnowledgeBaseResult] serRes;
+		DebugLib.Logger.WriteInfoLine("result " +  serRes.ToJson(result));
+		
+		Collection[Domain.ActorNames] names;
+		if(result.Results.Length &gt; 0 &amp;&amp; result.Results.Get(0).Data.Length &gt; 0)
+		{
+			for int i = 0; i &lt; result.Results.Get(0).Data.Length; i + 1 
+			{
+				Domain.ActorNames name;
+				name.Name = result.Results.Get(0).Data.Get(i).Row.Get(0).Name;
+				names.Add(name);
+			}	
+		}
+		return names;
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="MaterialsBase" Name="Material" ShadowModel="MaterialsBase" ShadowClass="Material" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="false" Width="296.5625" Height="50" Top="4" Left="612" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="HsSpecific" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PendingGraph" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IsHazardous" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

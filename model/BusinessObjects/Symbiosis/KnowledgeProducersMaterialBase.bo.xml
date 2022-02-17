@@ -1,0 +1,45 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<BusinessObject DateCreated="1/18/2021" Model_Name="KnowledgeProducersMaterialBase" Model_Description="" Version="" Comments="" Model_Creator="">
+  <Associations>
+    <Association ModelName="" Class1="ListProducersMaterialProps" Class2="ListProducersMaterialParameters" Role1="Properties" Role2="ListProducersMaterialParameters" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.5029585798816568" Percent2="0.45226130653266333" Path="M 285 246.945999145508 L 285 227.2919921875" />
+    </Association>
+    <Association ModelName="" Class1="ListProducersMaterialStatements" Class2="ListProducersMaterialParameters" Role1="ListProducersMaterialStatements" Role2="Parameters" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.5666666666666667" Percent2="0.4388888888888889" Path="M 596.757995605469 126 L 505.347991943359 126" />
+    </Association>
+    <Association ModelName="" Class1="ListProducersMaterialRequest" Class2="ListProducersMaterialStatements" Role1="ListProducersMaterialRequest" Role2="Statements" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.4909090909090909" Percent2="0.5214105793450882" Path="M 804 303.864990234375 L 804 204.446014404297" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="KnowledgeProcessBase" Name="ListProducersMaterialParameters" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="398.625" Height="180" Top="47" Left="105" />
+      <Attributes />
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeProcessBase" Name="ListProducersMaterialStatements" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="397.34375" Height="180" Top="24" Left="597" />
+      <Attributes>
+        <Attribute Name="Statement" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="1000" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeProcessBase" Name="ListProducersMaterialProps" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="338.46875" Height="180" Top="247" Left="115" />
+      <Attributes>
+        <Attribute Name="ActorId" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="" MaxLength="" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MaterialId" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="" MaxLength="" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeProcessBase" Name="ListProducersMaterialRequest" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="385.546875" Height="180" Top="304" Left="615" />
+      <Attributes />
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

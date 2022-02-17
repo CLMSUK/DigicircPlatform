@@ -1,0 +1,34 @@
+.badge-title {
+    cursor: pointer;
+    border-radius: 20px !important;
+    padding: 15px !important;
+}
+
+.badge-title-div{
+    border: 2px solid #042c71;
+    border-radius: 60px;
+    cursor: pointer;
+    -moz-box-shadow:    3px 3px 5px 6px #042c71;
+    -webkit-box-shadow: 3px 3px 5px 6px #042c71;
+    box-shadow: 3px 3px 8px 3px #042c71;
+}
+
+.badge-title-selected{ 
+ background-color: #042c71;
+ color: white;   
+}
+
+.panelContent {
+    box-shadow: 3px 3px 8px 3px #f36b1c !important;
+    height: 500px;
+}
+
+.panel-header {
+    color: #f36b1c;
+}
+
+.blueLine {
+    background-color: #042c71;
+    margin-top: 32px;
+    padding: 1px;
+}

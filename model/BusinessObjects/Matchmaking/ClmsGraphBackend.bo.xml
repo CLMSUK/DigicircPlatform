@@ -1,0 +1,596 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<BusinessObject DateCreated="8/4/2020" Model_Name="ClmsGraphBackend" Model_Description="" Version="" Comments="" Model_Creator="">
+  <Associations>
+    <Association ModelName="ClmsGraphBackend" Class1="GraphBackendResponse" Class2="Metadata" Role1="GraphBackendResponce" Role2="Metadata" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.6218940333316201" Percent2="0.3059994312042886" Path="M 560.0557861328125 1508.9112548828125 L 560.0557861328125 1568.8807373046875" />
+    </Association>
+    <Association ModelName="ClmsGraphBackend" Class1="GraphBackendResponse" Class2="Nodes" Role1="GraphBackendResponce" Role2="Nodes" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.1409562763414885" Percent2="0.7658372667100695" Path="M 413.8507080078125 1328.5294189453125 L 413.8507080078125 1268.9739990234375" />
+    </Association>
+    <Association ModelName="ClmsGraphBackend" Class1="GraphBackendResponse" Class2="Links" Role1="GraphBackendResponce" Role2="Links" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.4166666666666667" Percent2="0.8125" Path="M 675.4151000976562 1403 L 734.9841918945312 1403" />
+    </Association>
+    <Association ModelName="ClmsGraphBackend" Class1="GraphDebugResult" Class2="GraphBackendResponse" Role1="GraphDebugResult" Role2="Result" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.1" Percent2="0.9166666666666666" Path="M 311.17181396484375 1493 L 370.88580322265625 1493" />
+    </Association>
+    <Association ModelName="ClmsGraphBackend" Class1="QueryExtended" Class2="ExElements" Role1="QueryExtended" Role2="Elements" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.9583333333333334" Percent2="0.06111111111111111" Path="M 1402.445556640625 754 L 1462.02294921875 754" />
+    </Association>
+    <Association ModelName="ClmsGraphBackend" Class1="QueryExtended" Class2="ExRelations" Role1="QueryExtended" Role2="Relations" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Left" Edge2="Top" Percent1="0.5046296296296297" Percent2="0.5" Path="M 1097.69384765625 656 L 948 656 L 948 804.98486328125" />
+    </Association>
+    <Association ModelName="ClmsGraphBackend" Class1="ExMessageSearchData" Class2="ExSecurity" Role1="ExMessageSearchData" Role2="ExSecurity" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.48907318115234377" Percent2="0.5024202786959134" Path="M 1253.50341796875 247.73388671875 L 1253.50341796875 187.7569580078125" />
+    </Association>
+    <Association ModelName="ClmsGraphBackend" Class1="QueryExtended" Class2="ExMessageSearchData" Role1="QueryExtended" Role2="MessageSearchData" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.5001393368369654" Percent2="0.4782573699951172" Path="M 1250.0423583984375 547.7430419921875 L 1250.0423583984375 488.06103515625" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="ClmsGraphBackend" Name="GraphDebugResult" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="248" Height="180" Top="1475.7332763671875" Left="63" />
+      <Attributes>
+        <Attribute Name="Query" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="RawResult" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="GraphBackendResponse" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="304" Height="180" Top="1328.866943359375" Left="371.0335998535156" />
+      <Attributes />
+      <Operations />
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="Metadata" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="376" Height="264" Top="1569" Left="445.0779113769531" />
+      <Attributes>
+        <Attribute Name="ExportDataAsJson" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Pages" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PageSize" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="QueryElapsedTime" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="TotalResponseElementsWithPositiveRelevanceLevel" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Elements" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Relations" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ExportType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="Nodes" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="180" Height="384" Top="884.7393798828125" Left="276.66790771484375" />
+      <Attributes>
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Label" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="LabelType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Graphid" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="CC" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SL" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="CL" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="RL" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IA" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AL" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AC" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Attr" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="Links" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="180" Height="384" Top="1091.345947265625" Left="735.1414794921875" />
+      <Attributes>
+        <Attribute Name="Source" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Target" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Type" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="TypeRel" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Sid" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Tid" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Weight" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="CL" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="RL" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IA" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AL" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AC" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Attr" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="GraphMetadata" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="220" Height="180" Top="805" Left="540" />
+      <Attributes>
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Elements" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Relations" IsValueClass="false" Description="" DataType="float" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="Query" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="220" Height="180" Top="1335" Left="1017" />
+      <Attributes>
+        <Attribute Name="GraphContext" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MessageType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="GraphSubContext" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SearchText" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetDefault" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Interfaces.GraphBackend.Query GetDefault() 
+{
+	Interfaces.GraphBackend.Query q;
+	
+	q.GraphContext = Application.Settings.GraphBackendGraphContext;
+    q.GraphSubContext = Application.Settings.GraphBackendGraphSubContext;
+	q.MessageType = "Find";
+	
+	return q;
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="QueryExtended" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="304" Height="216" Top="547.8138427734375" Left="1098.0423583984375" />
+      <Attributes>
+        <Attribute Name="GraphContext" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="GraphSubContext" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MessageType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetDefault" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Interfaces.GraphBackend.QueryExtended GetDefault() 
+{
+	Interfaces.GraphBackend.QueryExtended q;
+	
+	q.GraphContext = Application.Settings.GraphBackendGraphContext;
+    q.GraphSubContext = Application.Settings.GraphBackendGraphSubContext;
+	q.MessageType = "Find";
+
+	return q;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetDeleteDefault" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Interfaces.GraphBackend.QueryExtended GetDeleteDefault() 
+{
+	Interfaces.GraphBackend.QueryExtended q;
+	
+	q.GraphContext = Application.Settings.GraphBackendGraphContext;
+    q.GraphSubContext = Application.Settings.GraphBackendGraphSubContext;
+	q.MessageType = "Delete";
+
+	return q;
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="ExElements" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="180" Height="180" Top="743.056396484375" Left="1462.19287109375" />
+      <Attributes>
+        <Attribute Name="Type" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Category" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Data" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="Transform" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Interfaces.GraphBackend.ExElements] Transform(Collection[Domain.ExElements] exElements) 
+{
+	Collection[Interfaces.GraphBackend.ExElements] elements;
+    foreach Domain.ExElements exElement in exElements 
+    {
+    	elements.Add(DataTransformations.GraphBackend.ExElements_To_ExElements(exElement));
+    }
+	return elements;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="PrepareRelationNodes" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Interfaces.GraphBackend.ExElements] PrepareRelationNodes(Domain.GraphUpdateElement element) 
+{
+    Interfaces.GraphBackend.ExElements sourceElement;
+    
+    sourceElement.Name = element.SourceNodeName;
+    sourceElement.Type = element.SourceNodeType;
+    
+    Interfaces.GraphBackend.ExElements destinationElement;
+    
+    destinationElement.Name = element.DestinationNodeName;
+    destinationElement.Type = element.DestinationNodeType;
+    
+	return {
+		sourceElement,
+		destinationElement
+	};
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="PrepareRalationNodesTypeText" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Interfaces.GraphBackend.ExElements] PrepareRalationNodesTypeText(Domain.GraphUpdateElement element, bool textIsInSource) 
+{
+	Interfaces.GraphBackend.ExElements sourceElement;
+    
+    sourceElement.Name = element.SourceNodeName;
+    sourceElement.Type = element.SourceNodeType;
+    if(textIsInSource)
+    {
+    	sourceElement.Category = "Text";
+    }
+    
+    Interfaces.GraphBackend.ExElements destinationElement;
+    
+    destinationElement.Name = element.DestinationNodeName;
+    destinationElement.Type = element.DestinationNodeType;
+    if(!textIsInSource)
+    {
+    	destinationElement.Category = "Text";
+    }
+    
+	return {
+		sourceElement,
+		destinationElement
+	};
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="ExRelations" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="180" Height="180" Top="805" Left="858" />
+      <Attributes>
+        <Attribute Name="Type" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetDefaults" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Interfaces.GraphBackend.ExRelations] GetDefaults() 
+{
+	Collection[Interfaces.GraphBackend.ExRelations] relations;
+	
+	Interfaces.GraphBackend.ExRelations relation;
+	relation.Type = "*";
+	
+	relations.Add(relation);
+	
+	return relations;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetRelationType" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Interfaces.GraphBackend.ExRelations] GetRelationType(string name) 
+{
+	Collection[Interfaces.GraphBackend.ExRelations] relations;
+	
+	Interfaces.GraphBackend.ExRelations relation;
+	relation.Type = name;
+	
+	relations.Add(relation);
+	
+	return relations;
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="ExMessageSearchData" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="320" Height="240" Top="247.7850341796875" Left="1097.1103515625" />
+      <Attributes>
+        <Attribute Name="LabelSearchType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="DepthSearchLevel" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AlgorithmName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="JsonResponseFormat" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="FindPathTypes" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AlgorithmOptimalPathParameters" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="ExSecurity" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="208" Height="180" Top="7.666259765625" Left="1149.50341796875" />
+      <Attributes>
+        <Attribute Name="ExAuthorization" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="UserName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Passwd" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="GraphQueries" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="200" Height="180" Top="699" Left="10" />
+      <Attributes />
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="Query" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.GraphBackendResponse Query(string queryText) 
+{
+	var q = Domain.Query.GetDefault();
+	q.SearchText = queryText;
+	
+	var response = Interfaces.GraphBackend.API.Query(q);
+	
+	return DataTransformations.GraphBackend
+		.GraphBackendResponse_To_GraphBackendResponseReversed(response);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="RawQuery" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function string RawQuery(string queryText) 
+{
+	var q = Domain.Query.GetDefault();
+	q.SearchText = queryText;
+
+	return Interfaces.GraphBackend.API.RawQuery(q);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="ExtenedQuery" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.GraphBackendResponse ExtenedQuery(Collection[Domain.ExElements] exElements) 
+{
+	var q = Domain.QueryExtended.GetDefault();
+	
+	q.MessageSearchData = Domain.GraphQueries.GetExMessageSearchData();
+	q.Elements = Domain.ExElements.Transform(exElements);
+	q.Relations = Domain.ExRelations.GetDefaults();
+	
+	var response = Interfaces.GraphBackend.API.ExtenedQuery(q);
+	return DataTransformations.GraphBackend
+		.GraphBackendResponse_To_GraphBackendResponseReversed(response);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="RawExtenedQuery" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function string RawExtenedQuery(Collection[Domain.ExElements] exElements) 
+{
+	var q = Domain.QueryExtended.GetDefault();
+	
+	q.MessageSearchData = Domain.GraphQueries.GetExMessageSearchData();
+	q.Elements = Domain.ExElements.Transform(exElements);
+	q.Relations = Domain.ExRelations.GetDefaults();
+	
+	return Interfaces.GraphBackend.API.RawExtenedQuery(q);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetExMessageSearchData" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Interfaces.GraphBackend.ExMessageSearchData GetExMessageSearchData() 
+{
+	Interfaces.GraphBackend.ExMessageSearchData exMessage;
+	
+	exMessage.LabelSearchType = "Whole";
+	exMessage.DepthSearchLevel = "1";
+	exMessage.JsonResponseFormat = "NotIndented";
+	exMessage.AlgorithmName = "";
+	
+	Interfaces.GraphBackend.ExSecurity exSecurity;
+	exSecurity.ExAuthorization = "NoAuth";
+	exSecurity.UserName = Application.Settings.GraphBackendUserName;
+	exSecurity.Passwd = Application.Settings.GraphBackendPasswd;
+	
+	exMessage.ExSecurity = exSecurity;
+	
+	return exMessage;
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="GraphUpdate" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="196" Height="180" Top="964" Left="10" />
+      <Attributes />
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="AddNewRelation" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.UpdateResponse AddNewRelation(Domain.GraphUpdateElement element) 
+{
+	var q = Domain.QueryExtended.GetDefault();
+	q.MessageType = "Update";
+	q.MessageSearchData = Domain.GraphQueries.GetExMessageSearchData();
+	
+	q.Elements = Domain.ExElements.PrepareRelationNodes(element);
+	
+	q.Relations = Domain.ExRelations.GetRelationType(element.RelationType);
+	
+	var response = Interfaces.GraphBackend.API.Update(q);
+	
+	DebugLib.Logger.WriteInfoLine(response.Type);
+	
+	return DataTransformations.GraphBackend.UpdateResponse_To_UpdateResponseReversed(response);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="SendActorToGraph" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void SendActorToGraph(Domain.Actor actor) 
+{
+	//name to country
+	if(actor.Address != null &amp;&amp; actor.Address.Country != null)
+	{
+		Domain.GraphUpdateElement nameCountryElement = Domain.GraphUpdateElement.Create();
+		nameCountryElement.RelationType = "hasCompany";
+		nameCountryElement.SourceNodeName = actor.Address.Country.Name;
+		nameCountryElement.SourceNodeType = "Country";
+		nameCountryElement.DestinationNodeName = actor.Name;
+		nameCountryElement.DestinationNodeType = actor.EntityType.Code;
+		var resultNameCountry = Domain.GraphUpdate.AddNewRelation(nameCountryElement);
+		
+		//reverse
+		Domain.GraphUpdateElement nameCountryElementReverse = Domain.GraphUpdateElement.Create();
+		nameCountryElementReverse.RelationType = "isCompanyOf";
+		nameCountryElementReverse.SourceNodeName = actor.Name;
+		nameCountryElementReverse.SourceNodeType = actor.EntityType.Code;
+		nameCountryElementReverse.DestinationNodeName = actor.Address.Country.Name;
+		nameCountryElementReverse.DestinationNodeType = "Country";
+		var resultNameCountryReverse = Domain.GraphUpdate.AddNewRelation(nameCountryElementReverse);
+	}
+	
+	//name to city
+	if(actor.Address != null &amp;&amp; !string.IsNullOrEmpty(actor.Address.Town))
+	{
+		Domain.GraphUpdateElement nameTownElement = Domain.GraphUpdateElement.Create();
+		nameTownElement.RelationType = "hasCompany";
+		nameTownElement.SourceNodeName = actor.Address.Town;
+		nameTownElement.SourceNodeType = "Town";
+		nameTownElement.DestinationNodeName = actor.Name;
+		nameTownElement.DestinationNodeType = actor.EntityType.Code;
+		var resultNameTown = Domain.GraphUpdate.AddNewRelation(nameTownElement);
+		//reverse
+		Domain.GraphUpdateElement nameTownElementReverse = Domain.GraphUpdateElement.Create();
+		nameTownElementReverse.RelationType = "isCompanyOf";
+		nameTownElementReverse.SourceNodeName = actor.Name;
+		nameTownElementReverse.SourceNodeType = actor.EntityType.Code;
+		nameTownElementReverse.DestinationNodeName = actor.Address.Town;
+		nameTownElementReverse.DestinationNodeType = "Town";
+		var resultNameTownReverse = Domain.GraphUpdate.AddNewRelation(nameTownElementReverse);
+	}
+	
+	//cityToCountry
+	if(actor.Address != null &amp;&amp; !string.IsNullOrEmpty(actor.Address.Town) &amp;&amp; actor.Address.Country != null)
+	{
+		Domain.GraphUpdateElement nameTownElement = Domain.GraphUpdateElement.Create();
+		nameTownElement.RelationType = "isLocationOf";
+		nameTownElement.SourceNodeName = actor.Address.Town;
+		nameTownElement.SourceNodeType = "Town";
+		nameTownElement.DestinationNodeName = actor.Address.Country.Name;
+		nameTownElement.DestinationNodeType = "Country";
+		var resultNameTown = Domain.GraphUpdate.AddNewRelation(nameTownElement);
+		
+		//reverse
+		Domain.GraphUpdateElement nameTownElementReverse = Domain.GraphUpdateElement.Create();
+		nameTownElementReverse.RelationType = "hasLocation";
+		nameTownElementReverse.SourceNodeName = actor.Address.Country.Name;
+		nameTownElementReverse.SourceNodeType = "Country";
+		nameTownElementReverse.DestinationNodeName = actor.Address.Town;
+		nameTownElementReverse.DestinationNodeType = "Town";
+		var resultNameTownReverse = Domain.GraphUpdate.AddNewRelation(nameTownElementReverse);
+	}
+	
+	//description
+	if(!string.IsNullOrEmpty(actor.Description))
+	{
+		Domain.GraphUpdateElement nameDescriptionElement = Domain.GraphUpdateElement.Create();
+		nameDescriptionElement.RelationType = "isDescriptionOf";
+		nameDescriptionElement.SourceNodeName = actor.Description;
+		nameDescriptionElement.SourceNodeType = "Description";
+		nameDescriptionElement.DestinationNodeName = actor.Name;
+		nameDescriptionElement.DestinationNodeType = actor.EntityType.Value;
+		var resultNameDesc = Domain.GraphUpdate.AddNewRelationTypeText(nameDescriptionElement, true);
+		
+		//reverse
+		Domain.GraphUpdateElement nameDescriptionElementReverse = Domain.GraphUpdateElement.Create();
+		nameDescriptionElementReverse.RelationType = "hasDescription";
+		nameDescriptionElementReverse.SourceNodeName = actor.Name;
+		nameDescriptionElementReverse.SourceNodeType = actor.EntityType.Value;
+		nameDescriptionElementReverse.DestinationNodeName = actor.Description;
+		nameDescriptionElementReverse.DestinationNodeType = "Description";
+		var resultNameDescReverse = Domain.GraphUpdate.AddNewRelationTypeText(nameDescriptionElementReverse,false);
+	}
+	
+	//sector
+	if(actor.SectorTypes.Length &gt; 0)
+	{
+		foreach(Domain.SectorType sector in actor.SectorTypes) 
+		{
+			Domain.GraphUpdateElement sectorElement = Domain.GraphUpdateElement.Create();
+			sectorElement.RelationType = "hasSectorType";
+			sectorElement.SourceNodeName = actor.Name;
+			sectorElement.SourceNodeType = actor.EntityType.Code;
+			sectorElement.DestinationNodeName = sector.Value;
+			sectorElement.DestinationNodeType = "SectorType";
+			var resultSector = Domain.GraphUpdate.AddNewRelation(sectorElement);	
+			
+			//reverse
+			Domain.GraphUpdateElement sectorElementReverse = Domain.GraphUpdateElement.Create();
+			sectorElementReverse.RelationType = "isSectorTypeOf";
+			sectorElementReverse.SourceNodeName = sector.Value;
+			sectorElementReverse.SourceNodeType = "SectorType";
+			sectorElementReverse.DestinationNodeName = actor.Name;
+			sectorElementReverse.DestinationNodeType = actor.EntityType.Code;
+			var resultSectorReverse = Domain.GraphUpdate.AddNewRelation(sectorElementReverse);	
+		}
+	}
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="InitGraphFromDB" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void InitGraphFromDB() 
+{
+	foreach Domain.Actor actor in Domain.Actor.GetAll() 
+	{
+		Domain.GraphUpdate.SendActorToGraph(actor);
+	}
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="DeleteRelation" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.UpdateResponse DeleteRelation(Domain.GraphUpdateElement element) 
+{
+	var q = Domain.QueryExtended.GetDeleteDefault();
+	q.MessageSearchData = Domain.GraphQueries.GetExMessageSearchData();
+	
+	q.Elements = Domain.ExElements.PrepareRelationNodes(element);
+	
+	q.Relations = Domain.ExRelations.GetRelationType(element.RelationType);
+	
+	var response = Interfaces.GraphBackend.API.Update(q);
+	
+	DebugLib.Logger.WriteInfoLine(response.Type);
+	
+	return DataTransformations.GraphBackend.UpdateResponse_To_UpdateResponseReversed(response);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="DeleteOldRelations" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void DeleteOldRelations(Domain.Actor oldInstance, Domain.Actor newInstance) 
+{
+	DebugLib.Logger.WriteInfoLine("Insinde delete");
+	//check country
+	if(oldInstance.Address.Country != newInstance.Address.Country)
+	{
+		DebugLib.Logger.WriteInfoLine("Delete country");
+		Domain.GraphUpdateElement nameCountryElement = Domain.GraphUpdateElement.Create();
+		nameCountryElement.RelationType = "hasCompany";
+		nameCountryElement.SourceNodeName = oldInstance.Address.Country.Name;
+		nameCountryElement.SourceNodeType = "Country";
+		nameCountryElement.DestinationNodeName = oldInstance.Name;
+		nameCountryElement.DestinationNodeType = oldInstance.EntityType.Code;
+		var resultNameCountry = Domain.GraphUpdate.DeleteRelation(nameCountryElement);
+		
+		//reverse
+		Domain.GraphUpdateElement nameCountryElementReversed = Domain.GraphUpdateElement.Create();
+		nameCountryElementReversed.RelationType = "isCompanyOf";
+		nameCountryElementReversed.SourceNodeName = oldInstance.Name;
+		nameCountryElementReversed.SourceNodeType = oldInstance.EntityType.Code;
+		nameCountryElementReversed.DestinationNodeName = oldInstance.Address.Country.Name;
+		nameCountryElementReversed.DestinationNodeType = "Country";
+		var resultNameCountryReversed = Domain.GraphUpdate.DeleteRelation(nameCountryElementReversed);
+	}
+	
+	//description
+	if(oldInstance.Description != newInstance.Description )
+	{
+		Domain.GraphUpdateElement nameDescriptionElement = Domain.GraphUpdateElement.Create();
+		nameDescriptionElement.RelationType = "isDescriptionOf";
+		nameDescriptionElement.SourceNodeName = oldInstance.Description;
+		nameDescriptionElement.SourceNodeType = "Description";
+		nameDescriptionElement.DestinationNodeName = oldInstance.Name;
+		nameDescriptionElement.DestinationNodeType = oldInstance.EntityType.Value;
+		var resultNameDesc = Domain.GraphUpdate.DeleteRelation(nameDescriptionElement);
+		
+		//reverse
+		Domain.GraphUpdateElement nameDescriptionElementReverse = Domain.GraphUpdateElement.Create();
+		nameDescriptionElementReverse.RelationType = "hasDescription";
+		nameDescriptionElementReverse.SourceNodeName = oldInstance.Name;
+		nameDescriptionElementReverse.SourceNodeType = oldInstance.EntityType.Value;
+		nameDescriptionElementReverse.DestinationNodeName = oldInstance.Description;
+		nameDescriptionElementReverse.DestinationNodeType = "Description";
+		var resultNameDescReverse = Domain.GraphUpdate.DeleteRelation(nameDescriptionElementReverse);
+	}
+	
+	//check sector type
+	if(oldInstance.SectorTypes.Length &gt; 0)
+	{
+		foreach Domain.SectorType sector in oldInstance.SectorTypes 
+		{
+			if(newInstance.SectorTypes.Any(a =&gt; a.Code == sector.Code))
+			{
+				Domain.GraphUpdateElement sectorElement = Domain.GraphUpdateElement.Create();
+				sectorElement.RelationType = "hasSectorType";
+				sectorElement.SourceNodeName = oldInstance.Name;
+				sectorElement.SourceNodeType = oldInstance.EntityType.Code;
+				sectorElement.DestinationNodeName = sector.Value;
+				sectorElement.DestinationNodeType = "SectorType";
+				var resultSector = Domain.GraphUpdate.DeleteRelation(sectorElement);	
+				
+				//reverse
+				Domain.GraphUpdateElement sectorElementReverse = Domain.GraphUpdateElement.Create();
+				sectorElementReverse.RelationType = "isSectorTypeOf";
+				sectorElementReverse.SourceNodeName = sector.Value;
+				sectorElementReverse.SourceNodeType = "SectorType";
+				sectorElementReverse.DestinationNodeName = oldInstance.Name;
+				sectorElementReverse.DestinationNodeType = oldInstance.EntityType.Code;
+				var resultSectorReverse = Domain.GraphUpdate.DeleteRelation(sectorElementReverse);	
+			}
+		}
+	}
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="AddNewRelationTypeText" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.UpdateResponse AddNewRelationTypeText(Domain.GraphUpdateElement element, bool isTextInSource) 
+{
+	var q = Domain.QueryExtended.GetDefault();
+	q.MessageType = "Update";
+	q.MessageSearchData = Domain.GraphQueries.GetExMessageSearchData();
+	
+	q.Elements = Domain.ExElements.PrepareRalationNodesTypeText(element,isTextInSource);
+	
+	q.Relations = Domain.ExRelations.GetRelationType(element.RelationType);
+	
+	var response = Interfaces.GraphBackend.API.Update(q);
+	DebugLib.Logger.WriteInfoLine(response.Type);
+	
+	return DataTransformations.GraphBackend.UpdateResponse_To_UpdateResponseReversed(response);
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="UpdateResponse" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="228" Height="180" Top="1070" Left="1017" />
+      <Attributes>
+        <Attribute Name="Type" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Desc" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ClmsGraphBackend" Name="GraphUpdateElement" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="276" Height="192" Top="1588" Left="911" />
+      <Attributes>
+        <Attribute Name="RelationType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SourceNodeName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SourceNodeType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="DestinationNodeName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="DestinationNodeType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

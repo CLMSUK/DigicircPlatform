@@ -1,0 +1,543 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<BusinessObject DateCreated="7/20/2020" Model_Name="Actors" Model_Description="" Version="" Comments="" Model_Creator="">
+  <Associations>
+    <Association ModelName="Actors" Class1="Actor" Class2="Address" Role1="Company" Role2="Address" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.5882367245357948" Percent2="0.331935016398444" Path="M 626.8507080078125 655.272216796875 L 626.8507080078125 433.875244140625" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="DigicircUser" Role1="Company" Role2="AddedBy" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.9750746944709606" Percent2="0.1826806640625" Path="M 369 1262 L 307 1262" />
+    </Association>
+    <Association ModelName="Actors" Class1="CircularEconomyReport" Class2="ThematicExpertise" Role1="CircularEconomyInformation" Role2="DesiredThematicExpertises" Multiplicity1="Many" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.3020080912283502" Percent2="0.5266540620243532" Path="M 1225.9793701171875 834.1713256835938 L 1225.9793701171875 1003.1102294921875" />
+    </Association>
+    <Association ModelName="Actors" Class1="CircularEconomyReport" Class2="SectorType" Role1="CircularEconomyInformation" Role2="DesiredSMESector" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.22344288746071927" Percent2="0.6288606217763957" Path="M 1107.5860595703125 554 L 1047.81005859375 554" />
+    </Association>
+    <Association ModelName="Actors" Class1="CircularEconomyReport" Class2="Actor" Role1="CircularEconomyRequirements" Role2="Actor" Multiplicity1="One" Multiplicity2="One" Navigable1="true" Navigable2="false" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.7569624405333449" Percent2="0.14388498386002813" Path="M 1107.6688232421875 745 L 806.0347900390625 745" />
+    </Association>
+    <Association ModelName="Actors" Class1="CircularEconomyReport" Class2="GeographicalArea" Role1="CircularEconomyInformation" Role2="DesiredGeographicalArea" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.880485710651289" Percent2="0.19833433053570257" Path="M 1452.471435546875 834.0540771484375 L 1452.471435546875 931.4915161132812" />
+    </Association>
+    <Association ModelName="Actors" Class1="GeographicalArea" Class2="CircularEconomyProviderReport" Role1="PlaceOperates" Role2="CircularEconomyProviderReport" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Right" Percent1="0.5035735361615632" Percent2="0.5053870655665887" Path="M 1525.208984375 1111.799072265625 L 1525.208984375 1448 L 1182.9708251953125 1448" />
+    </Association>
+    <Association ModelName="Actors" Class1="CircularEconomyProviderReport" Class2="ThematicExpertise" Role1="CircularEconomyProviderReport" Role2="ThematicExpertises" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.8913871522809957" Percent2="0.17567175212455607" Path="M 1139.506103515625 1339.703125 L 1139.506103515625 1187.57373046875" />
+    </Association>
+    <Association ModelName="Actors" Class1="Services" Class2="CircularEconomyProviderReport" Role1="ServicesProvided" Role2="CircularEconomyProviderReport" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.2455879264667873" Percent2="0.8880945522319421" Path="M 1138.24755859375 1615.9136962890625 L 1138.24755859375 1556.27685546875" />
+    </Association>
+    <Association ModelName="Actors" Class1="CircularEconomyProviderReport" Class2="Expertise" Role1="CircularEconomyProviderReport" Role2="Expertises" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.2045284268589298" Percent2="0.5614388811708452" Path="M 876.965087890625 1555.8944091796875 L 876.965087890625 1615.54638671875" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="CircularEconomyProviderReport" Role1="Actor" Role2="CircularEconomyProviderReport" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.9873885046599407" Percent2="0.006244123778767935" Path="M 801.1740112304688 1279.5089111328125 L 801.1740112304688 1339.837158203125" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="FileData" Role1="Actor" Role2="ActorLogo" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.401119710548131" Percent2="0.520157470703125" Path="M 369.8247985839844 905 L 306.27099609375 905" />
+      <DefaultFolderPath>function string DefaultFolderPathActorLogo() {
+	return "ActorActorLogo"; 
+}</DefaultFolderPath>
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="Actor" Role1="Cluster" Role2="Actors" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.9654252643018139" Percent2="0.9928535651676148" Path="M 791.5819091796875 655.1357421875 L 791.5819091796875 644 L 836.7105712890625 644 L 836.7105712890625 1293 L 803.560791015625 1293 L 803.560791015625 1279.8369140625" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="DigicircUser" Role1="ActorsCanManage" Role2="Administrators" Multiplicity1="Many" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.9895441478471664" Percent2="0.3626806640625" Path="M 369 1271 L 369 1280 L 330 1280 L 330 1271 L 307 1271" />
+    </Association>
+    <Association ModelName="Actors" Class1="CircularEconomyReport" Class2="Product" Role1="CircularEconomyReport" Role2="Resources" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="ValidFrom" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.18457335232261154" Percent2="0.5100849873310811" Path="M 1180 474 L 1180 360 L 1123 360 L 1123 266" />
+    </Association>
+    <Association ModelName="Actors" Class1="CircularEconomyReport" Class2="Product" Role1="CircularEconomyReport_1" Role2="DesiredResources" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="ValidFrom" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.3684667197102722" Percent2="0.7533282305743243" Path="M 1252 474 L 1252 360 L 1168 360 L 1168 266" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="Address" Role1="Actor" Role2="Sites" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.7439377727988266" Percent2="0.663870032796888" Path="M 694.8507080078125 655.272216796875 L 694.8507080078125 433.875244140625" />
+    </Association>
+    <Association ModelName="ValueList" Class1="Actor" Class2="EntityType" Role1="Actor" Role2="EntityType" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.5174779330982867" Percent2="0.5041888766818554" Path="M 686.3333129882812 600 L 746.1469116210938 600" />
+    </Association>
+    <Association ModelName="ValueList" Class1="SectorType" Class2="Actor" Role1="SectorTypes" Role2="Actor" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Top" Percent1="0.5288461538461541" Percent2="0.9362759371416285" Path="M 867.4736938476562 533.3970196063702 L 778.8513960007134 533.3970196063702 L 778.8513960007134 655.5035400390625" />
+    </Association>
+    <Association ModelName="GraphQuery" Class1="GraphQuery" Class2="Actor" Role1="GraphQuery" Role2="SelectedActor" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Bottom" Percent1="0.08878504672897196" Percent2="0.7956781510500519" Path="M 734.8347778320312 279 L 424.5 279 L 424.5 123.076171875" />
+    </Association>
+    <Association ModelName="Suggestions" Class1="Match" Class2="Actor" Role1="Match" Role2="ActorOffer" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Right" Percent1="0.035478903603326145" Percent2="0.36" Path="M 608 355 L 608 101 L 519 101" />
+    </Association>
+    <Association ModelName="Suggestions" Class1="Match" Class2="Actor" Role1="Match_1" Role2="ActorRequest" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Right" Percent1="0.007884200800739144" Percent2="0.7" Path="M 601 355 L 601 118 L 519 118" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="DigicircUser" Role1="Material" Role2="RequestedBy" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.15648854961832062" Percent2="0.1" Path="M 406 403 L 360 403 L 360 323 L 326 323" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUser" Class2="ApplicationPermission" Role1="Users" Role2="Permissions" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUser" Class2="ApplicationRole" Role1="Users" Role2="Roles" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationClient" Class2="ApplicationUser" Role1="Clients" Role2="User" Multiplicity1="Many" Multiplicity2="One" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUser" Class2="ApplicationUserLogin" Role1="User" Role2="Logins" Multiplicity1="One" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUserClaim" Class2="ApplicationUser" Role1="Claims" Role2="User" Multiplicity1="Many" Multiplicity2="One" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="Profile" Class2="ApplicationUser" Role1="Profile" Role2="ApplicationUser" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Restricted" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="Geolocation" Class1="Address" Class2="Country" Role1="Address" Role2="Country" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.4312977099236641" Percent2="0.5055555555555555" Path="M 214.21359252929688 442 L 273.837890625 442" />
+    </Association>
+    <Association ModelName="Product" Class1="Product" Class2="Address" Role1="Product" Role2="Site" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Right" Percent1="0.02900390625" Percent2="0.286103515625" Path="M 1034 266 L 1034 396 L 763 396" />
+    </Association>
+    <Association ModelName="SearchQuery" Class1="SearchQuery" Class2="SectorType" Role1="SearchQuery" Role2="SelectedSector" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.40013180892747297" Percent2="0.6230722839665719" Path="M 764.5020141601562 460 L 704.3237915039062 460" />
+    </Association>
+    <Association ModelName="Product" Class1="Product" Class2="Material" Role1="Product" Role2="Resource" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.2202797202797203" Percent2="0.21367521367521367" Path="M 450 358 L 558 358 L 558 517" />
+    </Association>
+    <Association ModelName="GraphQuery" Class1="GraphQuery" Class2="Product" Role1="GraphQuery" Role2="DesiredProduct" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.514018691588785" Percent2="0.15254237288135594" Path="M 734.8427124023438 370 L 512.121826171875 370" />
+    </Association>
+    <Association ModelName="GraphQuery" Class1="GraphQuery" Class2="Product" Role1="GraphQuery_1" Role2="ResourceProduct" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.7616822429906542" Percent2="0.3022598870056497" Path="M 734.8427124023438 423 L 512.121826171875 423" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="Actors" Name="Actor" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="436.734375" Height="622" Top="655.5035400390625" Left="369.947509765625" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ShortDescription" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="GetShortDescription" Setter="" />
+        <Attribute Name="Url" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Email" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SpecifiedEnityType" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="250" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MemberOfCluster" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="GetCountOfClusterMembers" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="GetGetCountOfClusterMembers" Setter="" />
+        <Attribute Name="ClusterName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Keywords" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="HasSites" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetActorsDataset" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Domain.Actor] GetActorsDataset(Collection[string] names) 
+{
+	Collection[Domain.Actor] actors;
+	if(names.Length == 0)
+	{
+		actors = Domain.Actor.GetAll();
+	}else
+	{
+		//var onlyNames = names.Select(n =&gt; n.Name);
+		actors = Domain.Actor.GetAll().Where(a =&gt; names.Contains(a.Name));
+		
+	}
+	
+//	foreach Domain.ActorNames actorName in names 
+//	{
+//		var actor = Domain.Actor.Find(a =&gt; a.Name == actorName.Name).First();
+//		if(actor == null)
+//		{
+//			continue;
+//		}
+//		actors.Add(actor);
+//	}
+	return actors;
+	
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetActorsFromGraphResponse" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Domain.Actor] GetActorsFromGraphResponse(Domain.GraphBackendResponse response) 
+{
+	Collection[Domain.Actor] actors;
+	foreach Domain.Nodes node in response.Nodes.Where(n =&gt; n.Label == "Company") 
+	{
+		var actor = Domain.Actor.Find(a =&gt; a.Name == node.Name).First();
+		if(actor == null)
+		{
+			continue;
+		}
+		actors.Add(actor);
+	} 
+	return actors;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="InitNewActor" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.Actor InitNewActor() 
+{
+	Domain.Actor actor;
+	
+	actor.CircularEconomyRequirements = Domain.CircularEconomyReport.Create();
+	actor.EntityType = Domain.EntityType.GetAll().First();
+	
+	return actor;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetShortDescription" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function string GetShortDescription() 
+{
+
+	var descLength =  this.Description.Length;
+	if(descLength &lt;  250)
+	{
+		return this.Description;
+	}
+	return this.Description.Substring(0, 250) + "...";
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetActorNamesFromGraphResponse" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Domain.ActorNames] GetActorNamesFromGraphResponse(Domain.GraphBackendResponse response) 
+{
+	Collection[Domain.ActorNames] actorNames;
+	Collection[string] types = Domain.EntityType.GetAll().Select(a =&gt; a.Code);
+	foreach Domain.Nodes node in response.Nodes.Where(n =&gt; types.Contains(n.Label)) 
+	{
+		Domain.ActorNames actorName = Domain.ActorNames.Create();
+		actorName.Name = node.Name;
+		actorNames.Add(actorName);
+	} 
+	return actorNames;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetGetCountOfClusterMembers" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function int GetGetCountOfClusterMembers() 
+{
+
+	if(this.EntityType.IsCluster)
+	{
+		return this.Actors.Length;
+	}
+	return 0;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="AddProductFromAPI" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function void AddProductFromAPI(Domain.Product product, bool desired) 
+{
+	//product type
+	if(product.Resource.Type != null &amp;&amp; Domain.ProductType.Find(a =&gt; a.Name == product.Resource.Type.Name).Length &gt; 0)
+	{
+		var productTypeDb = Domain.ProductType.Find(a =&gt; a.Name == product.Resource.Type.Name).First();
+		product.Resource.Type = productTypeDb;
+	}
+	//unit of measurement
+	if(product.Resource.UnitOfMeasurement != null &amp;&amp; Domain.UnitOfMeasurement.Find(a =&gt; a.Code == product.Resource.UnitOfMeasurement.Code).Length &gt; 0)
+	{
+		var unitOfMeasurementDb = Domain.UnitOfMeasurement.Find(a =&gt; a.Code == product.Resource.UnitOfMeasurement.Code).First();
+		product.Resource.UnitOfMeasurement = unitOfMeasurementDb;
+	}
+	//material
+	if(product.Resource != null &amp;&amp; Domain.Material.Find(a =&gt; a.Name == product.Resource.Name).Length &gt; 0)
+	{
+		var materialDb = Domain.Material.Find(a =&gt; a.Name == product.Resource.Name).First();
+		product.Resource = materialDb;
+	}
+	//physical Form
+	if(product.Resource.PhysicalForm != null &amp;&amp; Domain.PhysicalForm.Find(a =&gt; a.Code == product.Resource.PhysicalForm.Code).Length &gt; 0)
+	{
+		var physicalFormDb = Domain.PhysicalForm.Find(a =&gt; a.Code == product.Resource.PhysicalForm.Code).First();
+		product.Resource.PhysicalForm = physicalFormDb;
+	}
+	if(product.Site != null &amp;&amp; Domain.Address.Find(a =&gt; a.Alias == product.Site.Alias).Length &gt; 0)
+	{
+		var siteDb = Domain.Address.Find(a =&gt; a.Alias == product.Site.Alias).First();
+		product.Site = siteDb;
+	}
+	//site
+	if(desired)
+	{
+		this.CircularEconomyRequirements.DesiredResources.Add(product);
+	}
+	else
+	{
+		this.CircularEconomyRequirements.Resources.Add(product);
+	}
+	this.Save();
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetAddresses" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Domain.Address] GetAddresses(int id) 
+{
+	Collection[Domain.Address] addresses;
+	Domain.Actor actor = Domain.Actor.GetByKey(id);
+	if(actor.Address != null)
+	{
+		addresses.Add(actor.Address);
+	}
+	if(actor.HasSites)
+	{
+		addresses.AddRange(actor.Sites);
+	}
+	return addresses;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetActorNamesFromElasticResponse" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Domain.ActorNames] GetActorNamesFromElasticResponse(Interfaces.ElasticSearch.SearchResponse response) 
+{
+	Collection[Domain.ActorNames] actorNames;
+	var actors = response.Hits.Hits.ToCollection().Select(a =&gt; a.Source.Name);
+	foreach string name in actors) 
+	{
+		Domain.ActorNames actorName = Domain.ActorNames.Create();
+		actorName.Name = name;
+		actorNames.Add(actorName);
+	} 
+	return actorNames;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="Match" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function void Match() 
+{
+//	foreach Domain.Product product in this.CircularEconomyRequirements.DesiredResources 
+//	{
+//		Domain.ListProducersMaterialRequest req;
+//		Domain.ListProducersMaterialStatements stat;
+//		
+//		stat.Statement = "MATCH p= (producer:Actor)-[*]-&gt;(:Material {Id: $props.MaterialId})-[*]-&gt;(consumer:Actor {Id: $props.ActorId}) WHERE NOT (consumer)--&gt;() RETURN producer";
+//		
+//		stat.Parameters = Domain.ListProducersMaterialParameters.Create();
+//		stat.Parameters.Properties = Domain.ListProducersMaterialProps.Create();
+//		
+//		stat.Parameters.Properties.ActorId = this.Id;
+//		stat.Parameters.Properties.MaterialId = product.Resource.Id;
+//		
+//		req.Statements.Add(stat);
+//		
+//		var reqParsed = DataTransformations.KnowledgeBase.ListProducersMaterialRequest_To_ListProducersMaterialRequest(req);
+//	
+//		CommonLib.Serializer[Interfaces.KnowledgeBase.ListProducersMaterialRequest] ser;
+//		DebugLib.Logger.WriteInfoLine("request " +  ser.ToJson(reqParsed));
+//	
+//		Interfaces.KnowledgeBase.KnowledgeBaseResult result = Interfaces.KnowledgeBase.API.ListPossibleProducersForMaterial(reqParsed);
+//		
+//		CommonLib.Serializer[Interfaces.KnowledgeBase.KnowledgeBaseResult] serRes;
+//		DebugLib.Logger.WriteInfoLine("result " +  result.Results.Get(0).Data.Get(0).Row.Get(0).Name);
+//	}
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="ListPossibleMatches" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function Collection[Domain.ActorNames] ListPossibleMatches(bool offers) 
+{
+		Domain.ListProducersMaterialRequest req;
+		Domain.ListProducersMaterialStatements stat;
+		
+		if(offers)
+		{
+			stat.Statement = "MATCH p=(:Actor{Id: $props.ActorId})-[*]-&gt;(:Material)-[*]-&gt;(a:Actor) RETURN a";
+		}
+		else
+		{
+			stat.Statement = "MATCH p=(a:Actor)-[*]-&gt;(:Material)-[*]-&gt;(:Actor {Id: $props.ActorId}) RETURN a";
+			
+		}
+		
+		stat.Parameters = Domain.ListProducersMaterialParameters.Create();
+		stat.Parameters.Properties = Domain.ListProducersMaterialProps.Create();
+		
+		stat.Parameters.Properties.ActorId = this.Id;
+		
+		req.Statements.Add(stat);
+		
+		var reqParsed = DataTransformations.KnowledgeBase.ListProducersMaterialRequest_To_ListProducersMaterialRequest(req);
+	
+		CommonLib.Serializer[Interfaces.KnowledgeBase.ListProducersMaterialRequest] ser;
+		DebugLib.Logger.WriteInfoLine("request " +  ser.ToJson(reqParsed));
+	
+		Interfaces.KnowledgeBase.KnowledgeBaseResult result = Interfaces.KnowledgeBase.API.ListPossibleMatches(reqParsed);
+		
+		CommonLib.Serializer[Interfaces.KnowledgeBase.KnowledgeBaseResult] serRes;
+		DebugLib.Logger.WriteInfoLine("result " +  serRes.ToJson(result));
+		
+		Collection[Domain.ActorNames] names;
+		if(result.Results.Length &gt; 0 &amp;&amp; result.Results.Get(0).Data.Length &gt; 0)
+		{
+			for int i = 0; i &lt; result.Results.Get(0).Data.Length; i + 1 
+			{
+				Domain.ActorNames name;
+				name.Name = result.Results.Get(0).Data.Get(i).Row.Get(0).Name;
+				names.Add(name);
+			}	
+		}
+		return names;
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="Actors" Name="DigitalExpertise" ShadowModel="" ShadowClass="" Description="" Stereotype="Enumeration" PK="" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="false" Width="218.234375" Height="50" Top="372.1964111328125" Left="1559.7703857421875" />
+      <Literals>
+        <Literal Name="None" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Average" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Medium" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="Sufficient" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+        <Literal Name="High" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="">
+          <DiagramInfo Edge1="Top" Edge2="Top" Percent1="0.5" Percent2="0.5" Path="M 0 0 L 0 0" />
+        </Literal>
+      </Literals>
+      <Operations />
+    </Class>
+    <Class ModelName="User" Name="DigicircUser" ShadowModel="User" ShadowClass="DigicircUser" Description="" Stereotype="Class" PK="UserName" ConcurencyControl="true" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="ApplicationUser" TableName="" BaseClasses="ApplicationUser" BaseModel="ApplicationSystemBO">
+      <DiagramInfo IsExpanded="false" Width="294.578125" Height="50" Top="1252.865966796875" Left="13.703700065612793" />
+      <Attributes>
+        <Attribute Name="UserName" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="true" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PasswordHash" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="2147483647" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SecurityStamp" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="2147483647" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="EmailConfirmed" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="LockoutEnabled" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PhoneNumberConfirmed" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="TwoFactorEnabled" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AccessFailedCount" IsValueClass="false" Description="" DataType="int" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="256" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Email" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PhoneNumber" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="LockoutEndDate" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="FirstName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="256" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="LastName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="256" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SubscribeToNewsLetter" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="IsInRole" Description="" Syntax="" BaseInfo="ApplicationSystemBO:ApplicationUser" IsStatic="false" IsInherited="true" IsExternal="true">function bool IsInRole(string roleName)
+{
+	return this.Roles.Any(r =&gt; r.Name == roleName);
+}            </Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="HasPermission" Description="" Syntax="" BaseInfo="ApplicationSystemBO:ApplicationUser" IsStatic="false" IsInherited="true" IsExternal="true">function bool HasPermission(string permission)
+{
+  bool hasPermissionfromRoles = this.Roles.Any(rr =&gt; rr.Permissions.Any(pp =&gt; pp.Name == permission));
+	return hasPermissionfromRoles || this.Permissions.Any(pp =&gt; pp.Name == permission);
+}            </Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="Geolocation" Name="Address" ShadowModel="Geolocation" ShadowClass="Address" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="false" Width="203.25" Height="50" Top="381.69482421875" Left="558.8507080078125" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Latitude" IsValueClass="false" Description="" DataType="double" BaseInfo="" Length="100" Precision="15" Scale="15" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Longitude" IsValueClass="false" Description="" DataType="double" BaseInfo="" Length="100" Precision="18" Scale="15" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="StreetName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Number" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Town" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Zip" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="FullAddress" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="GetFullAddress" Setter="" />
+        <Attribute Name="Alias" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="500" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetFullAddress" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="true">function string GetFullAddress()
+{
+	return this.StreetName + " " + this.Number + ",&lt;br /&gt;" + this.Town + " " + this.Zip + "&lt;br /&gt;" + this.Country.Name;
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="Actors" Name="CircularEconomyReport" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="391.53125" Height="358" Top="474.0074462890625" Left="1107.7337646484375" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ExperienceInCircularEconomy" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SpecifyExperienceInCircularEconomy" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="250" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="DigitalExpertise" IsValueClass="true" Description="" DataType="DigitalExpertise" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" Path="M 1412.1839599609375 473.896484375 L 1412.1839599609375 411 L 1559.4095458984375 411" Edge1="Top" Edge2="Left" Percent1="0.7775884946923138" Percent2="0.77607177734375" />
+        <Attribute Name="DigitalProviredNeeded" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ThematicExpertiseNeeded" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="GetExperienceInCircularEconomy" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="GetGetExperienceInCircularEconomy" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetGetExperienceInCircularEconomy" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function string GetGetExperienceInCircularEconomy() 
+{
+
+
+	return this.ExperienceInCircularEconomy? "yes" : "no";
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="ValueList" Name="ThematicExpertise" ShadowModel="ValueList" ShadowClass="ThematicExpertise" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="ValueType" TableName="" BaseClasses="ValueType" BaseModel="ValueList">
+      <DiagramInfo IsExpanded="true" Width="246.375" Height="182" Top="1003.3901977539062" Left="1096.2249755859375" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="ValueList:ValueType" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ValueList" Name="SectorType" ShadowModel="ValueList" ShadowClass="SectorType" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="ValueType" TableName="" BaseClasses="ValueType" BaseModel="ValueList">
+      <DiagramInfo IsExpanded="true" Width="181.359375" Height="206" Top="424.4547119140625" Left="867.4736938476562" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="ValueList:ValueType" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Geolocation" Name="GeographicalArea" ShadowModel="Geolocation" ShadowClass="GeographicalArea" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="238.296875" Height="180" Top="931.6395263671875" Left="1405.208984375" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="Actors" Name="CircularEconomyProviderReport" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="382.234375" Height="214" Top="1339.84716796875" Left="798.7872924804688" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AvailableTestingFacilities" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ValueList" Name="Services" ShadowModel="ValueList" ShadowClass="Services" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="ValueType" TableName="" BaseClasses="ValueType" BaseModel="ValueList">
+      <DiagramInfo IsExpanded="true" Width="181.359375" Height="182" Top="1616" Left="1093.7078857421875" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="ValueList:ValueType" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ValueList" Name="Expertise" ShadowModel="ValueList" ShadowClass="Expertise" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="ValueType" TableName="" BaseClasses="ValueType" BaseModel="ValueList">
+      <DiagramInfo IsExpanded="true" Width="181.359375" Height="182" Top="1615.94970703125" Left="775.1428833007812" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="ValueList:ValueType" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="" Name="FileData" ShadowModel="" ShadowClass="FileData" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="true" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="false" Width="297.109375" Height="50" Top="878.9921264648438" Left="10" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="Guid" BaseInfo="" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="FileName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="FolderPath" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="MaxFileSize" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="2147483647" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AllowedExtensions" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="2147483647" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Blob" IsValueClass="false" Description="" DataType="Collection[byte]" BaseInfo="" Length="2147483647" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="StorageMedium" IsValueClass="true" Description="" DataType="StorageMedium" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" Path="M 37 264 L 0 264 L 0 720 L 620 720 L 620 700" Edge1="Left" Edge2="Bottom" Percent1="0.34579439252336447" Percent2="0.6928571428571428" />
+        <Attribute Name="UploadedBy" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="1000" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="UploadDateTime" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetAbsolutePath" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function string GetAbsolutePath() {                   
+                  if (this.StorageMedium == Domain.StorageMedium.DataBase) { return null; }
+                  
+                  string relativePath = FileIOLib.Path.Combine(this.FolderPath, this.FileName);
+   	              return CommonLib.Utilities.GetUploadsPath(relativePath); 
+            } </Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetThumbnail" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function Collection[byte] GetThumbnail(int width, int height) { 
+              if (this.StorageMedium == Domain.StorageMedium.DataBase) { 
+                return CommonLib.Utilities.CreateThumbnail(this.Blob, width, height);  
+              }
+              else {
+                var image = FileIOLib.File.ReadAllBytesFrom(this.GetAbsolutePath());
+                return CommonLib.Utilities.CreateThumbnail(image.ToCollection(), width, height);  
+              }
+              
+            } </Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="Product" Name="Product" ShadowModel="Product" ShadowClass="Product" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="185.0625" Height="258" Top="8.2557373046875" Left="1028.63427734375" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Quantity" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ValidFrom" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ValidTo" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IsDesired" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

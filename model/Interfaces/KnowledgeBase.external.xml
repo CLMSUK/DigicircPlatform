@@ -1,0 +1,198 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<ExternalApi DateCreated="10/30/2020" Model_Name="KnowledgeBase" Model_Description="" Version="" Comments="">
+  <Endpoint TransportType="HTTP" ProtocolType="REST">
+    <Security SecurityType="Basic">
+      <BasicSecurityDetails Username="neo4j" Password="dd6VDrRwUutx72EM" />
+    </Security>
+    <Class Name="MaterialCreateRequest" OriginalName="MaterialCreateRequest" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Statements" OriginalName="statements" Description="" Datatype="Array[Interfaces.KnowledgeBase.MaterialCreateStatements]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="MaterialCreateStatements" OriginalName="statements" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Statement" OriginalName="statement" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Parameters" OriginalName="parameters" Description="" Datatype="Interfaces.KnowledgeBase.MaterialCreateParameters" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="MaterialCreateParameters" OriginalName="parameters" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Props" OriginalName="props" Description="" Datatype="Interfaces.KnowledgeBase.MaterialCreateProps" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="MaterialCreateProps" OriginalName="props" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Name" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Decription" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="HsSpecific" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Id" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="KnowledgeBaseResult" OriginalName="KnowledgeBaseResult" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Results" OriginalName="results" Description="" Datatype="Array[Interfaces.KnowledgeBase.KnowledgeBaseResults]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="KnowledgeBaseResults" OriginalName="results" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Columns" OriginalName="columns" Description="" Datatype="Array[string]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Data" OriginalName="data" Description="" Datatype="Array[Interfaces.KnowledgeBase.KnowledgeBaseData]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="KnowledgeBaseData" OriginalName="data" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Row" OriginalName="" Description="" Datatype="Array[Interfaces.KnowledgeBase.KnowledgeBaseRow]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Meta" OriginalName="" Description="" Datatype="Array[Interfaces.KnowledgeBase.KnowledgeBaseMeta]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="KnowledgeBaseRow" OriginalName="row" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Decription" OriginalName="Decription" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Name" OriginalName="Name" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Id" OriginalName="Id" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="HsSpecific" OriginalName="HsSpecific" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="KnowledgeBaseMeta" OriginalName="meta" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Id" OriginalName="id" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Type" OriginalName="type" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Deleted" OriginalName="deleted" Description="" Datatype="bool" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ProcessCreateRequest" OriginalName="ProcessCreateRequest" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Statements" OriginalName="statements" Description="" Datatype="Array[Interfaces.KnowledgeBase.ProcessCreateStatements]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ProcessCreateStatements" OriginalName="statements" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Statement" OriginalName="statement" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Parameters" OriginalName="parameters" Description="" Datatype="Interfaces.KnowledgeBase.ProcessCreateParameters" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ProcessCreateParameters" OriginalName="parameters" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Props" OriginalName="props" Description="" Datatype="Interfaces.KnowledgeBase.ProcessCreateProps" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ProcessCreateProps" OriginalName="props" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Id" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Name" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Notes" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Ref" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="SourceId" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="ProductId" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ActorCreateRequest" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="statements" OriginalName="" Description="" Datatype="Array[Interfaces.KnowledgeBase.ActorCreateStatements]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ActorCreateStatements" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="statement" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="parameters" OriginalName="" Description="" Datatype="Interfaces.KnowledgeBase.ActorCreateParameters" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ActorCreateProps" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Id" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Name" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ActorCreateParameters" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="props" OriginalName="" Description="" Datatype="Interfaces.KnowledgeBase.ActorCreateProps" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ConnectActorMaterialProps" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="ActorId" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="MaterialId" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ConnectActorMaterialParameters" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="props" OriginalName="" Description="" Datatype="Interfaces.KnowledgeBase.ConnectActorMaterialProps" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ConnectActorMaterialStatements" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="statement" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="parameters" OriginalName="" Description="" Datatype="Interfaces.KnowledgeBase.ConnectActorMaterialParameters" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ConnectActorMaterialRequest" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="statements" OriginalName="" Description="" Datatype="Array[Interfaces.KnowledgeBase.ConnectActorMaterialStatements]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ListProducersMaterialRequest" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="statements" OriginalName="" Description="" Datatype="Array[Interfaces.KnowledgeBase.ListProducersMaterialStatements]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ListProducersMaterialStatements" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="statement" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="parameters" OriginalName="" Description="" Datatype="Interfaces.KnowledgeBase.ListProducersMaterialParameters" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ListProducersMaterialParameters" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="props" OriginalName="" Description="" Datatype="Interfaces.KnowledgeBase.ListProducersMaterialProps" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ListProducersMaterialProps" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="ActorId" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="MaterialId" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Operation Name="CreateMaterial" Description="" Datatype="Interfaces.KnowledgeBase.KnowledgeBaseResult" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="/db/neo4j/tx/commit" Notes="" UserDefinedUrlMethod="false">
+      <Parameters>
+        <Parameter Name="parameter" DataType="Interfaces.KnowledgeBase.MaterialCreateRequest" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Interfaces.KnowledgeBase.MaterialCreateRequest parameter,
+	Interfaces.KnowledgeBase.KnowledgeBaseResult response
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+    <Operation Name="CreateProcess" Description="" Datatype="Interfaces.KnowledgeBase.KnowledgeBaseResult" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="/db/neo4j/tx/commit" Notes="" UserDefinedUrlMethod="false">
+      <Parameters>
+        <Parameter Name="parameter" DataType="Interfaces.KnowledgeBase.ProcessCreateRequest" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Interfaces.KnowledgeBase.ProcessCreateRequest parameter,
+	Interfaces.KnowledgeBase.KnowledgeBaseResult response
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+    <Operation Name="CreateActor" Description="" Datatype="Interfaces.KnowledgeBase.KnowledgeBaseResult" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="/db/neo4j/tx/commit" Notes="" UserDefinedUrlMethod="false">
+      <Parameters>
+        <Parameter Name="parameter" DataType="Interfaces.KnowledgeBase.ActorCreateRequest" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Interfaces.KnowledgeBase.ActorCreateRequest parameter,
+	Interfaces.KnowledgeBase.KnowledgeBaseResult response
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+    <Operation Name="ConnectActorOfferedBy" Description="" Datatype="void" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="/db/neo4j/tx/commit" Notes="" UserDefinedUrlMethod="false">
+      <Parameters>
+        <Parameter Name="parameter" DataType="Interfaces.KnowledgeBase.ConnectActorMaterialRequest" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Interfaces.KnowledgeBase.ConnectActorMaterialRequest parameter
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+    <Operation Name="ConnectActorRequests" Description="" Datatype="void" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="/db/neo4j/tx/commit" Notes="" UserDefinedUrlMethod="false">
+      <Parameters>
+        <Parameter Name="parameter" DataType="Interfaces.KnowledgeBase.ConnectActorMaterialRequest" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Interfaces.KnowledgeBase.ConnectActorMaterialRequest parameter
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+    <Operation Name="ListPossibleMatches" Description="" Datatype="Interfaces.KnowledgeBase.KnowledgeBaseResult" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="/db/neo4j/tx/commit" Notes="" UserDefinedUrlMethod="false">
+      <Parameters>
+        <Parameter Name="parameter" DataType="Interfaces.KnowledgeBase.ListProducersMaterialRequest" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Interfaces.KnowledgeBase.ListProducersMaterialRequest parameter,
+	Interfaces.KnowledgeBase.KnowledgeBaseResult response
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+    <Operation Name="DeleteRelationships" Description="" Datatype="void" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="/db/neo4j/tx/commit" Notes="" UserDefinedUrlMethod="false">
+      <Parameters>
+        <Parameter Name="parameter" DataType="Interfaces.KnowledgeBase.ConnectActorMaterialRequest" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Interfaces.KnowledgeBase.ConnectActorMaterialRequest parameter
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+  </Endpoint>
+  <RestEndpointDetails BaseUrl="https://knowledge-graph.clmsuk.com" IgnoringNullFields="false" />
+</ExternalApi>

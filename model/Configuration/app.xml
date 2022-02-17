@@ -1,0 +1,605 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<Application DateCreated="07/20/2020" Model_Name="app" Model_Description="" Version="0.2.0" Comments="" OptionalLibraries="">
+  <Name>DigicircMatchmaking</Name>
+  <Theme>LiteTheme</Theme>
+  <AllowAdminToSetPasswords>false</AllowAdminToSetPasswords>
+  <Description>
+  </Description>
+  <AuthenticationType>Anonymous</AuthenticationType>
+  <Authorization>
+    <Roles>
+      <Role Name="Administrator" Description="Administrator" Permissions="ManageUsers;ManageRoles;ManagePermissions;ManageOperations;ManageSettings;ManageApplicationData;EditValueLists" />
+      <Role Name="User" Description="" Permissions="User;AddActors;EditOrganisation" />
+      <Role Name="Expert" Description="Expert" Permissions="ManageSymbiosis" />
+      <Role Name="Moderator" Description="" Permissions="EditValueLists;EditOrganisation;ManageActors" />
+    </Roles>
+    <Permissions>
+      <Permission Name="ManageUsers" Description="Can Manage Users" PermanentId="764650520" />
+      <Permission Name="ManageRoles" Description="Can Manage Roles" PermanentId="592647620" />
+      <Permission Name="ManagePermissions" Description="Can Manage Permissions" PermanentId="898003211" />
+      <Permission Name="ManageOperations" Description="Can Manage Operations" PermanentId="719339385" />
+      <Permission Name="ManageSettings" Description="Can Manage Settings" PermanentId="1881828570" />
+      <Permission Name="ManageApplicationData" Description="Can Manage Application Data" PermanentId="1385935426" />
+      <Permission Name="CustomerSelectionAndAdmin_Add" Description="CustomerSelectionAndAdmin_Add" PermanentId="1107507761" />
+      <Permission Name="User" Description="User Permision" PermanentId="" />
+      <Permission Name="EditOrganisation" Description="User can Edit Organisation" PermanentId="" />
+      <Permission Name="EditValueLists" Description="Can manage value lists" PermanentId="" />
+      <Permission Name="Developer" Description="Developer" PermanentId="" />
+      <Permission Name="ManageActors" Description="Can Manage Actors" PermanentId="" />
+      <Permission Name="ManageSymbiosis" Description="Can Manage Symbiosys" PermanentId="" />
+      <Permission Name="AddActors" Description="Can Add Actors" PermanentId="" />
+    </Permissions>
+  </Authorization>
+  <Globalization DefaultLocale="en-us" DefaultRegionalFormatting="en-us" DefaultTimezoneId="">
+    <Locales>
+      <Locale LCID="1033" LCString="en-us" LCDescription="English-United States" />
+      <Locale LCID="1032" LCString="el" LCDescription="Greek" />
+    </Locales>
+    <Resources>
+      <Res Type="S" Key="RES_SITE_ApplicationTitle" en-us="Digicirc Tools" el="Digicirc Tools" />
+      <Res Type="S" Key="RES_SITE_ApplicationDescription" en-us="" el="" />
+      <Res Type="S" Key="RES_SITE_WindowTitle" en-us="DigicircMatchmaking" el="DigicircMatchmaking" />
+      <Res Type="S" Key="RES_SITE_PREFS_CancelButtonText" en-us="Cancel" el="Ακύρωση" />
+      <Res Type="S" Key="RES_SITE_PREFS_OKButtonText" en-us="OK" el="OK" />
+      <Res Type="S" Key="RES_SITE_Changesnotsaved" en-us="Unsaved changes" el="Μη Αποθηκευμένες Αλλαγές" />
+      <Res Type="S" Key="RES_SITE_SessionExpiredErrorMessage" en-us="Your session has expired. Any changes have been ignored." el="Η περίοδος σύνδεσής σας έχει λήξει." />
+      <Res Type="S" Key="RES_SITE_SessionRefreshMessage" en-us="Your session is about to expire.&lt;/br&gt;&lt;/br&gt;Click the button below to refresh it." el="&gt;Η περίοδος σύνδεσής σας θα λήξει σύντομα.&lt;/br&gt;&lt;/br&gt;Κάντε κλικ στο παρακάτω πλήκτρο για να την ανανεώσετε." />
+      <Res Type="S" Key="RES_SITE_SessionRefreshedMessage" en-us="Your session has been successfully refreshed!" el="Η περίοδος σύνδεσής σας ανανεώθηκε επιτυχώς!" />
+      <Res Type="S" Key="RES_SITE_ExitConfirmation" en-us="Exit Confirmation" el="Επιβεβαίωση Εξόδου" />
+      <Res Type="S" Key="RES_SITE_ExitConfirmationMessage" en-us="There is unsaved information on this page that will be lost.&lt;/br&gt;&lt;/br&gt;Are you sure you want to exit?" el="Υπάρχουν μη αποθηκευμένα δεδομένα σε αυτή τη σελίδα που θα χαθούν.&lt;/br&gt;&lt;/br&gt;Είστε σίγουροι ότι θέλετε να εξέλθετε;" />
+      <Res Type="S" Key="RES_SITE_AreYouSure" en-us="Are you sure ?" el="Είστε σίγουροι;" />
+      <Res Type="S" Key="RES_SITE_Confirm" en-us="Please Confirm" el="Παρακαλώ επιβεβαιώστε" />
+      <Res Type="S" Key="RES_SITE_CloseChildList" en-us="Close" el="Κλείσιμο" />
+      <Res Type="S" Key="RES_SITE_Exit" en-us="OK" el="OK" />
+      <Res Type="S" Key="RES_SITE_NullValue" en-us="(empty)" el="(κενό)" />
+      <Res Type="S" Key="RES_SITE_POPUP_BLOCKED_TITLE" en-us="Attachment Download Blocked!" el="Μπλοκαρίστηκε η Μεταφόρτωση του Αρχείου!" />
+      <Res Type="S" Key="RES_SITE_POPUP_BLOCKED_MESSAGE" en-us="Your browser does not allow popups.&lt;br/&gt;Please, disable your Popup Blocker,&lt;br/&gt;or add this site to your exceptions list." el="Ο διαφυλλιστής σας δεν επιτρέπει αναδυόμενα παράθυρα.&lt;br/&gt;Παρακαλούμε, απενεργοποιήστε τον Popup Blocker σας&lt;br/&gt;ή προσθέστε τη σελίδα αυτή στην λίστα των εξαιρέσεών του." />
+      <Res Type="S" Key="RES_SITE_StaleObjectStateExceptionTitle" en-us="Stale Data" el="Παλαιά Δεδομένα" />
+      <Res Type="S" Key="RES_SITE_StaleObjectStateExceptionMessage" en-us="Somebody already committed modifications to the data you are about to commit. You have been working with stale data.Please, refresh your page in order to restart with fresh data." el="Κάποιος ήδη έχει αλλάξει τα δεδομένα που θέλετε να αποστείλετε. Δουλεύατε με παλαιά δεδομένα.Παρακαλούμε, ανανεώστε τη σελίδα σας προκειμένου να εργαστείτε με νέα δεδομένα." />
+      <Res Type="S" Key="RES_CONTROLLER_ACTION_TimeoutErrorTitle" en-us="Timeout" el="Λήξη Χρονικού Ορίου" />
+      <Res Type="S" Key="RES_CONTROLLER_ACTION_TimeoutErrorMessage" en-us="The running operation has timed out." el="Λήξη χρονικού ορίου κατά την εκέλεση της λειτουργίας." />
+      <Res Type="S" Key="RES_CONTROLLER_ACTION_AbortErrorTitle" en-us="Abort" el="Διακοπή" />
+      <Res Type="S" Key="RES_CONTROLLER_ACTION_AbortErrorMessage" en-us="The running operation has been aborted." el="Η τρέχουσα λειτουργία διακόπηκε." />
+      <Res Type="S" Key="RES_CONTROLLER_ACTION_GenericErrorTitle" en-us="Error" el="Σφάλμα" />
+      <Res Type="S" Key="RES_CONTROLLER_ACTION_GenericErrorMessage" en-us="Caught an unknown error, while communicating with the Server." el="Παρουσιάστηκε ένα άγνωστο σφάλμα κατά την επικοινωνία με τον Εξυπηρετητή." />
+      <Res Type="S" Key="RES_CONTROLLER_ACTION_ParserErrorTitle" en-us="Parser Error" el="Σφάλμα Parser" />
+      <Res Type="S" Key="RES_CONTROLLER_ACTION_ParserErrorMessage" en-us="Caught a Parser Error." el="Παρουσιάστηκε σφάλμα κατά την ανάλυση των δεδομένων." />
+      <Res Type="S" Key="RES_BO_PrimaryKeyNotSet" en-us="{0}'s PrimaryKey:[{1}] value was not set!" el="{0}' Πρωτεύον Κλειδί:[{1}] δεν έχει τιμή!" />
+      <Res Type="S" Key="RES_BO_CannotDeleteNewObject" en-us="Cannot delete a new [{0}] object!" el="Δεν μπορεί να διαγραφή νέο [{0}] αντικείμενο!" />
+      <Res Type="S" Key="RES_BO_UpdateFailedDueToConcurrency" en-us="Object could not be updated. Another user has modified it!" el="Το αντικείμενο δεν μπορεί να ενημερωθεί. Κάποιος άλλος χρήστης το τροποποίησε!" />
+      <Res Type="S" Key="RES_BO_DeleteFailedDueToConcurrency" en-us="Object could not be deleted. Another user has modified it!" el="Object could not be deleted. Another user has modified it!" />
+      <Res Type="S" Key="RES_BO_Overflow" en-us="The value specified for field [{1}] of [{0}] exceeds the maximum allowed size." el="The value specified for field [{1}] of [{0}] exceeds the maximum allowed size." />
+      <Res Type="S" Key="RES_BO_InvalidPassword" en-us="The Password you entered is invalid. The Password needs to:&lt;br/&gt;" el="The Password you entered is invalid. The Password needs to:&lt;br/&gt;" />
+      <Res Type="S" Key="RES_BO_InvalidPassword_CapitalLettersRequired" en-us="&amp;nbsp;&amp;nbsp;Include capital letters.&lt;br/&gt;" el="&amp;nbsp;&amp;nbsp;Include capital letters.&lt;br/&gt;" />
+      <Res Type="S" Key="RES_BO_InvalidPassword_MinPasswordLength" en-us="&amp;nbsp;&amp;nbsp;Be at least {0} characters long.&lt;br/&gt;" el="&amp;nbsp;&amp;nbsp;Be at least {0} characters long.&lt;br/&gt;" />
+      <Res Type="S" Key="RES_BO_InvalidPassword_MinRequiredNumericDigits" en-us="&amp;nbsp;&amp;nbsp;Include at least {0} numeric digits.&lt;br/&gt;" el="&amp;nbsp;&amp;nbsp;Include at least {0} numeric digits.&lt;br/&gt;" />
+      <Res Type="S" Key="RES_BO_InvalidPassword_MinRequiredNonAlphanumeric" en-us="&amp;nbsp;&amp;nbsp;Include at least {0} non-alphanumeric characters.&lt;br/&gt;" el="&amp;nbsp;&amp;nbsp;Include at least {0} non-alphanumeric characters.&lt;br/&gt;" />
+      <Res Type="S" Key="RES_BO_NewPass_And_OldPass_MustNotMatch" en-us="The new password cannot be the same as the old one." el="The new password cannot be the same as the old one." />
+      <Res Type="S" Key="RES_BO_BR_InvalidEmail" en-us="This is not a valid email address." el="This is not a valid email address." />
+      <Res Type="S" Key="RES_LIST_ERROR_ErrorTitle" en-us="Error Occured!" el="Προέκυψε Σφάλμα!" />
+      <Res Type="S" Key="RES_LIST_ERROR_CannotRemoveLastView" en-us="Cannot remove the last View! Try modifying it." el="Δεν επιτρέπεται να αφαιρεθεί και ο τελευταίος τρόπος προβολής. Επεξεργαστείτε τον." />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_ExportButtonTooltip" en-us="Export List" el="Εξαγωγή Λίστας" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_FilterButtonTooltip" en-us="Filter List" el="Φιλτράρισμα Λίστας" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_PreferencesButtonTooltip" en-us="Change List Preferences" el="Αλλαγή προτιμήσεων" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_RefreshButtonTooltip" en-us="Refresh List" el="Ανανέωση Λίστας" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_RefreshResetButtonTooltip" en-us="Reset List" el="Επαναφορά αρχικής κατάστασης της Λίστας" />
+      <Res Type="S" Key="RES_LIST_PAGER_PageSize" en-us="Show rows:" el="Προβολή γραμμών:" />
+      <Res Type="S" Key="RES_LIST_PAGER_Page" en-us="Page:" el="Σελίδα:" />
+      <Res Type="S" Key="RES_LIST_PAGER_Of" en-us="of" el="από" />
+      <Res Type="S" Key="RES_LIST_PAGER_FirstPage" en-us="First Page" el="Πρώτη Σελίδα" />
+      <Res Type="S" Key="RES_LIST_PAGER_PreviousPage" en-us="Previous Page" el="Προηγούμενη Σελίδα" />
+      <Res Type="S" Key="RES_LIST_PAGER_NextPage" en-us="Next Page" el="Επόμενη Σελίδα" />
+      <Res Type="S" Key="RES_LIST_PAGER_LastPage" en-us="Last Page" el="Τελευταία Σελίδα" />
+      <Res Type="S" Key="RES_LIST_PAGER_TotalRecords" en-us="Total Records:" el="Σύνολο γραμμών:" />
+      <Res Type="S" Key="RES_LIST_AGGREGATE_Summation" en-us="Total" el="Σύνολο" />
+      <Res Type="S" Key="RES_LIST_AGGREGATE_Average" en-us="Average" el="Μέση τιμή" />
+      <Res Type="S" Key="RES_LIST_AGGREGATE_Count" en-us="Count" el="Πλήθος:" />
+      <Res Type="S" Key="RES_LIST_PAGER_PageAggregateTooltip" en-us="Page {0} : {1}" el="Σελίδα {0} : {1}" />
+      <Res Type="S" Key="RES_LIST_PAGER_GrandAggregateTooltip" en-us="List {0} : {1}" el="Λίστα {0} : {1}" />
+      <Res Type="S" Key="RES_LIST_EXPORT_DialogTitle" en-us="Export Properties" el="Εξαγωγή Ρυθμίσεων" />
+      <Res Type="S" Key="RES_LIST_EXPORT_ExportRange_CurrentPage" en-us="Current Page" el="Τρέχουσα σελίδα" />
+      <Res Type="S" Key="RES_LIST_EXPORT_ExportRange_Top100Pages" en-us="Top 100 Records" el="Πρώτες 100 Εγγραφές" />
+      <Res Type="S" Key="RES_LIST_EXPORT_ExportRange_AllPages_10000_Restriction" en-us="All Pages (First 10000 Records)" el="Όλες οι σελίδες (Πρώτες 10.000 Εγγραφές)" />
+      <Res Type="S" Key="RES_LIST_EXPORT_ExportRange_AllPages" en-us="All Pages" el="Όλες οι σελίδες" />
+      <Res Type="S" Key="RES_LIST_EXPORT_PrintRange" en-us="Print Range" el="Εκτύπωση Εύρους" />
+      <Res Type="S" Key="RES_LIST_EXPORT_IncludeGridLines" en-us="Include Grid Lines" el="Εμφάνιση Γραμμών Πλέγματος" />
+      <Res Type="S" Key="RES_LIST_EXPORT_ExportOK" en-us="Export" el="Εξαγωγή" />
+      <Res Type="S" Key="RES_LIST_EXPORT_ExportCancel" en-us="Cancel" el="Ακύρωση" />
+      <Res Type="S" Key="RES_LIST_FILTERS_DialogTitle" en-us="Filters" el="Φίλτρα Λίστας" />
+      <Res Type="S" Key="RES_LIST_FILTERS_RowOperator_Header" en-us="Row Operator" el="Τύπος φίλτρου" />
+      <Res Type="S" Key="RES_LIST_FILTERS_RowOperatorTypes_None" en-us="[None]" el="[Κανένα]" />
+      <Res Type="S" Key="RES_LIST_FILTERS_RowOperatorTypes_And" en-us="And" el="Και" />
+      <Res Type="S" Key="RES_LIST_FILTERS_RowOperatorTypes_Or" en-us="Or" el="Ή" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Column_Header" en-us="Column" el="Στήλη" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Column_None" en-us="[None]" el="[Καμία]" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_Header" en-us="Operator" el="Τύπος Φίλτρου" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_None" en-us="None" el="Κανένα" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_EqualTo" en-us="Equal To" el="Ίσο με" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_NotEqualTo" en-us="Not Equal To" el="Δεν είναι Ίσο με" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_LessThan" en-us="Less Than" el="Μικρότερο Από" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_LessThanOrEqualTo" en-us="Less Than Or Equal To" el="Μικρότερο Ή Ίσο με" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_GreaterThan" en-us="Greater Than" el="Μεγαλύτερο από" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_GreaterThanOrEqualTo" en-us="Greater Than Or Equal To" el="Μεγαλύτερο Ή Ίσο με" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_Like" en-us="Like" el="Παρόμοιο με" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_IsNull" en-us="Is Null" el="Είναι Κενό" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_NotNull" en-us="Is Not Null" el="Δεν είναι Κενό" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_HasΝοValue" en-us="Has No Value" el="Χωρίς τιμή" />
+      <Res Type="S" Key="RES_LIST_FILTERS_SelectAll" en-us="Select All" el="Επιλογή Όλων" />
+      <Res Type="S" Key="RES_LIST_FILTERS_FilterValue_Header" en-us="Criteria" el="Κριτήρια" />
+      <Res Type="S" Key="RES_LIST_FILTERS_AddFilter" en-us="Add Filter" el="Προσθήκη φίλτρου" />
+      <Res Type="S" Key="RES_LIST_FILTERS_FilterOK" en-us="Apply Filter(s)" el="Εφαρμογή Φίλτρων" />
+      <Res Type="S" Key="RES_LIST_FILTERS_FilterCancel" en-us="Cancel" el="Ακύρωση" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_DialogTitle" en-us="Preferences" el="Προτιμήσεις Λίστας" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_Column_Header" en-us="List Column" el="Στήλη" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_Visible" en-us="Visible" el="Ορατή" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_Sorting" en-us="Sorting" el="Ταξινόμηση" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_SortingType_None" en-us="[None]" el="[Καμία]" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_SortingType_ASC" en-us="Ascending" el="Αύξουσα" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_SortingType_DESC" en-us="Descending" el="Φθίνουσα" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_SortOrder" en-us="Sort Order" el="Σειρά φίλτρου" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_MoveUp" en-us="Up" el="Πάνω" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_MoveDown" en-us="Down" el="Κάτω" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_PreferencesOK" en-us="Apply" el="Εφαρμογή" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_PreferencesCancel" en-us="Cancel" el="Ακύρωση" />
+      <Res Type="S" Key="RES_LIST_SelectCheckBox_Tooltip" en-us="Select me" el="Επιλογή" />
+      <Res Type="S" Key="RES_LIST_SelectAllCheckBox_Tooltip" en-us="Select all rows in the page" el="Επιλογή όλων των γραμμών στη Σελίδα" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_MoreActionsButton_Text" en-us="More Actions" el="Περισσότερες ενέργειες" />
+      <Res Type="S" Key="RES_LISTFORM_SUCCESS_SuccessMessage" en-us="Action completed succesfully!" el="Η ενέργεια ολοκληρώθηκε με επιτυχία!" />
+      <Res Type="S" Key="RES_LISTFORM_SUCCESS_SuccessTitle" en-us="Succesfull Action" el="Επιτυχής ολοκλήρωση" />
+      <Res Type="S" Key="RES_LIST_PAGER_SelectedRecords" en-us="Selected Records:" el="Επιλεγμένες γραμμές:" />
+      <Res Type="S" Key="RES_LISTFORM_NORESULTS_NoResults" en-us="No records found." el="Κανένα αποτέλεσμα." />
+      <Res Type="S" Key="RES_LIST_ERROR_UseOnlyEqualLike" en-us="Cannot apply operator to this column. Only &lt;b&gt;Equal To&lt;/b&gt;, &lt;b&gt;Not Equal To&lt;/b&gt; and &lt;b&gt;Like&lt;/b&gt; can be used." el="Δεν μπορεί να εφαρμοστεί ο επιλεγμένος τύπος σε αυτό το φίλτρο. Μόνο οι τύποι &lt;b&gt;Ίσο με&lt;/b&gt;, &lt;b&gt;Δεν είναι ίσο με&lt;/b&gt; και &lt;b&gt;Παρόμοιο&lt;/b&gt; μπορούν να χρησιμοποιηθούν." />
+      <Res Type="S" Key="RES_LIST_ERROR_MultipleNavigationActions" en-us="Cannot perform multiple navigation actions!" el="Δεν είναι δυνατό να εκτελεσθούν πολλαπλές μεταφορές σε άλλες σελίδες!" />
+      <Res Type="S" Key="RES_LIST_ShowOnlyGroups_Expand" en-us="Expand bottom level groups" el="Εμφάνιση όλων των ομάδων και των γραμμών" />
+      <Res Type="S" Key="RES_LIST_ShowOnlyGroups_Collapse" en-us="Collapse bottom level groups" el="Απόκρυψη γραμμών και εμφάνιση μόνο ομάδων" />
+      <Res Type="S" Key="RES_LIST_FILTERS_NoFilterDefined" en-us="No Filters defined." el="Δεν έχει οριστεί κανένα φίλτρο." />
+      <Res Type="S" Key="RES_LIST_EXPORT_ExportOnlyGroups" en-us="Export only Group data" el="Εξαγωγή μόνο των ομάδων" />
+      <Res Type="S" Key="RES_LIST_EXPORT_ExportTo" en-us="Export Type: " el="Εξαγωγή σε" />
+      <Res Type="S" Key="RES_LIST_VIEWS_RemovePrompt" en-us="Are you sure you wish to remove this view?" el="Θέλετε σίγουρα να διαγράψετε αυτή τη προβολή?" />
+      <Res Type="S" Key="RES_LIST_VIEWS_SaveHeader" en-us="Save Current View" el="Αποθήκευση προβολής" />
+      <Res Type="S" Key="RES_LIST_VIEWS_Name" en-us="View Name:" el="Όνομα προβολής:" />
+      <Res Type="S" Key="RES_LIST_VIEWS_Ok" en-us="OK" el="Αποθήκευση" />
+      <Res Type="S" Key="RES_LIST_VIEWS_Cancel" en-us="Cancel" el="Ακύρωση" />
+      <Res Type="S" Key="RES_LIST_VIEWS_MakeDefault" en-us="Make this the default view" el="Να γίνει ο προεπιλεγμένος τρόπος προβολής" />
+      <Res Type="S" Key="RES_LIST_VIEWS_Remove" en-us="Delete selected view" el="Διαγραφή προβολής" />
+      <Res Type="S" Key="RES_LIST_VIEWS_Save" en-us="Save current view" el="Αποθήκευση προβολής" />
+      <Res Type="S" Key="RES_LIST_PAGER_Items" en-us="records" el="Εγγραφές" />
+      <Res Type="S" Key="RES_LIST_PAGER_PerPage" en-us="per page" el="Ανά Σελίδα" />
+      <Res Type="S" Key="RES_LIST_PAGE_Pages" en-us="pages" el="Σελίδες" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_Rearrange" en-us="Rearrange" el="Αναδιάταξη" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_HideQuickFilters" en-us="Hide Quick Filters" el="Απόκρυψη Φίλτρων" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_PredefinedView" en-us="Predefined View" el="Προκαθορισμένη Προβολή" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_Search" en-us="Search" el="Αναζήτηση" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_ShowQuickFilters" en-us="Show Quick Filters" el="Φίλτρα" />
+      <Res Type="S" Key="RES_LIST_VIEWS_IsDefault" en-us="IsDefault" el="Είναι η αρχική προβολή" />
+      <Res Type="S" Key="RES_LISTFORM_FiltersApplied" en-us="Clear All Filters" el="Καθαρισμός" />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_GrandAverage" en-us="Grand Average:" el="Μέσος Όρος: " />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_GrandCount" en-us="Count:" el="Πλήθος: " />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_GrandTotal" en-us="Total:" el="Σύνολο:" />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_PageAverage" en-us="Page Average:" el="Μέσος Όρος Σελίδας:" />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_PageCount" en-us="Page Count:" el="Πλήθος Σελίδας:" />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_PageTotal" en-us="Page Total:" el="Σύνολο Σελίδας:" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_GroupingOrder" en-us="Grouping Order" el="Σειρά Ομαδοποίησης" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_Page" en-us="page" el="Σελίδα" />
+      <Res Type="S" Key="RES_LIST_SortASC_Tooltip" en-us="Click To Sort Ascending" el="Κλικ για Αύξουσα Ταξινόμιση" />
+      <Res Type="S" Key="RES_LIST_SortDESC_Tooltip" en-us="Click To Sort Descending" el="Κλικ για Φθίνουσα Ταξινόμιση" />
+      <Res Type="S" Key="RES_LIST_UnSort_Tooltip" en-us="Click To Unsort" el="Κλικ για Ακύρωση Ταξινόμισης" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_Range" en-us="Range" el="Εύρος" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_HasNoValue" en-us="Has No Value" el="Δεν έχει τιμή" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Operators_HasValue" en-us="Has Value" el="Με τιμή" />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_CalculateAverage" en-us="Calculate Average" el="Μέσος Όρος" />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_CalculateCount" en-us="Calculate Count" el="Πλήθος" />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_CalculateSum" en-us="Calculate Sum" el="Σύνολο" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_CommonActions" en-us="Actions" el="Ενέργειες" />
+      <Res Type="S" Key="RES_LIST_MoveColumnLeft_Tooltip" en-us="Move Column Left" el="Μετακίνηση στήλης αριστερά" />
+      <Res Type="S" Key="RES_LIST_MoveColumnRight_Tooltip" en-us="Move Column Right" el="Μετακίνηση στήλης δεξιά" />
+      <Res Type="S" Key="RES_LIST_PREFERENCES_Order" en-us="Order" el="Σειρά" />
+      <Res Type="S" Key="RES_LIST_FILTERS_False" en-us="False" el="Ψευδής" />
+      <Res Type="S" Key="RES_LIST_FILTERS_True" en-us="True" el="Αληθής" />
+      <Res Type="S" Key="RES_LIST_FILTERS_Apply" en-us="Apply" el="Εφαρμογή" />
+      <Res Type="S" Key="RES_LIST_FILTERS_ClearAll" en-us="Clear All" el="Καθαρισμός" />
+      <Res Type="S" Key="RES_LIST_RequiredFiltersMissingMessage" en-us="Please fill in all required list filters" el="Παρακαλώ συμπληρώστε τα απαραίτητα φίλτρα" />
+      <Res Type="S" Key="RES_LIST_RequiredFiltersMissingTitle" en-us="Empty filters" el="Κενά πεδία φίλτρων" />
+      <Res Type="S" Key="RES_LIST_FILTERS_ApplyQuickFilter" en-us="Apply Filter" el="Εφαρμογή" />
+      <Res Type="S" Key="RES_LIST_FILTERS_ClearQuickFilter" en-us="Clear Filter" el="Καθαρισμός φίλτρου" />
+      <Res Type="S" Key="RES_LISTFORM_SubGroups" en-us="Sub Groups" el="Υποομάδες" />
+      <Res Type="S" Key="RES_LIST_EXPORT_FileName" en-us="Filename" el="Όνομα αρχείου" />
+      <Res Type="S" Key="RES_LIST_EXPORT_PortraitOrientation" en-us="PDF Portrait orientation" el="Κάθετη διάταξη" />
+      <Res Type="S" Key="RES_LIST_EXPORT_SumHeader" en-us="SUM" el="Άθροισμα" />
+      <Res Type="S" Key="RES_LIST_EXPORT_AverageHeader" en-us="AVG" el="Μ. Όρος" />
+      <Res Type="S" Key="RES_LIST_EXPORT_Visible" en-us="Visible" el="Ορατό" />
+      <Res Type="S" Key="RES_LIST_EXPORT_Column" en-us="Column" el="Στήλη" />
+      <Res Type="S" Key="RES_LIST_EXPORT_DisplayColumns" en-us="Display Columns" el="Εμφάνιση στηλών" />
+      <Res Type="S" Key="RES_LIST_EXPORT_GroupColor" en-us="Group Lines Color" el="Χρώμα γραμμών ομάδων" />
+      <Res Type="S" Key="RES_LIST_EXPORT_HeaderColor" en-us="Header Lines Color" el="Χρώμα γραμμής επικεφαλίδας" />
+      <Res Type="S" Key="RES_LIST_EXPORT_EvenColor" en-us="Even Lines Color" el="Χρώμα ζυγών γραμμών" />
+      <Res Type="S" Key="RES_LIST_EXPORT_OddColor" en-us="Odd Lines Color" el="Χρώμα μονών γραμμών" />
+      <Res Type="S" Key="RES_LIST_EXPORT_AggregateColor" en-us="Aggregate Lines Color" el="Χρώμα γραμμών Συναρτήσεων" />
+      <Res Type="S" Key="RES_LIST_EXPORT_CountHeader" en-us="Count" el="Πλήθος" />
+      <Res Type="S" Key="RES_LIST_EXPORT_TotalNonGroupCount" en-us="Total items Count" el="Συνολικό πλήθος" />
+      <Res Type="S" Key="RES_LISTFORM_GetGroupsClosed" en-us="Group data only" el="Μόνο ομάδες (χωρίς εγγραφές)" />
+      <Res Type="S" Key="RES_LISTFORM_DisplayGroupItems" en-us="Group Records List" el="Λίστα εγγραφών Ομάδας" />
+      <Res Type="S" Key="RES_LISTFORM_PrevStateTooltip" en-us="Back to Groups" el="Επιστροφή στις Ομάδες" />
+      <Res Type="S" Key="RES_LIST_AGGREGATORS_ClearAll" en-us="Clear Aggregators" el="Καθαρισμός Υπολογισμών" />
+      <Res Type="S" Key="RES_LIST_Import_DownloadCsv" en-us="Download CSV Template" el="Λήψη πρώτυπου αρχείου CSV" />
+      <Res Type="S" Key="RES_LIST_Import_Import" en-us="Import" el="Εισαγωγή δεδομένων" />
+      <Res Type="S" Key="RES_LIST_Import_UploadCsv" en-us="Import from CSV File" el="Εισαγωγή δεδομένων από αρχείο CSV" />
+      <Res Type="S" Key="RES_LIST_Import_ErrorDescription" en-us="Description" el="Περιγραφή" />
+      <Res Type="S" Key="RES_LIST_Import_ErrorDetails" en-us="Error Details" el="Λεπτομέρειες Σφαλμάτων" />
+      <Res Type="S" Key="RES_LIST_Import_ErrorMessage" en-us="Message" el="Μήνυμα" />
+      <Res Type="S" Key="RES_LIST_Import_FailedRecords" en-us="Failed Records" el="Εγγραφές που απέτυχαν" />
+      <Res Type="S" Key="RES_LIST_Import_ImportedRecords" en-us="Imported Records" el="Εγγραφές που έγιναν" />
+      <Res Type="S" Key="RES_LIST_Import_ImportResults" en-us="Import Results" el="Αποτελέσματα Εισαγωγής" />
+      <Res Type="S" Key="RES_LIST_Import_RowNumber" en-us="File Line" el="Γραμμή Αρχείου" />
+      <Res Type="S" Key="RES_LIST_Import_PreferedEncoding" en-us="*Prefered encoding: UTF-8" el="*Προτεινόμενη κωδικοποίηση: UTF-8" />
+      <Res Type="S" Key="RES_LIST_VIEWS_Delete" en-us="Delete" el="Διαγραφή" />
+      <Res Type="S" Key="RES_LIST_TOOLBAR_ResetConfrmation" en-us="Reset will reset any changes you have made to the list. Are you sure you want to continue?" el="Επαναφέροντας τη λίστα στην αρχική κατάσταση θα χάσετε όποιες αλλαγές έχετε κάνει. Θέλετε να συνεχίσετε?" />
+      <Res Type="S" Key="RES_LIST_VIEWS_MakeDefaultConfirmation" en-us="Set current view as default?" el="Θέλετε να ορίσετε αυτή την προβολή ως προεπιλεγμένη?" />
+      <Res Type="S" Key="RES_LIST_VIEWS_Overwrite" en-us="Overwrite View?" el="Αντικατάσταση της υπάρχουσας προβολής?" />
+      <Res Type="S" Key="RES_LIST_VIEWS_NameAlert" en-us="Please enter a name" el="Παρακαλώ εισάγετε ένα όνομα προβολής" />
+      <Res Type="S" Key="RES_LIST_DeselectAllRecordsPromptText" en-us="Unselect All" el="Αποεπιλογή Όλων" />
+      <Res Type="S" Key="RES_LIST_DeselectAllPageRecordsText" en-us="Unselect All Page Rows" el="Αποεπιλογή Όλων στην Σελίδα" />
+      <Res Type="S" Key="RES_DATALIST_Actions" en-us="Actions" el="Ενέργειες" />
+      <Res Type="S" Key="RES_DATALIST_SelectionActions" en-us="Selection Actions" el="Ενέργειες Επιλογής" />
+      <Res Type="S" Key="RES_DATALIST_ClearSearch" en-us="Clear" el="Καθαρισμός" />
+      <Res Type="S" Key="RES_DATALIST_Search" en-us="Search" el="Αναζήτηση" />
+      <Res Type="S" Key="RES_DATALIST_NoResults" en-us="No records found" el="Κανένα αποτέλεσμα" />
+      <Res Type="S" Key="RES_DATALIST_Info" en-us="Showing _START_ to _END_ of _TOTAL_ records" el="Εμφάνιση _START_ έως _END_ από _TOTAL_ εγγραφές" />
+      <Res Type="S" Key="RES_DATALIST_PageSize" en-us="Page size: _MENU_" el="Μέγεθος σελίδας: _MENU_" />
+      <Res Type="S" Key="RES_DATALIST_Records" en-us="records" el="εγγραφές" />
+      <Res Type="S" Key="RES_DATALIST_All" en-us="All" el="Όλες" />
+      <Res Type="S" Key="RES_DATALIST_Loading" en-us="Loading..." el="Φόρτωση..." />
+      <Res Type="S" Key="RES_DATALIST_Processing" en-us="Processing..." el="Επεξεργασία..." />
+      <Res Type="S" Key="RES_DATALIST_PAGER_First" en-us="First" el="Πρώτη" />
+      <Res Type="S" Key="RES_DATALIST_PAGER_Last" en-us="Last" el="Τελευταία" />
+      <Res Type="S" Key="RES_DATALIST_PAGER_Next" en-us="Next" el="Επόμενη" />
+      <Res Type="S" Key="RES_DATALIST_PAGER_Previous" en-us="Previous" el="Προηγούμενη" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_True" en-us="True" el="Αληθής" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_False" en-us="False" el="Ψευδής" />
+      <Res Type="S" Key="RES_DATALIST_AGGREGATORS_CalculateAverage" en-us="Calculate Average" el="Μέσος Όρος" />
+      <Res Type="S" Key="RES_DATALIST_AGGREGATORS_CalculateCount" en-us="Calculate Count" el="Πλήθος" />
+      <Res Type="S" Key="RES_DATALIST_AGGREGATORS_CalculateSum" en-us="Calculate Sum" el="Σύνολο" />
+      <Res Type="S" Key="RES_DATALIST_BUTTONS_ColumnVisibility" en-us="Column Visibility" el="Ορατότητα Στηλών" />
+      <Res Type="S" Key="RES_DATALIST_BUTTONS_Copy" en-us="Copy" el="Αντιγραφή" />
+      <Res Type="S" Key="RES_DATALIST_BUTTONS_CopyTitle" en-us="Copy to clipboard" el="Αντιγραφή στο πρόχειρο" />
+      <Res Type="S" Key="RES_DATALIST_BUTTONS_CopySuccessSingle" en-us="Copied one row to clipboard" el="Αντιγράφηκε μια εγγραφή στο πρόχειρο" />
+      <Res Type="S" Key="RES_DATALIST_BUTTONS_CopySuccessMulti" en-us="Copied %d rows to clipboard" el="Αντιγράφηκαν %d εγγραφές στο πρόχειρο" />
+      <Res Type="S" Key="RES_DATALIST_AGGREGATORS_GrandAverage" en-us="Grand Average:" el="Μέσος Όρος: " />
+      <Res Type="S" Key="RES_DATALIST_AGGREGATORS_GrandCount" en-us="Count:" el="Πλήθος: " />
+      <Res Type="S" Key="RES_DATALIST_AGGREGATORS_GrandTotal" en-us="Total:" el="Σύνολο:" />
+      <Res Type="S" Key="RES_DATALIST_AGGREGATORS_PageAverage" en-us="Page Average:" el="Μέσος Όρος Σελίδας:" />
+      <Res Type="S" Key="RES_DATALIST_AGGREGATORS_PageCount" en-us="Page Count:" el="Πλήθος Σελίδας:" />
+      <Res Type="S" Key="RES_DATALIST_AGGREGATORS_PageTotal" en-us="Page Total:" el="Σύνολο Σελίδας:" />
+      <Res Type="S" Key="RES_DATALIST_SelectAllRecordsText" en-us="Select All" el="Επιλογή όλων" />
+      <Res Type="S" Key="RES_DATALIST_SelectAllPageRecordsText" en-us="Select all rows in the page" el="Επιλογή όλων στην σελίδα" />
+      <Res Type="S" Key="RES_DATALIST_DeselectAllRecordsText" en-us="Deselect All" el="Αποεπιλογή όλων" />
+      <Res Type="S" Key="RES_DATALIST_DeselectAllPageRecordsText" en-us="Deselect all rows in the page" el="Αποεπιλογή όλων στην σελίδα" />
+      <Res Type="S" Key="RES_DATALIST_ExportTitle" en-us="Page title" el="Τίτλος σελίδας" />
+      <Res Type="S" Key="RES_DATALIST_OneRowSelected" en-us="One row selected" el="Μία εγγραφή επιλεγμένη" />
+      <Res Type="S" Key="RES_DATALIST_MulitpleRowsSelected" en-us="%d rows selected" el="%d εγγραφές επιλεγμένες" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_DialogTitle" en-us="Export Properties" el="Εξαγωγή Ρυθμίσεων" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_ExportRange_CurrentPage" en-us="Current Page" el="Τρέχουσα σελίδα" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_ExportRange_Top100Pages" en-us="Top 100 Records" el="Πρώτες 100 Εγγραφές" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_ExportRange_AllPages_10000_Restriction" en-us="All Pages (First 10000 Records)" el="Όλες οι σελίδες (Πρώτες 10.000 Εγγραφές)" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_ExportRange_AllPages" en-us="All Pages" el="Όλες οι σελίδες" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_PrintRange" en-us="Print Range" el="Εκτύπωση Εύρους" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_IncludeGridLines" en-us="Include Grid Lines" el="Εμφάνιση Γραμμών Πλέγματος" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_ExportOK" en-us="Export" el="Εξαγωγή" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_ExportCancel" en-us="Cancel" el="Ακύρωση" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_ExportOnlyGroups" en-us="Export only Group data" el="Εξαγωγή μόνο των ομάδων" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_ExportTo" en-us="Export Type: " el="Εξαγωγή σε" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_FileName" en-us="Filename" el="Όνομα αρχείου" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_PortraitOrientation" en-us="PDF Portrait orientation" el="Κάθετη διάταξη" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_SumHeader" en-us="SUM" el="Άθροισμα" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_AverageHeader" en-us="AVG" el="Μ. Όρος" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_Visible" en-us="Visible" el="Ορατό" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_Column" en-us="Column" el="Στήλη" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_DisplayColumns" en-us="Display Columns" el="Εμφάνιση στηλών" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_GroupColor" en-us="Group Lines Color" el="Χρώμα γραμμών ομάδων" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_HeaderColor" en-us="Header Lines Color" el="Χρώμα γραμμής επικεφαλίδας" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_EvenColor" en-us="Even Lines Color" el="Χρώμα ζυγών γραμμών" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_OddColor" en-us="Odd Lines Color" el="Χρώμα μονών γραμμών" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_AggregateColor" en-us="Aggregate Lines Color" el="Χρώμα γραμμών Συναρτήσεων" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_CountHeader" en-us="Count" el="Πλήθος" />
+      <Res Type="S" Key="RES_DATALIST_EXPORT_TotalNonGroupCount" en-us="Total items Count" el="Συνολικό πλήθος" />
+      <Res Type="S" Key="RES_DATALIST_Grouping" en-us="Grouping" el="Ομαδοποίηση" />
+      <Res Type="S" Key="RES_DATALIST_GroupingOrder" en-us="Grouping Order" el="Σειρά Ομαδοποίησης" />
+      <Res Type="S" Key="RES_DATALIST_Column" en-us="Column" el="Στήλη" />
+      <Res Type="S" Key="RES_DATALIST_GetGroupsClosed" en-us="Group data only" el="Μόνο ομάδες (χωρίς εγγραφές)" />
+      <Res Type="S" Key="RES_DATALIST_MergedGroupLevels" en-us="Merged Grouping" el="Συγχωνευμένη ομαδοποιήση" />
+      <Res Type="S" Key="RES_DATALIST_VIEWS_ViewName" en-us="Current View Name" el="Όνομα Τρέχουσας" />
+      <Res Type="S" Key="RES_DATALIST_VIEWS_View" en-us="View" el="Προβολή" />
+      <Res Type="S" Key="RES_DATALIST_VIEWS_Views" en-us="Views" el="Προβολές" />
+      <Res Type="S" Key="RES_DATALIST_VIEWS_DeleteView" en-us="Delete" el="Διαγραφή" />
+      <Res Type="S" Key="RES_DATALIST_VIEWS_SaveView" en-us="Save Current" el="Αποθήκευση Τρέχουσας" />
+      <Res Type="S" Key="RES_DATALIST_VIEWS_InvalidViewName" en-us="Invalid View Name!" el="Μη έγκυρο Προβολής!" />
+      <Res Type="S" Key="RES_DATALIST_VIEWS_IsViewDefault" en-us="Is Default" el="Προεπιλεγμένη" />
+      <Res Type="S" Key="RES_DATALIST_VIEWS_DeleteConfirmation" en-us="Delete View?" el="Διαγραφή Προβολής;" />
+      <Res Type="S" Key="RES_DATALIST_QuickFilters" en-us="Show/Hide quick filters" el="Εμφάνιση/Απόκρυψη σύντομων φίλτρων" />
+      <Res Type="S" Key="RES_DATALIST_Import" en-us="Import" el="Εισαγωγή Δεδομένων" />
+      <Res Type="S" Key="RES_DATALIST_DownloadImportTemplate" en-us="Download CSV Template" el="Λήψη CSV αρχείου υποδείγματος" />
+      <Res Type="S" Key="RES_DATALIST_UploadImportFile" en-us="Upload CSV File" el="Ανέβασμα αρχείου δεδομένων" />
+      <Res Type="S" Key="RES_DATALIST_ImportDataEncoding" en-us="*Prefered encoding: UTF-8" el="*Προτεινόμενη κωδικοποίηση: UTF-8" />
+      <Res Type="S" Key="RES_DATALIST_ImportResult" en-us="Import Result" el="Αποτέλεσμα Εισαγωγής" />
+      <Res Type="S" Key="RES_DATALIST_ImportResultSuccess" en-us="Imported" el="Εισήχθησαν" />
+      <Res Type="S" Key="RES_DATALIST_ImportResultErrors" en-us="Errors" el="Απέτυχαν" />
+      <Res Type="S" Key="RES_DATALIST_ImportResultErrorList" en-us="Error List" el="Λίστα Σφαλμάτων" />
+      <Res Type="S" Key="RES_DATALIST_QuickFilters" en-us="Toggle Quick Filters" el="Εμφάνιση/Απόκρυψη σύντομων φίλτρων" />
+      <Res Type="S" Key="RES_DATALIST_MaxSelectedRowsLimitationTitle" en-us="Selected rows limit reached" el="Όριο μέγιστου αριθμού επιλεγμένων εγγραφών" />
+      <Res Type="S" Key="RES_DATALIST_MaxSelectedRowsLimitationMessage" en-us="You cannot select more than %d rows" el="Δε μπορείτε να επιλέξετε περισσότερες από %d εγγραφές" />
+      <Res Type="S" Key="RES_DATALIST_Refresh" en-us="Refresh List" el="Ανανέωση λίστας" />
+      <Res Type="S" Key="RES_DATALIST_Reset" en-us="Reset List" el="Επαναφορά λίστας" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Ok" en-us="OK" el="OK" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Cancel" en-us="Cancel" el="Άκυρο" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_ClearAll" en-us="Clear All" el="Καθαρισμός όλων" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_RequiredFiltersMissingMessage" en-us="Please fill in all required list filters" el="Παρακαλώ συμπληρώστε τα πεδία που λείπουν" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_DialogTitle" en-us="Filters" el="Φίλτρα" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_AddFilter" en-us="Add Filter" el="Προσθήκη φίλτρου" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_Header" en-us="Operator" el="Τύπος φίλτρου" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_FilterValue_Header" en-us="Criteria" el="Κριτήρια" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_RowOperator_Header" en-us="Row Operator" el="Λογικός τελεστής" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_RowOperatorTypes_Or" en-us="Or" el="Ή" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_RowOperatorTypes_And" en-us="And" el="Και" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_HasNoValue" en-us="Has no value" el="Δεν έχει τιμή" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_HasValue" en-us="Has value" el="Έχει τιμή" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_Range" en-us="Between" el="Μεταξύ" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_EqualTo" en-us="Equal to" el="Ίσο με" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_Like" en-us="Like" el="Μοιάζει με" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_NotEqualTo" en-us="Not equal to" el="Όχι ίσο με" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_GreaterThan" en-us="Greater than" el="Μεγαλύτερο από" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_GreaterThanOrEqualTo" en-us="Greater than or equal to" el="Μεγαλύτερο ή ίσο με" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_LessThan" en-us="Less than" el="Μικρότερο από" />
+      <Res Type="S" Key="RES_DATALIST_FILTERS_Operators_LessThanOrEqualTo" en-us="Less than or equal to" el="Μικρότερο ή ίσο με" />
+      <Res Type="S" Key="RES_DATALIST_VIEWS_ActiveView" en-us="Active view" el="Ενεργή προβολή" />
+      <Res Type="S" Key="RES_DATALIST_EXPORTV2_Totals" en-us="Totals" el="Σύνολα" />
+      <Res Type="S" Key="RES_DATALIST_EXPORTV2_Aggregator_Count" en-us="Count" el="Πλήθος" />
+      <Res Type="S" Key="RES_DATALIST_EXPORTV2_Aggregator_Sum" en-us="Sum" el="Άθροισμα" />
+      <Res Type="S" Key="RES_DATALIST_EXPORTV2_Aggregator_Average" en-us="Average" el="Μέσος Όρος" />
+      <Res Type="S" Key="RES_DATALIST_EXPORTV2_Aggregator_TotalCount" en-us="Total Count" el="Συνολικό Πλήθος" />
+      <Res Type="S" Key="RES_DATALIST_EXPORTV2_Aggregator_TotalSum" en-us="Total Sum" el="Συνολικό Άθροισμα" />
+      <Res Type="S" Key="RES_DATALIST_EXPORTV2_Aggregator_TotalAverage" en-us="Total Average" el="Συνολικός Μέσος Όρος" />
+      <Res Type="S" Key="RES_WEBFORM_PAGER_Records" en-us="Records" el="Εγγραφές" />
+      <Res Type="S" Key="RES_WEBFORM_PAGER_To" en-us="to" el="έως" />
+      <Res Type="S" Key="RES_WEBFORM_PAGER_FirstPage" en-us="First Page" el="Πρώτη Σελίδα" />
+      <Res Type="S" Key="RES_WEBFORM_PAGER_PreviousPage" en-us="Previous Page" el="Προηγούμενη Σελίδα" />
+      <Res Type="S" Key="RES_WEBFORM_PAGER_NextPage" en-us="Next Page" el="Επόμενη Σελίδα" />
+      <Res Type="S" Key="RES_WEBFORM_PAGER_LastPage" en-us="Last Page" el="Τελευταία Σελίδα" />
+      <Res Type="S" Key="RES_WEBFORM_PAGER_TotalRecords" en-us="Total Records" el="Συνολικές Εγγραφές" />
+      <Res Type="S" Key="RES_WEBFORM_PAGER_RecordsPerPage" en-us="Recs/Page" el="Εγγραφες / Σελίδα" />
+      <Res Type="S" Key="RES_WEBFORM_GRID_AddRow" en-us="Add Row " el="Προσθήκη Γραμμής" />
+      <Res Type="S" Key="RES_WEBFORM_GRID_DeleteRow" en-us="Delete Row" el="Διαγραφή Γραμμής" />
+      <Res Type="S" Key="RES_WEBFORM_GRID_NoData" en-us="No Records" el="Δεν υπάρχουν εγγραφές" />
+      <Res Type="S" Key="RES_WEBFORM_GRID_NoMatches" en-us="No matches found." el="Δεν βρέθηκαν αποτελέσματα." />
+      <Res Type="S" Key="RES_WEBFORM_GRID_NoMoreMatches" en-us="Search has been completed. Would you like to start over?" el="Η αναζήτηση ολοκληρώθηκε. Θέλετε να γίνει επανέναρξη;" />
+      <Res Type="S" Key="RES_WEBFORM_GRID_Result" en-us="Result" el="Αποτέλεσμα" />
+      <Res Type="S" Key="RES_WEBFORM_GRID_From" en-us="from" el="από" />
+      <Res Type="S" Key="RES_WEBFORM_FIELD_Required" en-us="Field is required!" el="Το πεδίο είναι υποχρεωτικό!" />
+      <Res Type="S" Key="RES_WEBFORM_FIELD_RequiredMissing" en-us="Required Fields are missing!" el="Υποχρεωτικά πεδία δεν εχουν τιμές!" />
+      <Res Type="S" Key="RES_WEBFORM_ERROR_ErrorTitle" en-us="Error Occured" el="Παρουσιάστηκε σφάλμα" />
+      <Res Type="S" Key="RES_WEBFORM_SUCCESS_SuccessTitle" en-us="Succesfull Action" el="Επιτυχημένη ενέργεια" />
+      <Res Type="S" Key="RES_WEBFORM_SUCCESS_SuccessMessage" en-us="Action completed succesfully!" el="Η ενέργεια ολοκληρώθηκε με επιτυχία!" />
+      <Res Type="S" Key="RES_WEBFORM_DirtyMessage" en-us="There's still unsaved data on the page" el="Υπάρχουν μη αποθηκευμένα δεδομένα στη σελίδα" />
+      <Res Type="S" Key="RES_WEBFORM_NoAction" en-us="No valid Action was requested of the form!" el="Δεν ζητήθηκε καμία έγκυρη ενέργεια να εκτελεστεί!" />
+      <Res Type="S" Key="RES_WEBFORM_NotAuthorizedAction" en-us="You are not authorized to perform the requested Action [{0}]!" el="Δεν είστε εξουσιοδοτημένοι να εκτελέσετε την ενέργεια [{0}]!" />
+      <Res Type="S" Key="RES_WEBFORM_FieldOverflow" en-us="The value specified exceeds the maximum allowed size." el="Η τιμή υπερβαίνει το μέγιστο επιτρεπόμενο όριο." />
+      <Res Type="S" Key="RES_WEBFORM_UNAUTHORIZED_PageTitle" en-us="Unauthorized Access" el="Μη εξουσιοδοτημένη πρόσβαση" />
+      <Res Type="S" Key="RES_WEBFORM_DeleteFailedDueToIntegrity" en-us="[{0}] with identifier:[{1}] could not be deleted because it is being used (referential integrity)." el="[{0}] με κωδικό: [{1}] δεν μπορεί να διαγραφεί γιατί χρησιμοποιείται (referential integrity)." />
+      <Res Type="S" Key="RES_WEBFORM_ObjectWithIdNotFound" en-us="{0} with id:[{1}] was not found!" el="{0} με id: [{1}] δεν βρέθηκε!" />
+      <Res Type="S" Key="RES_WEBFORM_ObjectNotFound" en-us="The object was not found!" el="Το αντικείμενο δεν βρέθηκε!" />
+      <Res Type="S" Key="RES_WEBFORM_QuickFilters" en-us="Quick Filter" el="Σύντομα Φίλτρα" />
+      <Res Type="S" Key="RES_WEBFORM_NoRecordsFound_MessageTitle" en-us="No Records" el="Δεν υπάρχουν εγγραφές" />
+      <Res Type="S" Key="RES_WEBFORM_FIELD_RequiredMissingTitle" en-us="Required Fields Missing" el="Υποχρεωτικά πεδία λείπουν!" />
+      <Res Type="S" Key="RES_WEBFORM_FIELD_InvalidBindingsTitle" en-us="Invalid Data in Fields" el="Λανθασμένες τιμές σε πεδία" />
+      <Res Type="S" Key="RES_WEBFORM_GenericErrorTitle" en-us="Error" el="Σφάλμα" />
+      <Res Type="S" Key="RES_WEBFORM_GenericErrorDescription" en-us="An unexpected error occured. If error persists, contanct an Administrator." el="Προέκυψε ένα μη αναμενόμενο σφάλμα. Αν το σφάλμα συνεχίσει να προκύπτει, επικοινωνήστε με έναν Διαχειριστή." />
+      <Res Type="S" Key="RES_WEBFORM_GenericConfirmationQuestion" en-us="Are you sure?" el="Είστε Σίγουροι?" />
+      <Res Type="S" Key="RES_WEBFORM_GenericFormatError" en-us="Input string was not in a correct format" el="Η συμβολοσειρά που εισαγάγατε δεν έχει σωστή μορφή" />
+      <Res Type="S" Key="RES_WEBFORM_dv_Title" en-us="Validation" el="Επικύρωση" />
+      <Res Type="S" Key="RES_CHECKBOX_FALSE" en-us="No" el="Οχι" />
+      <Res Type="S" Key="RES_CHECKBOX_TRUE" en-us="Yes" el="Ναι" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_Error" en-us="Error" el="Σφάλμα" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_Ignore" en-us="Ignore" el="Αγνόηση" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_IgnoreAll" en-us="Ignore all" el="Αγνόηση όλων" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_Information" en-us="Information" el="Πληροφορία" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_Messages" en-us="Validation Messages" el="Μηνύματα" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_RequireYourAttention" en-us="items require your attention" el="αντικείμενα απαιτούν την προσοχή σας" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_ShowIgnoredWarnings" en-us="Show ignored warnings" el="Αγνοημένες προειδοποιήσεις" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_Warning" en-us="Warning" el="Προειδοποίηση" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_Cancel" en-us="Cancel" el="Επιστροφή" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_Proceed" en-us="Proceed" el="Συνέχεια" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_RequireYourAttentionSingular" en-us="An item requires your attention" el="Ένα αντικείμενο απαιτεί την προσοχή σας" />
+      <Res Type="S" Key="RES_WEBFORM_VALIDATIONS_WarningConfirmation" en-us="Form has some warnings. Proceed?" el="Η φόρμα έχει προειδοποιήσεις. Συνέχεια;" />
+      <Res Type="S" Key="RES_WEBFORM_REQUIRED_Legend" en-us="Required Fields" el="Υποχρεωτικά Πεδία" />
+      <Res Type="S" Key="RES_WEBFORM_FileUploadTitle" en-us="File Upload" el="Ανέβασμα Αρχείου" />
+      <Res Type="S" Key="RES_WEBFORM_FileUploadSuccess" en-us="File was successfully uploaded" el="Το αρχείο ανέβηκε επιτυχώς" />
+      <Res Type="S" Key="RES_WEBFORM_FileUploadError" en-us="An error occured while uploading file" el="Το ανέβασμα του αρχείου απέτυχε" />
+      <Res Type="S" Key="RES_WEBFORM_FileNotFound" en-us="The requested file was not found" el="Το αρχείο που ζητήσατε δεν βρέθηκε" />
+      <Res Type="S" Key="RES_WEBFORM_FileUploadLoading" en-us="Uploading file..." el="Ανέβασμα αρχείου..." />
+      <Res Type="S" Key="RES_WEBFORM_LoadingMessage" en-us="Your request is being processed..." el="Το αίτημά σας επεξεργάζεται..." />
+      <Res Type="S" Key="RES_WEBFORM_Picklist_ClearAllConfirmation" en-us="Are you sure you want to clear your selection?" el="Είστε σίγουροι ότι θέλετε να καθαρίσετε την επιλογή σας;" />
+      <Res Type="S" Key="RES_AUTH_ERROR_TITLE" en-us="Authentication Error" el="Σφάλμα Ταυτοποίησης" />
+      <Res Type="S" Key="RES_AUTH_ERROR_SUBTITLE" en-us="An error occured while creating Application User" el="Προέκειψε σφάλμα κατά τη δημιουργία του Χρήστη" />
+      <Res Type="S" Key="RES_AUTH_ERROR_FOOTER" en-us="Please contact an Administrator" el="Παρακαλώ επικοινωνήστε με έναν Διαχειριστή" />
+      <Res Type="S" Key="RES_AUTH_NOT_CREATED" en-us="Application User was not created. Username:" el="Ο Χρήστης δεν δημιουργήθηκε. Όνομα Χρήστη:" />
+      <Res Type="S" Key="RES_SECURITY_ERROR_TITLE" en-us="Security Exception" el="Σφάλμα Ασφάλειας" />
+      <Res Type="S" Key="RES_SECURITY_ERROR_SUBTITLE" en-us="Security Error" el="Σφάλμα Ασφάλειας" />
+      <Res Type="S" Key="RES_SECURITY_ERROR_FOOTER" en-us="If error persists, please contact an Administrator" el="Αν το σφάλμα συνεχίσει, παρακαλώ επικοινωνήστε με έναν Διαχειριστή" />
+      <Res Type="C" Key="RES_SITE_HeaderText" en-us="StartPages" el="StartPages" />
+      <Res Type="C" Key="RES_SITE_FooterTextLeft" en-us="Copyright © 2015" el="Copyright © 2017" />
+      <Res Type="C" Key="RES_SITE_FooterTextRight" en-us="CLMS UK" el="CLMS UK" />
+    </Resources>
+  </Globalization>
+  <DefaultPages>
+    <Default>
+      <ControllerAction ControllerType="WebForm" Controller="SearchForm" Action="Index" TargetFrame="_self" OnCloseModalDialogAction="" OnUnauthorized="HIDE" ModalSize="">
+        <Parameters />
+      </ControllerAction>
+    </Default>
+    <Error>
+      <ControllerAction ControllerType="WebForm" Controller="ErrorPage" Action="Render" TargetFrame="_self" OnCloseModalDialogAction="" OnUnauthorized="HIDE" ModalSize="">
+        <Parameters />
+      </ControllerAction>
+    </Error>
+    <Unauthorized>
+      <ControllerAction ControllerType="WebForm" Controller="Unauthorized" Action="Render" TargetFrame="_self" OnCloseModalDialogAction="" OnUnauthorized="HIDE" ModalSize="">
+        <Parameters />
+      </ControllerAction>
+    </Unauthorized>
+    <NotFound>
+      <ControllerAction ControllerType="WebForm" Controller="NotFoundPage" Action="Render" TargetFrame="_self" OnCloseModalDialogAction="" OnUnauthorized="HIDE" ModalSize="">
+        <Parameters />
+      </ControllerAction>
+    </NotFound>
+    <SignIn>
+      <ControllerAction ControllerType="WebForm" Controller="SignInPage" Action="LoadDefault" TargetFrame="_self" OnCloseModalDialogAction="" OnUnauthorized="HIDE" ModalSize="">
+        <Parameters />
+      </ControllerAction>
+    </SignIn>
+    <FirstAdminSetup>
+      <ControllerAction ControllerType="WebForm" Controller="FirstAdminSetup" Action="Render" TargetFrame="_self" OnCloseModalDialogAction="" OnUnauthorized="HIDE" ModalSize="">
+        <Parameters />
+      </ControllerAction>
+    </FirstAdminSetup>
+    <ThemePreview>
+      <ControllerAction ControllerType="WebForm" Controller="" Action="" TargetFrame="_self" OnCloseModalDialogAction="" OnUnauthorized="HIDE" ModalSize="POPUP">
+        <Parameters />
+      </ControllerAction>
+    </ThemePreview>
+  </DefaultPages>
+  <ImplementationStrategy Id="MVP">
+    <Settings>
+      <Setting Name="RunUnitTestsonBuild" Value="false" />
+      <Setting Name="InheritanceMappingStrategy" Value="" />
+      <Setting Name="ManagedByCLMSAPIManager" Value="false" />
+      <Setting Name="RealTimeProfiling" Value="false" />
+      <Setting Name="EnablePerformanceLog" Value="false" />
+      <Setting Name="DecoupleWebFromApplicationServer" Value="false" />
+      <Setting Name="GenerateNetCore" Value="false" />
+      <Setting Name="EnableMQTTWebsocket" Value="false" />
+      <Setting Name="SupportMySQLLikeDatabases" Value="true" />
+      <Setting Name="RemoveConcurencyFromSystemicClasses" Value="false" />
+      <Setting Name="SetMinAndMaxThreads" Value="false" />
+    </Settings>
+  </ImplementationStrategy>
+  <Events>
+    <Event Name="SignIn" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context>
+        <Input Name="UserName" Type="string" />
+        <Input Name="Time" Type="DateTime" />
+      </Context>
+      <Handler>static function void onSignIn(
+	string UserName,
+	DateTime Time
+)
+{
+
+}</Handler>
+    </Event>
+    <Event Name="SignOut" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context>
+        <Input Name="UserName" Type="string" />
+        <Input Name="Time" Type="DateTime" />
+      </Context>
+      <Handler>
+      </Handler>
+    </Event>
+    <Event Name="ApplicationStart" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context />
+      <Handler>
+      </Handler>
+    </Event>
+    <Event Name="ApplicationEnd" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context />
+      <Handler>
+      </Handler>
+    </Event>
+    <Event Name="ApplicationError" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context>
+        <Input Name="exception" Type="Exception" />
+      </Context>
+      <Handler>
+      </Handler>
+    </Event>
+    <Event Name="SessionStart" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context />
+      <Handler>
+      </Handler>
+    </Event>
+    <Event Name="OnInstanceSave" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context>
+        <Input Name="Instance" Type="Object" />
+      </Context>
+      <Handler>
+      </Handler>
+    </Event>
+    <Event Name="FileDownload" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context>
+        <Input Name="path" Type="string" />
+        <Input Name="username" Type="string" />
+      </Context>
+      <Handler>
+      </Handler>
+    </Event>
+    <Event Name="ExternalUserCreating" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context>
+        <Input Name="user" Type="Domain.ApplicationUser" />
+      </Context>
+      <Handler>static function void onExternalUserCreating(
+	Domain.ApplicationUser user
+)
+{
+
+}</Handler>
+    </Event>
+    <Event Name="UserAuthenticating" IsSystemic="true" ExecuteInParallelContext="true">
+      <Context>
+        <Input Name="username" Type="string" />
+      </Context>
+      <Handler>
+      </Handler>
+    </Event>
+  </Events>
+  <Settings>
+    <Setting Name="EmailHostAddress" Value="" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="EmailPassword" Value="" Description="" IsPassword="True" IsSystemic="True" />
+    <Setting Name="EmailUsername" Value="" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="EmailFromAccount" Value="" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="EmailPort" Value="587" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="IMAPhost" Value="" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="IMAPport" Value="" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="IMAPenableSSL" Value="" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="IMAPusername" Value="" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="IMAPpassword" Value="" Description="" IsPassword="True" IsSystemic="True" />
+    <Setting Name="ApplicationCacheExpiration" Value="30" Description="Application cache expiration in seconds" IsPassword="False" IsSystemic="True" />
+    <Setting Name="EnableAuditTrail" Value="true" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="SQLQueryTimeoutInSeconds" Value="30" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="SessionTimeoutInMinutes" Value="20" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="EnableCors" Value="false" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="AllowAnonymousFileDownload" Value="false" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="AllowMultipleSessionsPerUser" Value="true" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="MaxRequestLengthInKB" Value="51200" Description="" IsPassword="False" IsSystemic="True" />
+    <Setting Name="OpenCageApiKey" Value="" Description="" IsPassword="False" IsSystemic="False" />
+    <Setting Name="GraphBackendGraphContext" Value="PlayGround" Description="" IsPassword="False" IsSystemic="False" />
+    <Setting Name="GraphBackendGraphSubContext" Value="" Description="" IsPassword="False" IsSystemic="False" />
+    <Setting Name="GraphBackendUserName" Value="" Description="" IsPassword="False" IsSystemic="False" />
+    <Setting Name="GraphBackendPasswd" Value="" Description="" IsPassword="False" IsSystemic="False" />
+    <Setting Name="ElasticSearchIndex" Value="" Description="" IsPassword="False" IsSystemic="False" />
+    <Setting Name="GraphDBEndpoint" Value="bolt://knowledge-graph-db.clmsuk.com:443" Description="" IsPassword="False" IsSystemic="False" />
+    <Setting Name="MatchmakingAnalyticsId" Value="" Description="" IsPassword="False" IsSystemic="False" />
+    <Setting Name="SymbiosisAnalyticsId" Value="" Description="" IsPassword="False" IsSystemic="False" />
+    <Setting Name="DontCallKnowledgeGraph" Value="true" Description="" IsPassword="False" IsSystemic="False" />
+  </Settings>
+  <Tags />
+  <Controls />
+  <EncryptionStrategies />
+  <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">
+  </CachingOptions>
+  <SoftwareLicenseOptions LicenseName="Custom License" LicenseDescription="GNU AFFERO GENERAL PUBLIC LICENSE&#xA;                       Version 3, 19 November 2007&#xA;&#xA; Copyright (C) 2007 Free Software Foundation, Inc. &lt;https://fsf.org/&gt;&#xA; Everyone is permitted to copy and distribute verbatim copies&#xA; of this license document, but changing it is not allowed.&#xA;&#xA;                            Preamble&#xA;&#xA;  The GNU Affero General Public License is a free, copyleft license for&#xA;software and other kinds of works, specifically designed to ensure&#xA;cooperation with the community in the case of network server software.&#xA;&#xA;  The licenses for most software and other practical works are designed&#xA;to take away your freedom to share and change the works.  By contrast,&#xA;our General Public Licenses are intended to guarantee your freedom to&#xA;share and change all versions of a program--to make sure it remains free&#xA;software for all its users.&#xA;&#xA;  When we speak of free software, we are referring to freedom, not&#xA;price.  Our General Public Licenses are designed to make sure that you&#xA;have the freedom to distribute copies of free software (and charge for&#xA;them if you wish), that you receive source code or can get it if you&#xA;want it, that you can change the software or use pieces of it in new&#xA;free programs, and that you know you can do these things.&#xA;&#xA;  Developers that use our General Public Licenses protect your rights&#xA;with two steps: (1) assert copyright on the software, and (2) offer&#xA;you this License which gives you legal permission to copy, distribute&#xA;and/or modify the software.&#xA;&#xA;  A secondary benefit of defending all users' freedom is that&#xA;improvements made in alternate versions of the program, if they&#xA;receive widespread use, become available for other developers to&#xA;incorporate.  Many developers of free software are heartened and&#xA;encouraged by the resulting cooperation.  However, in the case of&#xA;software used on network servers, this result may fail to come about.&#xA;The GNU General Public License permits making a modified version and&#xA;letting the public access it on a server without ever releasing its&#xA;source code to the public.&#xA;&#xA;  The GNU Affero General Public License is designed specifically to&#xA;ensure that, in such cases, the modified source code becomes available&#xA;to the community.  It requires the operator of a network server to&#xA;provide the source code of the modified version running there to the&#xA;users of that server.  Therefore, public use of a modified version, on&#xA;a publicly accessible server, gives the public access to the source&#xA;code of the modified version.&#xA;&#xA;  An older license, called the Affero General Public License and&#xA;published by Affero, was designed to accomplish similar goals.  This is&#xA;a different license, not a version of the Affero GPL, but Affero has&#xA;released a new version of the Affero GPL which permits relicensing under&#xA;this license.&#xA;&#xA;  The precise terms and conditions for copying, distribution and&#xA;modification follow.&#xA;&#xA;                       TERMS AND CONDITIONS&#xA;&#xA;  0. Definitions.&#xA;&#xA;  &quot;This License&quot; refers to version 3 of the GNU Affero General Public License.&#xA;&#xA;  &quot;Copyright&quot; also means copyright-like laws that apply to other kinds of&#xA;works, such as semiconductor masks.&#xA;&#xA;  &quot;The Program&quot; refers to any copyrightable work licensed under this&#xA;License.  Each licensee is addressed as &quot;you&quot;.  &quot;Licensees&quot; and&#xA;&quot;recipients&quot; may be individuals or organizations.&#xA;&#xA;  To &quot;modify&quot; a work means to copy from or adapt all or part of the work&#xA;in a fashion requiring copyright permission, other than the making of an&#xA;exact copy.  The resulting work is called a &quot;modified version&quot; of the&#xA;earlier work or a work &quot;based on&quot; the earlier work.&#xA;&#xA;  A &quot;covered work&quot; means either the unmodified Program or a work based&#xA;on the Program.&#xA;&#xA;  To &quot;propagate&quot; a work means to do anything with it that, without&#xA;permission, would make you directly or secondarily liable for&#xA;infringement under applicable copyright law, except executing it on a&#xA;computer or modifying a private copy.  Propagation includes copying,&#xA;distribution (with or without modification), making available to the&#xA;public, and in some countries other activities as well.&#xA;&#xA;  To &quot;convey&quot; a work means any kind of propagation that enables other&#xA;parties to make or receive copies.  Mere interaction with a user through&#xA;a computer network, with no transfer of a copy, is not conveying.&#xA;&#xA;  An interactive user interface displays &quot;Appropriate Legal Notices&quot;&#xA;to the extent that it includes a convenient and prominently visible&#xA;feature that (1) displays an appropriate copyright notice, and (2)&#xA;tells the user that there is no warranty for the work (except to the&#xA;extent that warranties are provided), that licensees may convey the&#xA;work under this License, and how to view a copy of this License.  If&#xA;the interface presents a list of user commands or options, such as a&#xA;menu, a prominent item in the list meets this criterion.&#xA;&#xA;  1. Source Code.&#xA;&#xA;  The &quot;source code&quot; for a work means the preferred form of the work&#xA;for making modifications to it.  &quot;Object code&quot; means any non-source&#xA;form of a work.&#xA;&#xA;  A &quot;Standard Interface&quot; means an interface that either is an official&#xA;standard defined by a recognized standards body, or, in the case of&#xA;interfaces specified for a particular programming language, one that&#xA;is widely used among developers working in that language.&#xA;&#xA;  The &quot;System Libraries&quot; of an executable work include anything, other&#xA;than the work as a whole, that (a) is included in the normal form of&#xA;packaging a Major Component, but which is not part of that Major&#xA;Component, and (b) serves only to enable use of the work with that&#xA;Major Component, or to implement a Standard Interface for which an&#xA;implementation is available to the public in source code form.  A&#xA;&quot;Major Component&quot;, in this context, means a major essential component&#xA;(kernel, window system, and so on) of the specific operating system&#xA;(if any) on which the executable work runs, or a compiler used to&#xA;produce the work, or an object code interpreter used to run it.&#xA;&#xA;  The &quot;Corresponding Source&quot; for a work in object code form means all&#xA;the source code needed to generate, install, and (for an executable&#xA;work) run the object code and to modify the work, including scripts to&#xA;control those activities.  However, it does not include the work's&#xA;System Libraries, or general-purpose tools or generally available free&#xA;programs which are used unmodified in performing those activities but&#xA;which are not part of the work.  For example, Corresponding Source&#xA;includes interface definition files associated with source files for&#xA;the work, and the source code for shared libraries and dynamically&#xA;linked subprograms that the work is specifically designed to require,&#xA;such as by intimate data communication or control flow between those&#xA;subprograms and other parts of the work.&#xA;&#xA;  The Corresponding Source need not include anything that users&#xA;can regenerate automatically from other parts of the Corresponding&#xA;Source.&#xA;&#xA;  The Corresponding Source for a work in source code form is that&#xA;same work.&#xA;&#xA;  2. Basic Permissions.&#xA;&#xA;  All rights granted under this License are granted for the term of&#xA;copyright on the Program, and are irrevocable provided the stated&#xA;conditions are met.  This License explicitly affirms your unlimited&#xA;permission to run the unmodified Program.  The output from running a&#xA;covered work is covered by this License only if the output, given its&#xA;content, constitutes a covered work.  This License acknowledges your&#xA;rights of fair use or other equivalent, as provided by copyright law.&#xA;&#xA;  You may make, run and propagate covered works that you do not&#xA;convey, without conditions so long as your license otherwise remains&#xA;in force.  You may convey covered works to others for the sole purpose&#xA;of having them make modifications exclusively for you, or provide you&#xA;with facilities for running those works, provided that you comply with&#xA;the terms of this License in conveying all material for which you do&#xA;not control copyright.  Those thus making or running the covered works&#xA;for you must do so exclusively on your behalf, under your direction&#xA;and control, on terms that prohibit them from making any copies of&#xA;your copyrighted material outside their relationship with you.&#xA;&#xA;  Conveying under any other circumstances is permitted solely under&#xA;the conditions stated below.  Sublicensing is not allowed; section 10&#xA;makes it unnecessary.&#xA;&#xA;  3. Protecting Users' Legal Rights From Anti-Circumvention Law.&#xA;&#xA;  No covered work shall be deemed part of an effective technological&#xA;measure under any applicable law fulfilling obligations under article&#xA;11 of the WIPO copyright treaty adopted on 20 December 1996, or&#xA;similar laws prohibiting or restricting circumvention of such&#xA;measures.&#xA;&#xA;  When you convey a covered work, you waive any legal power to forbid&#xA;circumvention of technological measures to the extent such circumvention&#xA;is effected by exercising rights under this License with respect to&#xA;the covered work, and you disclaim any intention to limit operation or&#xA;modification of the work as a means of enforcing, against the work's&#xA;users, your or third parties' legal rights to forbid circumvention of&#xA;technological measures.&#xA;&#xA;  4. Conveying Verbatim Copies.&#xA;&#xA;  You may convey verbatim copies of the Program's source code as you&#xA;receive it, in any medium, provided that you conspicuously and&#xA;appropriately publish on each copy an appropriate copyright notice;&#xA;keep intact all notices stating that this License and any&#xA;non-permissive terms added in accord with section 7 apply to the code;&#xA;keep intact all notices of the absence of any warranty; and give all&#xA;recipients a copy of this License along with the Program.&#xA;&#xA;  You may charge any price or no price for each copy that you convey,&#xA;and you may offer support or warranty protection for a fee.&#xA;&#xA;  5. Conveying Modified Source Versions.&#xA;&#xA;  You may convey a work based on the Program, or the modifications to&#xA;produce it from the Program, in the form of source code under the&#xA;terms of section 4, provided that you also meet all of these conditions:&#xA;&#xA;    a) The work must carry prominent notices stating that you modified&#xA;    it, and giving a relevant date.&#xA;&#xA;    b) The work must carry prominent notices stating that it is&#xA;    released under this License and any conditions added under section&#xA;    7.  This requirement modifies the requirement in section 4 to&#xA;    &quot;keep intact all notices&quot;.&#xA;&#xA;    c) You must license the entire work, as a whole, under this&#xA;    License to anyone who comes into possession of a copy.  This&#xA;    License will therefore apply, along with any applicable section 7&#xA;    additional terms, to the whole of the work, and all its parts,&#xA;    regardless of how they are packaged.  This License gives no&#xA;    permission to license the work in any other way, but it does not&#xA;    invalidate such permission if you have separately received it.&#xA;&#xA;    d) If the work has interactive user interfaces, each must display&#xA;    Appropriate Legal Notices; however, if the Program has interactive&#xA;    interfaces that do not display Appropriate Legal Notices, your&#xA;    work need not make them do so.&#xA;&#xA;  A compilation of a covered work with other separate and independent&#xA;works, which are not by their nature extensions of the covered work,&#xA;and which are not combined with it such as to form a larger program,&#xA;in or on a volume of a storage or distribution medium, is called an&#xA;&quot;aggregate&quot; if the compilation and its resulting copyright are not&#xA;used to limit the access or legal rights of the compilation's users&#xA;beyond what the individual works permit.  Inclusion of a covered work&#xA;in an aggregate does not cause this License to apply to the other&#xA;parts of the aggregate.&#xA;&#xA;  6. Conveying Non-Source Forms.&#xA;&#xA;  You may convey a covered work in object code form under the terms&#xA;of sections 4 and 5, provided that you also convey the&#xA;machine-readable Corresponding Source under the terms of this License,&#xA;in one of these ways:&#xA;&#xA;    a) Convey the object code in, or embodied in, a physical product&#xA;    (including a physical distribution medium), accompanied by the&#xA;    Corresponding Source fixed on a durable physical medium&#xA;    customarily used for software interchange.&#xA;&#xA;    b) Convey the object code in, or embodied in, a physical product&#xA;    (including a physical distribution medium), accompanied by a&#xA;    written offer, valid for at least three years and valid for as&#xA;    long as you offer spare parts or customer support for that product&#xA;    model, to give anyone who possesses the object code either (1) a&#xA;    copy of the Corresponding Source for all the software in the&#xA;    product that is covered by this License, on a durable physical&#xA;    medium customarily used for software interchange, for a price no&#xA;    more than your reasonable cost of physically performing this&#xA;    conveying of source, or (2) access to copy the&#xA;    Corresponding Source from a network server at no charge.&#xA;&#xA;    c) Convey individual copies of the object code with a copy of the&#xA;    written offer to provide the Corresponding Source.  This&#xA;    alternative is allowed only occasionally and noncommercially, and&#xA;    only if you received the object code with such an offer, in accord&#xA;    with subsection 6b.&#xA;&#xA;    d) Convey the object code by offering access from a designated&#xA;    place (gratis or for a charge), and offer equivalent access to the&#xA;    Corresponding Source in the same way through the same place at no&#xA;    further charge.  You need not require recipients to copy the&#xA;    Corresponding Source along with the object code.  If the place to&#xA;    copy the object code is a network server, the Corresponding Source&#xA;    may be on a different server (operated by you or a third party)&#xA;    that supports equivalent copying facilities, provided you maintain&#xA;    clear directions next to the object code saying where to find the&#xA;    Corresponding Source.  Regardless of what server hosts the&#xA;    Corresponding Source, you remain obligated to ensure that it is&#xA;    available for as long as needed to satisfy these requirements.&#xA;&#xA;    e) Convey the object code using peer-to-peer transmission, provided&#xA;    you inform other peers where the object code and Corresponding&#xA;    Source of the work are being offered to the general public at no&#xA;    charge under subsection 6d.&#xA;&#xA;  A separable portion of the object code, whose source code is excluded&#xA;from the Corresponding Source as a System Library, need not be&#xA;included in conveying the object code work.&#xA;&#xA;  A &quot;User Product&quot; is either (1) a &quot;consumer product&quot;, which means any&#xA;tangible personal property which is normally used for personal, family,&#xA;or household purposes, or (2) anything designed or sold for incorporation&#xA;into a dwelling.  In determining whether a product is a consumer product,&#xA;doubtful cases shall be resolved in favor of coverage.  For a particular&#xA;product received by a particular user, &quot;normally used&quot; refers to a&#xA;typical or common use of that class of product, regardless of the status&#xA;of the particular user or of the way in which the particular user&#xA;actually uses, or expects or is expected to use, the product.  A product&#xA;is a consumer product regardless of whether the product has substantial&#xA;commercial, industrial or non-consumer uses, unless such uses represent&#xA;the only significant mode of use of the product.&#xA;&#xA;  &quot;Installation Information&quot; for a User Product means any methods,&#xA;procedures, authorization keys, or other information required to install&#xA;and execute modified versions of a covered work in that User Product from&#xA;a modified version of its Corresponding Source.  The information must&#xA;suffice to ensure that the continued functioning of the modified object&#xA;code is in no case prevented or interfered with solely because&#xA;modification has been made.&#xA;&#xA;  If you convey an object code work under this section in, or with, or&#xA;specifically for use in, a User Product, and the conveying occurs as&#xA;part of a transaction in which the right of possession and use of the&#xA;User Product is transferred to the recipient in perpetuity or for a&#xA;fixed term (regardless of how the transaction is characterized), the&#xA;Corresponding Source conveyed under this section must be accompanied&#xA;by the Installation Information.  But this requirement does not apply&#xA;if neither you nor any third party retains the ability to install&#xA;modified object code on the User Product (for example, the work has&#xA;been installed in ROM).&#xA;&#xA;  The requirement to provide Installation Information does not include a&#xA;requirement to continue to provide support service, warranty, or updates&#xA;for a work that has been modified or installed by the recipient, or for&#xA;the User Product in which it has been modified or installed.  Access to a&#xA;network may be denied when the modification itself materially and&#xA;adversely affects the operation of the network or violates the rules and&#xA;protocols for communication across the network.&#xA;&#xA;  Corresponding Source conveyed, and Installation Information provided,&#xA;in accord with this section must be in a format that is publicly&#xA;documented (and with an implementation available to the public in&#xA;source code form), and must require no special password or key for&#xA;unpacking, reading or copying.&#xA;&#xA;  7. Additional Terms.&#xA;&#xA;  &quot;Additional permissions&quot; are terms that supplement the terms of this&#xA;License by making exceptions from one or more of its conditions.&#xA;Additional permissions that are applicable to the entire Program shall&#xA;be treated as though they were included in this License, to the extent&#xA;that they are valid under applicable law.  If additional permissions&#xA;apply only to part of the Program, that part may be used separately&#xA;under those permissions, but the entire Program remains governed by&#xA;this License without regard to the additional permissions.&#xA;&#xA;  When you convey a copy of a covered work, you may at your option&#xA;remove any additional permissions from that copy, or from any part of&#xA;it.  (Additional permissions may be written to require their own&#xA;removal in certain cases when you modify the work.)  You may place&#xA;additional permissions on material, added by you to a covered work,&#xA;for which you have or can give appropriate copyright permission.&#xA;&#xA;  Notwithstanding any other provision of this License, for material you&#xA;add to a covered work, you may (if authorized by the copyright holders of&#xA;that material) supplement the terms of this License with terms:&#xA;&#xA;    a) Disclaiming warranty or limiting liability differently from the&#xA;    terms of sections 15 and 16 of this License; or&#xA;&#xA;    b) Requiring preservation of specified reasonable legal notices or&#xA;    author attributions in that material or in the Appropriate Legal&#xA;    Notices displayed by works containing it; or&#xA;&#xA;    c) Prohibiting misrepresentation of the origin of that material, or&#xA;    requiring that modified versions of such material be marked in&#xA;    reasonable ways as different from the original version; or&#xA;&#xA;    d) Limiting the use for publicity purposes of names of licensors or&#xA;    authors of the material; or&#xA;&#xA;    e) Declining to grant rights under trademark law for use of some&#xA;    trade names, trademarks, or service marks; or&#xA;&#xA;    f) Requiring indemnification of licensors and authors of that&#xA;    material by anyone who conveys the material (or modified versions of&#xA;    it) with contractual assumptions of liability to the recipient, for&#xA;    any liability that these contractual assumptions directly impose on&#xA;    those licensors and authors.&#xA;&#xA;  All other non-permissive additional terms are considered &quot;further&#xA;restrictions&quot; within the meaning of section 10.  If the Program as you&#xA;received it, or any part of it, contains a notice stating that it is&#xA;governed by this License along with a term that is a further&#xA;restriction, you may remove that term.  If a license document contains&#xA;a further restriction but permits relicensing or conveying under this&#xA;License, you may add to a covered work material governed by the terms&#xA;of that license document, provided that the further restriction does&#xA;not survive such relicensing or conveying.&#xA;&#xA;  If you add terms to a covered work in accord with this section, you&#xA;must place, in the relevant source files, a statement of the&#xA;additional terms that apply to those files, or a notice indicating&#xA;where to find the applicable terms.&#xA;&#xA;  Additional terms, permissive or non-permissive, may be stated in the&#xA;form of a separately written license, or stated as exceptions;&#xA;the above requirements apply either way.&#xA;&#xA;  8. Termination.&#xA;&#xA;  You may not propagate or modify a covered work except as expressly&#xA;provided under this License.  Any attempt otherwise to propagate or&#xA;modify it is void, and will automatically terminate your rights under&#xA;this License (including any patent licenses granted under the third&#xA;paragraph of section 11).&#xA;&#xA;  However, if you cease all violation of this License, then your&#xA;license from a particular copyright holder is reinstated (a)&#xA;provisionally, unless and until the copyright holder explicitly and&#xA;finally terminates your license, and (b) permanently, if the copyright&#xA;holder fails to notify you of the violation by some reasonable means&#xA;prior to 60 days after the cessation.&#xA;&#xA;  Moreover, your license from a particular copyright holder is&#xA;reinstated permanently if the copyright holder notifies you of the&#xA;violation by some reasonable means, this is the first time you have&#xA;received notice of violation of this License (for any work) from that&#xA;copyright holder, and you cure the violation prior to 30 days after&#xA;your receipt of the notice.&#xA;&#xA;  Termination of your rights under this section does not terminate the&#xA;licenses of parties who have received copies or rights from you under&#xA;this License.  If your rights have been terminated and not permanently&#xA;reinstated, you do not qualify to receive new licenses for the same&#xA;material under section 10.&#xA;&#xA;  9. Acceptance Not Required for Having Copies.&#xA;&#xA;  You are not required to accept this License in order to receive or&#xA;run a copy of the Program.  Ancillary propagation of a covered work&#xA;occurring solely as a consequence of using peer-to-peer transmission&#xA;to receive a copy likewise does not require acceptance.  However,&#xA;nothing other than this License grants you permission to propagate or&#xA;modify any covered work.  These actions infringe copyright if you do&#xA;not accept this License.  Therefore, by modifying or propagating a&#xA;covered work, you indicate your acceptance of this License to do so.&#xA;&#xA;  10. Automatic Licensing of Downstream Recipients.&#xA;&#xA;  Each time you convey a covered work, the recipient automatically&#xA;receives a license from the original licensors, to run, modify and&#xA;propagate that work, subject to this License.  You are not responsible&#xA;for enforcing compliance by third parties with this License.&#xA;&#xA;  An &quot;entity transaction&quot; is a transaction transferring control of an&#xA;organization, or substantially all assets of one, or subdividing an&#xA;organization, or merging organizations.  If propagation of a covered&#xA;work results from an entity transaction, each party to that&#xA;transaction who receives a copy of the work also receives whatever&#xA;licenses to the work the party's predecessor in interest had or could&#xA;give under the previous paragraph, plus a right to possession of the&#xA;Corresponding Source of the work from the predecessor in interest, if&#xA;the predecessor has it or can get it with reasonable efforts.&#xA;&#xA;  You may not impose any further restrictions on the exercise of the&#xA;rights granted or affirmed under this License.  For example, you may&#xA;not impose a license fee, royalty, or other charge for exercise of&#xA;rights granted under this License, and you may not initiate litigation&#xA;(including a cross-claim or counterclaim in a lawsuit) alleging that&#xA;any patent claim is infringed by making, using, selling, offering for&#xA;sale, or importing the Program or any portion of it.&#xA;&#xA;  11. Patents.&#xA;&#xA;  A &quot;contributor&quot; is a copyright holder who authorizes use under this&#xA;License of the Program or a work on which the Program is based.  The&#xA;work thus licensed is called the contributor's &quot;contributor version&quot;.&#xA;&#xA;  A contributor's &quot;essential patent claims&quot; are all patent claims&#xA;owned or controlled by the contributor, whether already acquired or&#xA;hereafter acquired, that would be infringed by some manner, permitted&#xA;by this License, of making, using, or selling its contributor version,&#xA;but do not include claims that would be infringed only as a&#xA;consequence of further modification of the contributor version.  For&#xA;purposes of this definition, &quot;control&quot; includes the right to grant&#xA;patent sublicenses in a manner consistent with the requirements of&#xA;this License.&#xA;&#xA;  Each contributor grants you a non-exclusive, worldwide, royalty-free&#xA;patent license under the contributor's essential patent claims, to&#xA;make, use, sell, offer for sale, import and otherwise run, modify and&#xA;propagate the contents of its contributor version.&#xA;&#xA;  In the following three paragraphs, a &quot;patent license&quot; is any express&#xA;agreement or commitment, however denominated, not to enforce a patent&#xA;(such as an express permission to practice a patent or covenant not to&#xA;sue for patent infringement).  To &quot;grant&quot; such a patent license to a&#xA;party means to make such an agreement or commitment not to enforce a&#xA;patent against the party.&#xA;&#xA;  If you convey a covered work, knowingly relying on a patent license,&#xA;and the Corresponding Source of the work is not available for anyone&#xA;to copy, free of charge and under the terms of this License, through a&#xA;publicly available network server or other readily accessible means,&#xA;then you must either (1) cause the Corresponding Source to be so&#xA;available, or (2) arrange to deprive yourself of the benefit of the&#xA;patent license for this particular work, or (3) arrange, in a manner&#xA;consistent with the requirements of this License, to extend the patent&#xA;license to downstream recipients.  &quot;Knowingly relying&quot; means you have&#xA;actual knowledge that, but for the patent license, your conveying the&#xA;covered work in a country, or your recipient's use of the covered work&#xA;in a country, would infringe one or more identifiable patents in that&#xA;country that you have reason to believe are valid.&#xA;&#xA;  If, pursuant to or in connection with a single transaction or&#xA;arrangement, you convey, or propagate by procuring conveyance of, a&#xA;covered work, and grant a patent license to some of the parties&#xA;receiving the covered work authorizing them to use, propagate, modify&#xA;or convey a specific copy of the covered work, then the patent license&#xA;you grant is automatically extended to all recipients of the covered&#xA;work and works based on it.&#xA;&#xA;  A patent license is &quot;discriminatory&quot; if it does not include within&#xA;the scope of its coverage, prohibits the exercise of, or is&#xA;conditioned on the non-exercise of one or more of the rights that are&#xA;specifically granted under this License.  You may not convey a covered&#xA;work if you are a party to an arrangement with a third party that is&#xA;in the business of distributing software, under which you make payment&#xA;to the third party based on the extent of your activity of conveying&#xA;the work, and under which the third party grants, to any of the&#xA;parties who would receive the covered work from you, a discriminatory&#xA;patent license (a) in connection with copies of the covered work&#xA;conveyed by you (or copies made from those copies), or (b) primarily&#xA;for and in connection with specific products or compilations that&#xA;contain the covered work, unless you entered into that arrangement,&#xA;or that patent license was granted, prior to 28 March 2007.&#xA;&#xA;  Nothing in this License shall be construed as excluding or limiting&#xA;any implied license or other defenses to infringement that may&#xA;otherwise be available to you under applicable patent law.&#xA;&#xA;  12. No Surrender of Others' Freedom.&#xA;&#xA;  If conditions are imposed on you (whether by court order, agreement or&#xA;otherwise) that contradict the conditions of this License, they do not&#xA;excuse you from the conditions of this License.  If you cannot convey a&#xA;covered work so as to satisfy simultaneously your obligations under this&#xA;License and any other pertinent obligations, then as a consequence you may&#xA;not convey it at all.  For example, if you agree to terms that obligate you&#xA;to collect a royalty for further conveying from those to whom you convey&#xA;the Program, the only way you could satisfy both those terms and this&#xA;License would be to refrain entirely from conveying the Program.&#xA;&#xA;  13. Remote Network Interaction; Use with the GNU General Public License.&#xA;&#xA;  Notwithstanding any other provision of this License, if you modify the&#xA;Program, your modified version must prominently offer all users&#xA;interacting with it remotely through a computer network (if your version&#xA;supports such interaction) an opportunity to receive the Corresponding&#xA;Source of your version by providing access to the Corresponding Source&#xA;from a network server at no charge, through some standard or customary&#xA;means of facilitating copying of software.  This Corresponding Source&#xA;shall include the Corresponding Source for any work covered by version 3&#xA;of the GNU General Public License that is incorporated pursuant to the&#xA;following paragraph.&#xA;&#xA;  Notwithstanding any other provision of this License, you have&#xA;permission to link or combine any covered work with a work licensed&#xA;under version 3 of the GNU General Public License into a single&#xA;combined work, and to convey the resulting work.  The terms of this&#xA;License will continue to apply to the part which is the covered work,&#xA;but the work with which it is combined will remain governed by version&#xA;3 of the GNU General Public License.&#xA;&#xA;  14. Revised Versions of this License.&#xA;&#xA;  The Free Software Foundation may publish revised and/or new versions of&#xA;the GNU Affero General Public License from time to time.  Such new versions&#xA;will be similar in spirit to the present version, but may differ in detail to&#xA;address new problems or concerns.&#xA;&#xA;  Each version is given a distinguishing version number.  If the&#xA;Program specifies that a certain numbered version of the GNU Affero General&#xA;Public License &quot;or any later version&quot; applies to it, you have the&#xA;option of following the terms and conditions either of that numbered&#xA;version or of any later version published by the Free Software&#xA;Foundation.  If the Program does not specify a version number of the&#xA;GNU Affero General Public License, you may choose any version ever published&#xA;by the Free Software Foundation.&#xA;&#xA;  If the Program specifies that a proxy can decide which future&#xA;versions of the GNU Affero General Public License can be used, that proxy's&#xA;public statement of acceptance of a version permanently authorizes you&#xA;to choose that version for the Program.&#xA;&#xA;  Later license versions may give you additional or different&#xA;permissions.  However, no additional obligations are imposed on any&#xA;author or copyright holder as a result of your choosing to follow a&#xA;later version.&#xA;&#xA;  15. Disclaimer of Warranty.&#xA;&#xA;  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY&#xA;APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT&#xA;HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM &quot;AS IS&quot; WITHOUT WARRANTY&#xA;OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,&#xA;THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR&#xA;PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM&#xA;IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF&#xA;ALL NECESSARY SERVICING, REPAIR OR CORRECTION.&#xA;&#xA;  16. Limitation of Liability.&#xA;&#xA;  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING&#xA;WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS&#xA;THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY&#xA;GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE&#xA;USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF&#xA;DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD&#xA;PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),&#xA;EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF&#xA;SUCH DAMAGES.&#xA;&#xA;  17. Interpretation of Sections 15 and 16.&#xA;&#xA;  If the disclaimer of warranty and limitation of liability provided&#xA;above cannot be given local legal effect according to their terms,&#xA;reviewing courts shall apply local law that most closely approximates&#xA;an absolute waiver of all civil liability in connection with the&#xA;Program, unless a warranty or assumption of liability accompanies a&#xA;copy of the Program in return for a fee.&#xA;&#xA;                     END OF TERMS AND CONDITIONS&#xA;&#xA;            How to Apply These Terms to Your New Programs&#xA;&#xA;  If you develop a new program, and you want it to be of the greatest&#xA;possible use to the public, the best way to achieve this is to make it&#xA;free software which everyone can redistribute and change under these terms.&#xA;&#xA;  To do so, attach the following notices to the program.  It is safest&#xA;to attach them to the start of each source file to most effectively&#xA;state the exclusion of warranty; and each file should have at least&#xA;the &quot;copyright&quot; line and a pointer to where the full notice is found.&#xA;&#xA;    A platform for circular economy ecosystems.&#xA;    Copyright (C) 2020  CLMS UK&#xA;&#xA;    This program is free software: you can redistribute it and/or modify&#xA;    it under the terms of the GNU Affero General Public License as published&#xA;    by the Free Software Foundation, either version 3 of the License, or&#xA;    (at your option) any later version.&#xA;&#xA;    This program is distributed in the hope that it will be useful,&#xA;    but WITHOUT ANY WARRANTY; without even the implied warranty of&#xA;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&#xA;    GNU Affero General Public License for more details.&#xA;&#xA;    You should have received a copy of the GNU Affero General Public License&#xA;    along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.&#xA;&#xA;Also add information on how to contact you by electronic and paper mail.&#xA;&#xA;  If your software can interact with users remotely through a computer&#xA;network, you should also make sure that it provides a way for users to&#xA;get its source.  For example, if your program is a web application, its&#xA;interface could display a &quot;Source&quot; link that leads users to an archive&#xA;of the code.  There are many ways you could offer source, and different&#xA;solutions will be better for different programs; see section 13 for the&#xA;specific requirements.&#xA;&#xA;  You should also get your employer (if you work as a programmer) or school,&#xA;if any, to sign a &quot;copyright disclaimer&quot; for the program, if necessary.&#xA;For more information on this, and how to apply and follow the GNU AGPL, see&#xA;&lt;https://www.gnu.org/licenses/&gt;." OwnerCompany="CLMS UK" />
+  <ExternalLoginProviderInfo GoogleClientId="" GoogleClientSecret="" FacebookAppId="" FacebookAppSecret="" GoogleEnabled="false" FacebookEnabled="false" />
+  <OSAuthenticationOptions LoginUserClass="" />
+  <IdentityServerOptions Authority="" ClientId="" ClientSecret="" Scope="" NameClaim="" EmailClaim="" UsernameClaim="" LoginUserClass="" />
+  <PasswordPolicyConfig RequiredLength="6" RequireNonLetterOrDigit="True" RequireDigit="True" RequireLowercase="True" RequireUppercase="True" />
+</Application>

@@ -1,0 +1,176 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<BusinessObject DateCreated="11/17/2020" Model_Name="ElasticHelpers" Model_Description="" Version="" Comments="" Model_Creator="">
+  <Associations />
+  <Classes>
+    <Class ModelName="ElasticHelpers" Name="ElasticDoc" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="180" Height="180" Top="8" Left="263" />
+      <Attributes />
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="CreateActorDoc" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Interfaces.ElasticSearch.ActorDoc CreateActorDoc(Domain.Actor actor) 
+{
+	Interfaces.ElasticSearch.ActorDoc actorDoc;
+	
+	actorDoc.ID = actor.Id;
+	actorDoc.Name = actor.Name;
+	actorDoc.Description = actor.Description;
+	actorDoc.Tags = actor.Keywords;
+	if(actor.Address != null &amp;&amp; actor.Address.Country != null)
+	{
+		actorDoc.Country = actor.Address.Country.Name;
+	}
+	if(actor.SectorTypes.Length != 0)
+	{
+		actorDoc.Sector = actor.SectorTypes.Get(0).Value;
+	}
+	
+	Collection[string] material;
+	if (actor.CircularEconomyRequirements.Resources.Length &gt; 0) 
+	{
+		material.AddRange(actor.CircularEconomyRequirements.Resources.Select(m =&gt; m.Resource.Name));
+	}
+	actorDoc.Resources = material;
+	
+	Collection[string] requestedMaterial;
+	if (actor.CircularEconomyRequirements.DesiredResources.Length &gt; 0) 
+	{
+		requestedMaterial.AddRange(actor.CircularEconomyRequirements.DesiredResources.Select(m =&gt; m.Resource.Name));
+	}
+	actorDoc.RequestedResources = requestedMaterial;
+
+	return actorDoc;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="SendActorDoc" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function string SendActorDoc(Domain.Actor actor) 
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return "";
+	}
+	
+	var doc = Domain.ElasticDoc.CreateActorDoc(actor);
+	
+	CommonLib.Serializer[Interfaces.ElasticSearch.ActorDoc] ser;
+	DebugLib.Logger.WriteInfoLine("Elastic request " + ser.ToJson(doc));
+	
+	return Interfaces.ElasticSearch.API.CreateDoc(actor.Id, doc);
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="ElasticHelpers" Name="ElasticConsumer" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="226.296875" Height="180" Top="238" Left="10" />
+      <Attributes />
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="InitElasticFromDb" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void InitElasticFromDb()
+{
+	foreach Domain.Actor actor in Domain.Actor.GetAll() 
+	{
+		Domain.ElasticDoc.SendActorDoc(actor);
+	}
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="Search" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Interfaces.ElasticSearch.SearchResponse Search(Domain.SearchQuery modelQuery) 
+{
+	Interfaces.ElasticSearch.SearchRequest request;
+	Interfaces.ElasticSearch.Query query;
+	if(!modelQuery.AdvanceSearch)
+	{
+		Collection[Interfaces.ElasticSearch.Must] mustCollection = 
+			Domain.ElasticConsumer.Filters(modelQuery, true);
+			
+		Interfaces.ElasticSearch.BoolStatement boolElastic;
+		query.Bool = boolElastic;
+		query.Bool.Must = mustCollection.ToArray();
+	}
+	else
+	{
+		Collection[Interfaces.ElasticSearch.Must] mustCollection = 
+			Domain.ElasticConsumer.Filters(modelQuery, false);
+		
+		if(!string.IsNullOrEmpty(modelQuery.SearchTerm))
+		{
+			Interfaces.ElasticSearch.Must mustSearchTerm;
+			Interfaces.ElasticSearch.MultiMatch matchSearchTerm;
+			matchSearchTerm.Query = modelQuery.SearchTerm;
+			string materialSearchMode = "";
+			switch modelQuery.MaterialSearchMode {
+				case "offers":
+					materialSearchMode = "Resources";
+					break;
+				case "requests":
+					materialSearchMode = "RequestedResources";
+					break;
+			}
+			matchSearchTerm.Fields = {"Name", "Description", materialSearchMode};
+			mustSearchTerm.MultiMatch = matchSearchTerm;
+			mustCollection.Add(mustSearchTerm);
+		}
+		
+		Interfaces.ElasticSearch.BoolStatement boolElastic;
+		query.Bool = boolElastic;
+		query.Bool.Must = mustCollection.ToArray();
+	}
+	
+	
+	request.Query = query;
+	
+	CommonLib.Serializer[Interfaces.ElasticSearch.SearchRequest] serQ;
+	DebugLib.Logger.WriteInfoLine("search query " + serQ.ToJson(request));
+	
+	var response = Interfaces.ElasticSearch.API.Search(request);
+	
+	CommonLib.Serializer[Interfaces.ElasticSearch.SearchResponse] serR;
+	DebugLib.Logger.WriteInfoLine("response elastic " + serR.ToJson(response));
+	
+	return response;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="Filters" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Collection[Interfaces.ElasticSearch.Must] Filters(Domain.SearchQuery modelQuery, bool filterResource) 
+{
+	Collection[Interfaces.ElasticSearch.Must] mustCollection;
+	
+	if(modelQuery.SelectedCountry.Name != null)
+	{
+		Interfaces.ElasticSearch.Must must;
+		Interfaces.ElasticSearch.MultiMatch match;
+		match.Query = modelQuery.SelectedCountry.Name;
+		match.Fields = {"Country"};
+		must.MultiMatch = match;
+		mustCollection.Add(must);
+	}
+	
+	if(modelQuery.SelectedSector.Value != null)
+	{
+		Interfaces.ElasticSearch.Must must;
+		Interfaces.ElasticSearch.MultiMatch match;
+		match.Query = modelQuery.SelectedSector.Value;
+		match.Fields = {"Sector"};
+		must.MultiMatch = match;
+		mustCollection.Add(must);
+	}
+	
+	if(filterResource &amp;&amp; modelQuery.SelectedMaterial.Name != null) 
+	{
+		Interfaces.ElasticSearch.Must mustSearchTerm;
+		Interfaces.ElasticSearch.MultiMatch matchSearchTerm;
+		matchSearchTerm.Query = modelQuery.SelectedMaterial.Name;
+		string materialSearchMode = "";
+		switch modelQuery.MaterialSearchMode {
+			case "offers":
+				materialSearchMode = "Resources";
+				break;
+			case "requests":
+				materialSearchMode = "RequestedResources";
+				break;
+		}
+		matchSearchTerm.Fields = {materialSearchMode};
+		mustSearchTerm.MultiMatch = matchSearchTerm;
+		mustCollection.Add(mustSearchTerm);
+	}
+	
+	return mustCollection;
+}</Operation>
+      </Operations>
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

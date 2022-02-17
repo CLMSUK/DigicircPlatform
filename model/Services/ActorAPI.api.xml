@@ -1,0 +1,120 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<ExposedApi DateCreated="11/3/2020" Model_Name="ActorAPI" Model_Description="" Version="0.1.0" Comments="">
+  <Operations>
+    <Operation Verb="Post" Path="addResource" ReturnDataType="Domain.Response" Name="AddResource" Description="" AllowAnonymousUsers="False" AllowAllAuthenticated="True" EnableAccessLog="False" ResponseSample="" RequestSample="" ReadOnly="false" AllowPermisssions="" ApplicationTags="">
+      <Parameters>
+        <Parameter DataType="Domain.Product" Required="True" Name="product" Description="" />
+        <Parameter DataType="int" Required="True" Name="id" Description="" />
+      </Parameters>
+      <Code>function Domain.Response ExposedOperation(Domain.Product product, int id) {
+	Domain.Response response;
+	
+	if(id == null)
+	{
+		response.Status = "No Id provided";
+		return response;
+	}
+	
+	Domain.Actor actor = Domain.Actor.GetByKey(id, false);
+	if(actor == null)
+	{
+		response.Status = "There is no actor with the given Id";
+		return response;
+	}
+	
+	Domain.ApplicationUser user = AppLib.Session.GetCurrentUser();
+	if(actor.AddedBy.UserName != user.UserName &amp;&amp; actor.Administrators.All(a =&gt; a.UserName != user.UserName))
+	{
+		response.Status = "You have no permission to edit the given actor";
+	}
+	
+	actor.AddProductFromAPI(product, false);
+	
+	response.Status = "Ok";
+	return response;
+}</Code>
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Domain.Product product,
+	int id,
+	Domain.Response response
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+  </Operations>
+  <DataContracts>
+    <DataContract Name="" Class="Domain.Address" BaseClass="">
+      <Members>
+        <Member Name="Id" DataType="int" Checked="False" />
+        <Member Name="Latitude" DataType="double" Checked="False" />
+        <Member Name="Longitude" DataType="double" Checked="False" />
+        <Member Name="StreetName" DataType="string" Checked="False" />
+        <Member Name="Number" DataType="int" Checked="False" />
+        <Member Name="Town" DataType="string" Checked="False" />
+        <Member Name="Zip" DataType="string" Checked="False" />
+        <Member Name="FullAddress" DataType="string" Checked="False" />
+        <Member Name="Country" DataType="Domain.Country" Checked="False" />
+        <Member Name="Alias" DataType="string" Checked="True" />
+      </Members>
+    </DataContract>
+    <DataContract Name="" Class="Domain.Material" BaseClass="">
+      <Members>
+        <Member Name="Id" DataType="int" Checked="False" />
+        <Member Name="Name" DataType="string" Checked="True" />
+        <Member Name="Description" DataType="string" Checked="False" />
+        <Member Name="HsSpecific" DataType="string" Checked="False" />
+        <Member Name="ConvertedBy" DataType="Collection[Domain.Process]" Checked="False" />
+        <Member Name="ConvertBy" DataType="Collection[Domain.Process]" Checked="False" />
+        <Member Name="PendingGraph" DataType="bool" Checked="False" />
+        <Member Name="IsHazardous" DataType="bool" Checked="False" />
+        <Member Name="RequestedBy" DataType="Domain.DigicircUser" Checked="False" />
+        <Member Name="Type" DataType="Domain.ProductType" Checked="True" />
+        <Member Name="PhysicalForm" DataType="Domain.PhysicalForm" Checked="True" />
+        <Member Name="UnitOfMeasurement" DataType="Domain.UnitOfMeasurement" Checked="True" />
+      </Members>
+    </DataContract>
+    <DataContract Name="" Class="Domain.PhysicalForm" BaseClass="ValueType">
+      <Members>
+        <Member Name="Id" DataType="int" Checked="False" />
+        <Member Name="Code" DataType="string" Checked="True" />
+        <Member Name="Value" DataType="string" Checked="False" />
+      </Members>
+    </DataContract>
+    <DataContract Name="" Class="Domain.Product" BaseClass="">
+      <Members>
+        <Member Name="Id" DataType="int" Checked="False" />
+        <Member Name="Quantity" DataType="int" Checked="True" />
+        <Member Name="ValidFrom" DataType="DateTime" Checked="True" />
+        <Member Name="ValidTo" DataType="DateTime" Checked="True" />
+        <Member Name="IsDesired" DataType="bool" Checked="True" />
+        <Member Name="Resource" DataType="Domain.Material" Checked="True" />
+        <Member Name="Site" DataType="Domain.Address" Checked="True" />
+      </Members>
+    </DataContract>
+    <DataContract Name="" Class="Domain.ProductType" BaseClass="">
+      <Members>
+        <Member Name="Id" DataType="int" Checked="False" />
+        <Member Name="Name" DataType="string" Checked="True" />
+        <Member Name="SybTypes" DataType="Collection[Domain.ProductType]" Checked="False" />
+        <Member Name="ParentType" DataType="Domain.ProductType" Checked="False" />
+      </Members>
+    </DataContract>
+    <DataContract Name="" Class="Domain.Response" BaseClass="">
+      <Members>
+        <Member Name="Code" DataType="int" Checked="True" />
+        <Member Name="Status" DataType="string" Checked="True" />
+      </Members>
+    </DataContract>
+    <DataContract Name="" Class="Domain.UnitOfMeasurement" BaseClass="ValueType">
+      <Members>
+        <Member Name="Id" DataType="int" Checked="False" />
+        <Member Name="Code" DataType="string" Checked="True" />
+        <Member Name="Value" DataType="string" Checked="False" />
+      </Members>
+    </DataContract>
+  </DataContracts>
+</ExposedApi>

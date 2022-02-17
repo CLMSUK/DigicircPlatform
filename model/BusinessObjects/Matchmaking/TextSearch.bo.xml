@@ -1,0 +1,45 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<BusinessObject DateCreated="10/29/2020" Model_Name="TextSearch" Model_Description="" Version="" Comments="" Model_Creator="">
+  <Associations />
+  <Classes>
+    <Class ModelName="TextSearch" Name="TextSearch" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="180" Height="180" Top="10" Left="31" />
+      <Attributes />
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetTags" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function string GetTags(string description) 
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return "";
+	}
+	
+	Domain.TextSearchRequest req;
+	req.Text = description;
+	
+	var result = Interfaces.TextSearch.API
+		.GetKeywords(DataTransformations.TextSearch.TextSearchRequest_To_TextSearchRequest(req));
+	
+	return result.Tags;
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="TextSearch" Name="TextSearchRequest" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Text" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="252.642578125" Height="180" Top="224" Left="10" />
+      <Attributes>
+        <Attribute Name="Text" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="TextSearch" Name="TextSearchResponse" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Tags" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="266.150390625" Height="180" Top="8" Left="274" />
+      <Attributes>
+        <Attribute Name="Tags" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

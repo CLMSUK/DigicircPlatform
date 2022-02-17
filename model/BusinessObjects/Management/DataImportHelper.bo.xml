@@ -1,0 +1,84 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<BusinessObject DateCreated="8/27/2020" Model_Name="DataImportHelper" Model_Description="" Version="" Comments="" Model_Creator="">
+  <Associations />
+  <Classes>
+    <Class ModelName="DataImportHelper" Name="Company" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="244" Height="288" Top="8" Left="10" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="company_name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="url" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="city" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="country" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="zip_code" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="company_category" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="imported" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="TransformToActor" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void TransformToActor(Domain.EntityType entityType) 
+{
+	foreach Domain.Company company in Domain.Company.GetAll() 
+	{
+		Domain.Actor actor = Domain.Actor.Create();
+		actor.EntityType = entityType;
+		actor.Name = company.company_name;
+		actor.Description = company.description;
+		actor.Url = company.url;
+		actor.Address = Domain.Address.Create();
+		actor.Address.Town = company.city;
+		actor.Address.Zip = company.zip_code;
+		actor.Address.Country = Domain.Country.Find(a =&gt; a.ShortName == company.country).First();
+		Domain.SectorType sector;
+		var dbSector = Domain.SectorType.Find(s =&gt; s.Value == company.company_category).First();
+		if(dbSector!= null)
+		{
+			sector = dbSector;
+		}
+		else
+		{
+			sector.Value = company.company_category;
+		}
+		Collection[Domain.SectorType] types;
+		types.Add(sector);
+		actor.SectorTypes = types;
+		
+		actor.CircularEconomyRequirements = Domain.CircularEconomyReport.Create();
+		
+		actor.Save();
+	}
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="DataImportHelper" Name="DataHelper" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="180" Height="180" Top="116" Left="296" />
+      <Attributes />
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="CleanDuplcateSectors" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void CleanDuplcateSectors(Domain.SectorType sector) 
+{
+	foreach Domain.Actor actor in Domain.Actor.GetAll() 
+	{
+		if(actor.SectorTypes.Any(a =&gt; a.Value == sector.Value))
+		{
+			DebugLib.Logger.WriteInfoLine("Found same sector value in actor");
+			Domain.SectorType sectorToRemove = actor.SectorTypes.Where(a =&gt; a.Value == sector.Value).First();
+			if(sectorToRemove.Id == sector.Id)
+			{
+				continue;
+			}
+			actor.SectorTypes.Remove(sectorToRemove);
+			sectorToRemove.Actor = null;
+			sectorToRemove.Delete();
+			actor.SectorTypes.Add(sector);
+			actor.Save();
+		}
+	}
+}</Operation>
+      </Operations>
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

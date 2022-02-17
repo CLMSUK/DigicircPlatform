@@ -1,0 +1,1039 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<DataTransformation DateCreated="10/30/2020" Model_Name="KnowledgeBase" Model_Description="" Version="" Comments="">
+  <Transformation Name="MaterialCreateRequest_To_MaterialCreateRequest" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="MaterialCreateRequest" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.MaterialCreateRequest" OriginalDataType="Interfaces.KnowledgeBase.MaterialCreateRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statements" PropertyName="Statements" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[Interfaces.KnowledgeBase.MaterialCreateStatements]" OriginalDataType="Array[Interfaces.KnowledgeBase.MaterialCreateStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateRequest.Statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="MaterialCreateRequest" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Domain.MaterialCreateRequest" OriginalDataType="Domain.MaterialCreateRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statements" PropertyName="Statements" ParentModel="KnowledgeMaterialBase" ParentModelId="0" DataType="Collection[Domain.MaterialCreateStatements]" OriginalDataType="Collection[Domain.MaterialCreateStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateRequest.Statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="MaterialCreateStatements_To_MaterialCreateStatements" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="MaterialCreateRequest.Statements" />
+        <RightItems Items="MaterialCreateRequest.Statements" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="MaterialCreateStatements_To_MaterialCreateStatements" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="MaterialCreateStatements" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.MaterialCreateStatements" OriginalDataType="Interfaces.KnowledgeBase.MaterialCreateStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statement" PropertyName="Statement" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateStatements.Statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Parameters" PropertyName="Parameters" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.MaterialCreateParameters" OriginalDataType="Interfaces.KnowledgeBase.MaterialCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateStatements.Parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="MaterialCreateStatements" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Domain.MaterialCreateStatements" OriginalDataType="Domain.MaterialCreateStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statement" PropertyName="Statement" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateStatements.Statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Parameters" PropertyName="Parameters" ParentModel="KnowledgeMaterialBase" ParentModelId="0" DataType="Domain.MaterialCreateParameters" OriginalDataType="Domain.MaterialCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateStatements.Parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="MaterialCreateStatements.Statement" />
+        <RightItems Items="MaterialCreateStatements.Statement" />
+      </Mapping>
+      <Mapping DetailedTransformation="MaterialCreateParameters_To_MaterialCreateParameters" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="MaterialCreateStatements.Parameters" />
+        <RightItems Items="MaterialCreateStatements.Parameters" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="MaterialCreateParameters_To_MaterialCreateParameters" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="MaterialCreateParameters" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.MaterialCreateParameters" OriginalDataType="Interfaces.KnowledgeBase.MaterialCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Props" PropertyName="Props" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.MaterialCreateProps" OriginalDataType="Interfaces.KnowledgeBase.MaterialCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateParameters.Props" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="MaterialCreateParameters" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Domain.MaterialCreateParameters" OriginalDataType="Domain.MaterialCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Props" PropertyName="Props" ParentModel="KnowledgeMaterialBase" ParentModelId="0" DataType="Domain.MaterialCreateProps" OriginalDataType="Domain.MaterialCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateParameters.Props" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="MaterialCreateProps_To_MaterialCreateProps" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="MaterialCreateParameters.Props" />
+        <RightItems Items="MaterialCreateParameters.Props" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="MaterialCreateProps_To_MaterialCreateProps" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="MaterialCreateProps" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.MaterialCreateProps" OriginalDataType="Interfaces.KnowledgeBase.MaterialCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Name" PropertyName="Name" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateProps.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Decription" PropertyName="Decription" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateProps.Decription" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="HsSpecific" PropertyName="HsSpecific" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateProps.HsSpecific" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Id" PropertyName="Id" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Left" Path="MaterialCreateProps.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="MaterialCreateProps" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Domain.MaterialCreateProps" OriginalDataType="Domain.MaterialCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Name" PropertyName="Name" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateProps.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Decription" PropertyName="Decription" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateProps.Decription" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="HsSpecific" PropertyName="HsSpecific" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateProps.HsSpecific" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Id" PropertyName="Id" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Right" Path="MaterialCreateProps.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="MaterialCreateProps.Name" />
+        <RightItems Items="MaterialCreateProps.Name" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="MaterialCreateProps.Decription" />
+        <RightItems Items="MaterialCreateProps.Decription" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="MaterialCreateProps.HsSpecific" />
+        <RightItems Items="MaterialCreateProps.HsSpecific" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="MaterialCreateProps.Id" />
+        <RightItems Items="MaterialCreateProps.Id" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="KnowledgeBaseResult_To_KnowledgeBaseResult" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="KnowledgeBaseResult" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Domain.KnowledgeBaseResult" OriginalDataType="Domain.KnowledgeBaseResult" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseResult" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Results" PropertyName="Results" ParentModel="KnowledgeMaterialBase" ParentModelId="0" DataType="Collection[Domain.KnowledgeBaseResults]" OriginalDataType="Collection[Domain.KnowledgeBaseResults]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseResult.Results" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="KnowledgeBaseResult" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.KnowledgeBaseResult" OriginalDataType="Interfaces.KnowledgeBase.KnowledgeBaseResult" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseResult" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Results" PropertyName="Results" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[Interfaces.KnowledgeBase.KnowledgeBaseResults]" OriginalDataType="Array[Interfaces.KnowledgeBase.KnowledgeBaseResults]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseResult.Results" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="KnowledgeBaseResults_To_KnowledgeBaseResults" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="KnowledgeBaseResult.Results" />
+        <RightItems Items="KnowledgeBaseResult.Results" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="KnowledgeBaseResults_To_KnowledgeBaseResults" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="KnowledgeBaseResults" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Domain.KnowledgeBaseResults" OriginalDataType="Domain.KnowledgeBaseResults" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseResults" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Data" PropertyName="Data" ParentModel="KnowledgeMaterialBase" ParentModelId="0" DataType="Collection[Domain.KnowledgeBaseData]" OriginalDataType="Collection[Domain.KnowledgeBaseData]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseResults.Data" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="KnowledgeBaseResults" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.KnowledgeBaseResults" OriginalDataType="Interfaces.KnowledgeBase.KnowledgeBaseResults" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseResults" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Columns" PropertyName="Columns" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[string]" OriginalDataType="Array[string]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseResults.Columns" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Data" PropertyName="Data" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[Interfaces.KnowledgeBase.KnowledgeBaseData]" OriginalDataType="Array[Interfaces.KnowledgeBase.KnowledgeBaseData]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseResults.Data" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="KnowledgeBaseData_To_KnowledgeBaseData" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="KnowledgeBaseResults.Data" />
+        <RightItems Items="KnowledgeBaseResults.Data" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="KnowledgeBaseData_To_KnowledgeBaseData" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="KnowledgeBaseData" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Domain.KnowledgeBaseData" OriginalDataType="Domain.KnowledgeBaseData" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseData" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Row" PropertyName="Row" ParentModel="KnowledgeMaterialBase" ParentModelId="0" DataType="Collection[Domain.KnowledgeBaseRow]" OriginalDataType="Collection[Domain.KnowledgeBaseRow]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseData.Row" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Meta" PropertyName="Meta" ParentModel="KnowledgeMaterialBase" ParentModelId="0" DataType="Collection[Domain.KnowledgeBaseMeta]" OriginalDataType="Collection[Domain.KnowledgeBaseMeta]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseData.Meta" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="KnowledgeBaseData" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.KnowledgeBaseData" OriginalDataType="Interfaces.KnowledgeBase.KnowledgeBaseData" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseData" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Row" PropertyName="Row" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[Interfaces.KnowledgeBase.KnowledgeBaseRow]" OriginalDataType="Array[Interfaces.KnowledgeBase.KnowledgeBaseRow]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseData.Row" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Meta" PropertyName="Meta" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[Interfaces.KnowledgeBase.KnowledgeBaseMeta]" OriginalDataType="Array[Interfaces.KnowledgeBase.KnowledgeBaseMeta]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseData.Meta" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="KnowledgeBaseRow_To_KnowledgeBaseRow" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="KnowledgeBaseData.Row" />
+        <RightItems Items="KnowledgeBaseData.Row" />
+      </Mapping>
+      <Mapping DetailedTransformation="KnowledgeBaseMeta_To_KnowledgeBaseMeta" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="KnowledgeBaseData.Meta" />
+        <RightItems Items="KnowledgeBaseData.Meta" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="KnowledgeBaseRow_To_KnowledgeBaseRow" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="KnowledgeBaseRow" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Domain.KnowledgeBaseRow" OriginalDataType="Domain.KnowledgeBaseRow" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseRow" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Decription" PropertyName="Decription" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseRow.Decription" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Name" PropertyName="Name" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseRow.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="KnowledgeBaseRow" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.KnowledgeBaseRow" OriginalDataType="Interfaces.KnowledgeBase.KnowledgeBaseRow" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseRow" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Decription" PropertyName="Decription" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseRow.Decription" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Name" PropertyName="Name" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseRow.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Id" PropertyName="Id" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseRow.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="HsSpecific" PropertyName="HsSpecific" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseRow.HsSpecific" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="KnowledgeBaseRow.Decription" />
+        <RightItems Items="KnowledgeBaseRow.Decription" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="KnowledgeBaseRow.Name" />
+        <RightItems Items="KnowledgeBaseRow.Name" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="KnowledgeBaseMeta_To_KnowledgeBaseMeta" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="KnowledgeBaseMeta" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Domain.KnowledgeBaseMeta" OriginalDataType="Domain.KnowledgeBaseMeta" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseMeta" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Id" PropertyName="Id" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseMeta.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Type" PropertyName="Type" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseMeta.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Deleted" PropertyName="Deleted" ParentModel="" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="KnowledgeBaseMeta.Deleted" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="KnowledgeBaseMeta" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.KnowledgeBaseMeta" OriginalDataType="Interfaces.KnowledgeBase.KnowledgeBaseMeta" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseMeta" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Id" PropertyName="Id" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseMeta.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Type" PropertyName="Type" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseMeta.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Deleted" PropertyName="Deleted" ParentModel="KnowledgeBase" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="KnowledgeBaseMeta.Deleted" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="KnowledgeBaseMeta.Id" />
+        <RightItems Items="KnowledgeBaseMeta.Id" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="KnowledgeBaseMeta.Type" />
+        <RightItems Items="KnowledgeBaseMeta.Type" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="KnowledgeBaseMeta.Deleted" />
+        <RightItems Items="KnowledgeBaseMeta.Deleted" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ProcessCreateRequest_To_ProcessCreateRequest" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ProcessCreateRequest" PropertyName="" ParentModel="KnowledgeProcessBase" ParentModelId="0" DataType="Domain.ProcessCreateRequest" OriginalDataType="Domain.ProcessCreateRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statements" PropertyName="Statements" ParentModel="KnowledgeProcessBase" ParentModelId="0" DataType="Collection[Domain.ProcessCreateStatements]" OriginalDataType="Collection[Domain.ProcessCreateStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateRequest.Statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ProcessCreateRequest" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ProcessCreateRequest" OriginalDataType="Interfaces.KnowledgeBase.ProcessCreateRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statements" PropertyName="Statements" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[Interfaces.KnowledgeBase.ProcessCreateStatements]" OriginalDataType="Array[Interfaces.KnowledgeBase.ProcessCreateStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateRequest.Statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="ProcessCreateStatements_To_ProcessCreateStatements" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateRequest.Statements" />
+        <RightItems Items="ProcessCreateRequest.Statements" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ProcessCreateStatements_To_ProcessCreateStatements" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ProcessCreateStatements" PropertyName="" ParentModel="KnowledgeProcessBase" ParentModelId="0" DataType="Domain.ProcessCreateStatements" OriginalDataType="Domain.ProcessCreateStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statement" PropertyName="Statement" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateStatements.Statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Parameters" PropertyName="Parameters" ParentModel="KnowledgeProcessBase" ParentModelId="0" DataType="Domain.ProcessCreateParameters" OriginalDataType="Domain.ProcessCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateStatements.Parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ProcessCreateStatements" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ProcessCreateStatements" OriginalDataType="Interfaces.KnowledgeBase.ProcessCreateStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statement" PropertyName="Statement" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateStatements.Statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Parameters" PropertyName="Parameters" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ProcessCreateParameters" OriginalDataType="Interfaces.KnowledgeBase.ProcessCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateStatements.Parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateStatements.Statement" />
+        <RightItems Items="ProcessCreateStatements.Statement" />
+      </Mapping>
+      <Mapping DetailedTransformation="ProcessCreateParameters_To_ProcessCreateParameters" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateStatements.Parameters" />
+        <RightItems Items="ProcessCreateStatements.Parameters" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ProcessCreateParameters_To_ProcessCreateParameters" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ProcessCreateParameters" PropertyName="" ParentModel="KnowledgeProcessBase" ParentModelId="0" DataType="Domain.ProcessCreateParameters" OriginalDataType="Domain.ProcessCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Props" PropertyName="Props" ParentModel="KnowledgeProcessBase" ParentModelId="0" DataType="Domain.ProcessCreateProps" OriginalDataType="Domain.ProcessCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateParameters.Props" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ProcessCreateParameters" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ProcessCreateParameters" OriginalDataType="Interfaces.KnowledgeBase.ProcessCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Props" PropertyName="Props" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ProcessCreateProps" OriginalDataType="Interfaces.KnowledgeBase.ProcessCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateParameters.Props" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="ProcessCreateProps_To_ProcessCreateProps" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateParameters.Props" />
+        <RightItems Items="ProcessCreateParameters.Props" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ProcessCreateProps_To_ProcessCreateProps" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ProcessCreateProps" PropertyName="" ParentModel="KnowledgeProcessBase" ParentModelId="0" DataType="Domain.ProcessCreateProps" OriginalDataType="Domain.ProcessCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Id" PropertyName="Id" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateProps.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Name" PropertyName="Name" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateProps.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Notes" PropertyName="Notes" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateProps.Notes" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Ref" PropertyName="Ref" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateProps.Ref" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="SourceId" PropertyName="SourceId" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateProps.SourceId" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="ProductId" PropertyName="ProductId" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ProcessCreateProps.ProductId" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ProcessCreateProps" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ProcessCreateProps" OriginalDataType="Interfaces.KnowledgeBase.ProcessCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Id" PropertyName="Id" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateProps.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Name" PropertyName="Name" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateProps.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Notes" PropertyName="Notes" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateProps.Notes" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Ref" PropertyName="Ref" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateProps.Ref" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="SourceId" PropertyName="SourceId" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateProps.SourceId" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="ProductId" PropertyName="ProductId" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ProcessCreateProps.ProductId" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateProps.Id" />
+        <RightItems Items="ProcessCreateProps.Id" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateProps.Name" />
+        <RightItems Items="ProcessCreateProps.Name" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateProps.Notes" />
+        <RightItems Items="ProcessCreateProps.Notes" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateProps.Ref" />
+        <RightItems Items="ProcessCreateProps.Ref" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateProps.SourceId" />
+        <RightItems Items="ProcessCreateProps.SourceId" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ProcessCreateProps.ProductId" />
+        <RightItems Items="ProcessCreateProps.ProductId" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ActorCreateRequest_To_ActorCreateRequest" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ActorCreateRequest" PropertyName="" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ActorCreateRequest" OriginalDataType="Domain.ActorCreateRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statements" PropertyName="Statements" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Collection[Domain.ActorCreateStatements]" OriginalDataType="Collection[Domain.ActorCreateStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateRequest.Statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ActorCreateRequest" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ActorCreateRequest" OriginalDataType="Interfaces.KnowledgeBase.ActorCreateRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="statements" PropertyName="statements" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[Interfaces.KnowledgeBase.ActorCreateStatements]" OriginalDataType="Array[Interfaces.KnowledgeBase.ActorCreateStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateRequest.statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="ActorCreateStatements_To_ActorCreateStatements" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ActorCreateRequest.Statements" />
+        <RightItems Items="ActorCreateRequest.statements" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ActorCreateStatements_To_ActorCreateStatements" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ActorCreateStatements" PropertyName="" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ActorCreateStatements" OriginalDataType="Domain.ActorCreateStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statement" PropertyName="Statement" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateStatements.Statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Parameters" PropertyName="Parameters" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ActorCreateParameters" OriginalDataType="Domain.ActorCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateStatements.Parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ActorCreateStatements" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ActorCreateStatements" OriginalDataType="Interfaces.KnowledgeBase.ActorCreateStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="statement" PropertyName="statement" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateStatements.statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="parameters" PropertyName="parameters" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ActorCreateParameters" OriginalDataType="Interfaces.KnowledgeBase.ActorCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateStatements.parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ActorCreateStatements.Statement" />
+        <RightItems Items="ActorCreateStatements.statement" />
+      </Mapping>
+      <Mapping DetailedTransformation="ActorCreateParameters_To_ActorCreateParameters" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ActorCreateStatements.Parameters" />
+        <RightItems Items="ActorCreateStatements.parameters" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ActorCreateParameters_To_ActorCreateParameters" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ActorCreateParameters" PropertyName="" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ActorCreateParameters" OriginalDataType="Domain.ActorCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Props" PropertyName="Props" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ActorCreateProps" OriginalDataType="Domain.ActorCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateParameters.Props" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ActorCreateParameters" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ActorCreateParameters" OriginalDataType="Interfaces.KnowledgeBase.ActorCreateParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="props" PropertyName="props" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ActorCreateProps" OriginalDataType="Interfaces.KnowledgeBase.ActorCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateParameters.props" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="ActorCreateProps_To_ActorCreateProps" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ActorCreateParameters.Props" />
+        <RightItems Items="ActorCreateParameters.props" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ActorCreateProps_To_ActorCreateProps" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ActorCreateProps" PropertyName="" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ActorCreateProps" OriginalDataType="Domain.ActorCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Id" PropertyName="Id" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateProps.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Name" PropertyName="Name" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ActorCreateProps.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ActorCreateProps" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ActorCreateProps" OriginalDataType="Interfaces.KnowledgeBase.ActorCreateProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Id" PropertyName="Id" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateProps.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Name" PropertyName="Name" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ActorCreateProps.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ActorCreateProps.Id" />
+        <RightItems Items="ActorCreateProps.Id" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ActorCreateProps.Name" />
+        <RightItems Items="ActorCreateProps.Name" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ConnectActorMaterialRequest_To_ConnectActorMaterialRequest" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ConnectActorMaterialRequest" PropertyName="" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ConnectActorMaterialRequest" OriginalDataType="Domain.ConnectActorMaterialRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statements" PropertyName="Statements" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Collection[Domain.ConnectActorMaterialStatements]" OriginalDataType="Collection[Domain.ConnectActorMaterialStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialRequest.Statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ConnectActorMaterialRequest" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ConnectActorMaterialRequest" OriginalDataType="Interfaces.KnowledgeBase.ConnectActorMaterialRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="statements" PropertyName="statements" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[Interfaces.KnowledgeBase.ConnectActorMaterialStatements]" OriginalDataType="Array[Interfaces.KnowledgeBase.ConnectActorMaterialStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialRequest.statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="ConnectActorMaterialStatements_To_ConnectActorMaterialStatements" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ConnectActorMaterialRequest.Statements" />
+        <RightItems Items="ConnectActorMaterialRequest.statements" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ConnectActorMaterialStatements_To_ConnectActorMaterialStatements" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ConnectActorMaterialStatements" PropertyName="" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ConnectActorMaterialStatements" OriginalDataType="Domain.ConnectActorMaterialStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statement" PropertyName="Statement" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialStatements.Statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Parameters" PropertyName="Parameters" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ConnectActorMaterialParameters" OriginalDataType="Domain.ConnectActorMaterialParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialStatements.Parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ConnectActorMaterialStatements" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ConnectActorMaterialStatements" OriginalDataType="Interfaces.KnowledgeBase.ConnectActorMaterialStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="statement" PropertyName="statement" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialStatements.statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="parameters" PropertyName="parameters" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ConnectActorMaterialParameters" OriginalDataType="Interfaces.KnowledgeBase.ConnectActorMaterialParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialStatements.parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ConnectActorMaterialStatements.Statement" />
+        <RightItems Items="ConnectActorMaterialStatements.statement" />
+      </Mapping>
+      <Mapping DetailedTransformation="ConnectActorMaterialParameters_To_ConnectActorMaterialParameters" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ConnectActorMaterialStatements.Parameters" />
+        <RightItems Items="ConnectActorMaterialStatements.parameters" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ConnectActorMaterialParameters_To_ConnectActorMaterialParameters" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ConnectActorMaterialParameters" PropertyName="" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ConnectActorMaterialParameters" OriginalDataType="Domain.ConnectActorMaterialParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Props" PropertyName="Props" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ConnectActorMaterialProps" OriginalDataType="Domain.ConnectActorMaterialProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialParameters.Props" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ConnectActorMaterialParameters" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ConnectActorMaterialParameters" OriginalDataType="Interfaces.KnowledgeBase.ConnectActorMaterialParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="props" PropertyName="props" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ConnectActorMaterialProps" OriginalDataType="Interfaces.KnowledgeBase.ConnectActorMaterialProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialParameters.props" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="ConnectActorMaterialProps_To_ConnectActorMaterialProps" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ConnectActorMaterialParameters.Props" />
+        <RightItems Items="ConnectActorMaterialParameters.props" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ConnectActorMaterialProps_To_ConnectActorMaterialProps" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ConnectActorMaterialProps" PropertyName="" ParentModel="KnowledgeActorBase" ParentModelId="0" DataType="Domain.ConnectActorMaterialProps" OriginalDataType="Domain.ConnectActorMaterialProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="ActorId" PropertyName="ActorId" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialProps.ActorId" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="MaterialId" PropertyName="MaterialId" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ConnectActorMaterialProps.MaterialId" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ConnectActorMaterialProps" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ConnectActorMaterialProps" OriginalDataType="Interfaces.KnowledgeBase.ConnectActorMaterialProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="ActorId" PropertyName="ActorId" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialProps.ActorId" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="MaterialId" PropertyName="MaterialId" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ConnectActorMaterialProps.MaterialId" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ConnectActorMaterialProps.ActorId" />
+        <RightItems Items="ConnectActorMaterialProps.ActorId" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ConnectActorMaterialProps.MaterialId" />
+        <RightItems Items="ConnectActorMaterialProps.MaterialId" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ListProducersMaterialRequest_To_ListProducersMaterialRequest" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ListProducersMaterialRequest" PropertyName="" ParentModel="KnowledgeProducersMaterialBase" ParentModelId="0" DataType="Domain.ListProducersMaterialRequest" OriginalDataType="Domain.ListProducersMaterialRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statements" PropertyName="Statements" ParentModel="KnowledgeProducersMaterialBase" ParentModelId="0" DataType="Collection[Domain.ListProducersMaterialStatements]" OriginalDataType="Collection[Domain.ListProducersMaterialStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialRequest.Statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ListProducersMaterialRequest" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ListProducersMaterialRequest" OriginalDataType="Interfaces.KnowledgeBase.ListProducersMaterialRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="statements" PropertyName="statements" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Array[Interfaces.KnowledgeBase.ListProducersMaterialStatements]" OriginalDataType="Array[Interfaces.KnowledgeBase.ListProducersMaterialStatements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialRequest.statements" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="ListProducersMaterialStatements_To_ListProducersMaterialStatements" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ListProducersMaterialRequest.Statements" />
+        <RightItems Items="ListProducersMaterialRequest.statements" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ListProducersMaterialStatements_To_ListProducersMaterialStatements" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ListProducersMaterialStatements" PropertyName="" ParentModel="KnowledgeProducersMaterialBase" ParentModelId="0" DataType="Domain.ListProducersMaterialStatements" OriginalDataType="Domain.ListProducersMaterialStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Statement" PropertyName="Statement" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialStatements.Statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Parameters" PropertyName="Parameters" ParentModel="KnowledgeProducersMaterialBase" ParentModelId="0" DataType="Domain.ListProducersMaterialParameters" OriginalDataType="Domain.ListProducersMaterialParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialStatements.Parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ListProducersMaterialStatements" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ListProducersMaterialStatements" OriginalDataType="Interfaces.KnowledgeBase.ListProducersMaterialStatements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialStatements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="statement" PropertyName="statement" ParentModel="KnowledgeBase" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialStatements.statement" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="parameters" PropertyName="parameters" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ListProducersMaterialParameters" OriginalDataType="Interfaces.KnowledgeBase.ListProducersMaterialParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialStatements.parameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ListProducersMaterialStatements.Statement" />
+        <RightItems Items="ListProducersMaterialStatements.statement" />
+      </Mapping>
+      <Mapping DetailedTransformation="ListProducersMaterialParameters_To_ListProducersMaterialParameters" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ListProducersMaterialStatements.Parameters" />
+        <RightItems Items="ListProducersMaterialStatements.parameters" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ListProducersMaterialParameters_To_ListProducersMaterialParameters" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ListProducersMaterialParameters" PropertyName="" ParentModel="KnowledgeProducersMaterialBase" ParentModelId="0" DataType="Domain.ListProducersMaterialParameters" OriginalDataType="Domain.ListProducersMaterialParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Properties" PropertyName="Properties" ParentModel="KnowledgeProducersMaterialBase" ParentModelId="0" DataType="Domain.ListProducersMaterialProps" OriginalDataType="Domain.ListProducersMaterialProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialParameters.Properties" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ListProducersMaterialParameters" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ListProducersMaterialParameters" OriginalDataType="Interfaces.KnowledgeBase.ListProducersMaterialParameters" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialParameters" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="props" PropertyName="props" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ListProducersMaterialProps" OriginalDataType="Interfaces.KnowledgeBase.ListProducersMaterialProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialParameters.props" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="ListProducersMaterialProps_To_ListProducersMaterialProps" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ListProducersMaterialParameters.Properties" />
+        <RightItems Items="ListProducersMaterialParameters.props" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ListProducersMaterialProps_To_ListProducersMaterialProps" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ListProducersMaterialProps" PropertyName="" ParentModel="KnowledgeProducersMaterialBase" ParentModelId="0" DataType="Domain.ListProducersMaterialProps" OriginalDataType="Domain.ListProducersMaterialProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="ActorId" PropertyName="ActorId" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialProps.ActorId" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="MaterialId" PropertyName="MaterialId" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ListProducersMaterialProps.MaterialId" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ListProducersMaterialProps" PropertyName="" ParentModel="KnowledgeBase" ParentModelId="0" DataType="Interfaces.KnowledgeBase.ListProducersMaterialProps" OriginalDataType="Interfaces.KnowledgeBase.ListProducersMaterialProps" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialProps" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="ActorId" PropertyName="ActorId" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialProps.ActorId" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="MaterialId" PropertyName="MaterialId" ParentModel="KnowledgeBase" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ListProducersMaterialProps.MaterialId" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ListProducersMaterialProps.ActorId" />
+        <RightItems Items="ListProducersMaterialProps.ActorId" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ListProducersMaterialProps.MaterialId" />
+        <RightItems Items="ListProducersMaterialProps.MaterialId" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+</DataTransformation>

@@ -1,0 +1,983 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<DataTransformation DateCreated="8/4/2020" Model_Name="GraphBackend" Model_Description="" Version="" Comments="">
+  <Transformation Name="Metadata_To_Metadata" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="Metadata" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.Metadata" OriginalDataType="Domain.Metadata" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Metadata" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="ExportDataAsJson" PropertyName="ExportDataAsJson" ParentModel="" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Metadata.ExportDataAsJson" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Pages" PropertyName="Pages" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Metadata.Pages" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="PageSize" PropertyName="PageSize" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Metadata.PageSize" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="QueryElapsedTime" PropertyName="QueryElapsedTime" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Metadata.QueryElapsedTime" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="TotalResponseElementsWithPositiveRelevanceLevel" PropertyName="TotalResponseElementsWithPositiveRelevanceLevel" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Metadata.TotalResponseElementsWithPositiveRelevanceLevel" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Elements" PropertyName="Elements" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Metadata.Elements" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Relations" PropertyName="Relations" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Metadata.Relations" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="ExportType" PropertyName="ExportType" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Metadata.ExportType" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="Metadata" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.Metadata" OriginalDataType="Interfaces.GraphBackend.Metadata" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="ExportDataAsJson" PropertyName="ExportDataAsJson" ParentModel="GraphBackend" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata.ExportDataAsJson" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Pages" PropertyName="Pages" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata.Pages" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="PageSize" PropertyName="PageSize" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata.PageSize" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="QueryElapsedTime" PropertyName="QueryElapsedTime" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata.QueryElapsedTime" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="TotalResponseElementsWithPositiveRelevanceLevel" PropertyName="TotalResponseElementsWithPositiveRelevanceLevel" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata.TotalResponseElementsWithPositiveRelevanceLevel" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Elements" PropertyName="Elements" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata.Elements" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Relations" PropertyName="Relations" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata.Relations" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="ExportType" PropertyName="ExportType" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata.ExportType" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="HeaderElement" PropertyName="HeaderElement" ParentModel="GraphBackend" ParentModelId="0" DataType="Object" OriginalDataType="Object" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Metadata.HeaderElement" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Metadata.ExportDataAsJson" />
+        <RightItems Items="Metadata.ExportDataAsJson" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Metadata.Pages" />
+        <RightItems Items="Metadata.Pages" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Metadata.PageSize" />
+        <RightItems Items="Metadata.PageSize" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Metadata.QueryElapsedTime" />
+        <RightItems Items="Metadata.QueryElapsedTime" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Metadata.TotalResponseElementsWithPositiveRelevanceLevel" />
+        <RightItems Items="Metadata.TotalResponseElementsWithPositiveRelevanceLevel" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Metadata.Elements" />
+        <RightItems Items="Metadata.Elements" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Metadata.Relations" />
+        <RightItems Items="Metadata.Relations" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Metadata.ExportType" />
+        <RightItems Items="Metadata.ExportType" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="Nodes_To_Nodes" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="Nodes" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.Nodes" OriginalDataType="Domain.Nodes" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Name" PropertyName="Name" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Label" PropertyName="Label" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.Label" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="LabelType" PropertyName="LabelType" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.LabelType" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Id" PropertyName="Id" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Graphid" PropertyName="Graphid" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.Graphid" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="CC" PropertyName="CC" ParentModel="" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.CC" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="SL" PropertyName="SL" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.SL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="CL" PropertyName="CL" ParentModel="" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.CL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="RL" PropertyName="RL" ParentModel="" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.RL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="IA" PropertyName="IA" ParentModel="" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.IA" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AL" PropertyName="AL" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.AL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AC" PropertyName="AC" ParentModel="" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.AC" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Attr" PropertyName="Attr" ParentModel="" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Nodes.Attr" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="Nodes" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.Nodes" OriginalDataType="Interfaces.GraphBackend.Nodes" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Name" PropertyName="Name" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Label" PropertyName="Label" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.Label" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="LabelType" PropertyName="LabelType" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.LabelType" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Id" PropertyName="Id" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.Id" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Graphid" PropertyName="Graphid" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.Graphid" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="data" PropertyName="data" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.Data" OriginalDataType="Interfaces.GraphBackend.Data" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.data" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="CC" PropertyName="CC" ParentModel="GraphBackend" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.CC" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="SL" PropertyName="SL" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.SL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="CL" PropertyName="CL" ParentModel="GraphBackend" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.CL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="RL" PropertyName="RL" ParentModel="GraphBackend" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.RL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="IA" PropertyName="IA" ParentModel="GraphBackend" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.IA" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AL" PropertyName="AL" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.AL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AC" PropertyName="AC" ParentModel="GraphBackend" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.AC" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Attr" PropertyName="Attr" ParentModel="GraphBackend" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Nodes.Attr" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.Name" />
+        <RightItems Items="Nodes.Name" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.Label" />
+        <RightItems Items="Nodes.Label" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.LabelType" />
+        <RightItems Items="Nodes.LabelType" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.Id" />
+        <RightItems Items="Nodes.Id" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.Graphid" />
+        <RightItems Items="Nodes.Graphid" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.CC" />
+        <RightItems Items="Nodes.CC" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.SL" />
+        <RightItems Items="Nodes.SL" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.CL" />
+        <RightItems Items="Nodes.CL" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.RL" />
+        <RightItems Items="Nodes.RL" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.IA" />
+        <RightItems Items="Nodes.IA" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.AL" />
+        <RightItems Items="Nodes.AL" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.AC" />
+        <RightItems Items="Nodes.AC" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Nodes.Attr" />
+        <RightItems Items="Nodes.Attr" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="Links_To_Links" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="Links" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.Links" OriginalDataType="Domain.Links" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Source" PropertyName="Source" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.Source" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Target" PropertyName="Target" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.Target" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Type" PropertyName="Type" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="TypeRel" PropertyName="TypeRel" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.TypeRel" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Sid" PropertyName="Sid" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.Sid" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Tid" PropertyName="Tid" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.Tid" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Weight" PropertyName="Weight" ParentModel="" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.Weight" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="CL" PropertyName="CL" ParentModel="" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.CL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="RL" PropertyName="RL" ParentModel="" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.RL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="IA" PropertyName="IA" ParentModel="" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.IA" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AL" PropertyName="AL" ParentModel="" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.AL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AC" PropertyName="AC" ParentModel="" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.AC" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Attr" PropertyName="Attr" ParentModel="" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="Links.Attr" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="Links" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.Links" OriginalDataType="Interfaces.GraphBackend.Links" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Source" PropertyName="Source" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.Source" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Target" PropertyName="Target" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.Target" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Type" PropertyName="Type" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="TypeRel" PropertyName="TypeRel" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.TypeRel" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Sid" PropertyName="Sid" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.Sid" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Tid" PropertyName="Tid" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.Tid" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Data" PropertyName="Data" ParentModel="GraphBackend" ParentModelId="0" DataType="Object" OriginalDataType="Object" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.Data" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Weight" PropertyName="Weight" ParentModel="GraphBackend" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.Weight" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="CL" PropertyName="CL" ParentModel="GraphBackend" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.CL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="RL" PropertyName="RL" ParentModel="GraphBackend" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.RL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="IA" PropertyName="IA" ParentModel="GraphBackend" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.IA" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AL" PropertyName="AL" ParentModel="GraphBackend" ParentModelId="0" DataType="int" OriginalDataType="int" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.AL" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AC" PropertyName="AC" ParentModel="GraphBackend" ParentModelId="0" DataType="float" OriginalDataType="float" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.AC" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Attr" PropertyName="Attr" ParentModel="GraphBackend" ParentModelId="0" DataType="bool" OriginalDataType="bool" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="Links.Attr" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.Source" />
+        <RightItems Items="Links.Source" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.Target" />
+        <RightItems Items="Links.Target" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.Type" />
+        <RightItems Items="Links.Type" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.TypeRel" />
+        <RightItems Items="Links.TypeRel" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.Sid" />
+        <RightItems Items="Links.Sid" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.Tid" />
+        <RightItems Items="Links.Tid" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.Weight" />
+        <RightItems Items="Links.Weight" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.CL" />
+        <RightItems Items="Links.CL" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.RL" />
+        <RightItems Items="Links.RL" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.IA" />
+        <RightItems Items="Links.IA" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.AL" />
+        <RightItems Items="Links.AL" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.AC" />
+        <RightItems Items="Links.AC" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="Links.Attr" />
+        <RightItems Items="Links.Attr" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="QueryExtended_To_QueryExtended" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="QueryExtended" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.QueryExtended" OriginalDataType="Domain.QueryExtended" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="QueryExtended" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="GraphContext" PropertyName="GraphContext" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="QueryExtended.GraphContext" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="GraphSubContext" PropertyName="GraphSubContext" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="QueryExtended.GraphSubContext" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="MessageType" PropertyName="MessageType" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="QueryExtended.MessageType" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Elements" PropertyName="Elements" ParentModel="GraphBackend" ParentModelId="0" DataType="Collection[Domain.ExElements]" OriginalDataType="Collection[Domain.ExElements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="QueryExtended.Elements" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Relations" PropertyName="Relations" ParentModel="GraphBackend" ParentModelId="0" DataType="Collection[Domain.ExRelations]" OriginalDataType="Collection[Domain.ExRelations]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="QueryExtended.Relations" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="MessageSearchData" PropertyName="MessageSearchData" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.ExMessageSearchData" OriginalDataType="Domain.ExMessageSearchData" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="QueryExtended.MessageSearchData" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="QueryExtended" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.QueryExtended" OriginalDataType="Interfaces.GraphBackend.QueryExtended" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="QueryExtended" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="GraphContext" PropertyName="GraphContext" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="QueryExtended.GraphContext" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="GraphSubContext" PropertyName="GraphSubContext" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="QueryExtended.GraphSubContext" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="MessageType" PropertyName="MessageType" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="QueryExtended.MessageType" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Elements" PropertyName="Elements" ParentModel="GraphBackend" ParentModelId="0" DataType="Collection[Interfaces.GraphBackend.ExElements]" OriginalDataType="Collection[Interfaces.GraphBackend.ExElements]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="QueryExtended.Elements" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Relations" PropertyName="Relations" ParentModel="GraphBackend" ParentModelId="0" DataType="Collection[Interfaces.GraphBackend.ExRelations]" OriginalDataType="Collection[Interfaces.GraphBackend.ExRelations]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="QueryExtended.Relations" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="MessageSearchData" PropertyName="MessageSearchData" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.ExMessageSearchData" OriginalDataType="Interfaces.GraphBackend.ExMessageSearchData" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="QueryExtended.MessageSearchData" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="QueryExtended.GraphContext" />
+        <RightItems Items="QueryExtended.GraphContext" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="QueryExtended.GraphSubContext" />
+        <RightItems Items="QueryExtended.GraphSubContext" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="QueryExtended.MessageType" />
+        <RightItems Items="QueryExtended.MessageType" />
+      </Mapping>
+      <Mapping DetailedTransformation="ExElements_To_ExElements" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="QueryExtended.Elements" />
+        <RightItems Items="QueryExtended.Elements" />
+      </Mapping>
+      <Mapping DetailedTransformation="ExRelations_To_ExRelations" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="QueryExtended.Relations" />
+        <RightItems Items="QueryExtended.Relations" />
+      </Mapping>
+      <Mapping DetailedTransformation="ExMessageSearchData_To_ExMessageSearchData" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="QueryExtended.MessageSearchData" />
+        <RightItems Items="QueryExtended.MessageSearchData" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ExElements_To_ExElements" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ExElements" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.ExElements" OriginalDataType="Domain.ExElements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExElements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Type" PropertyName="Type" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExElements.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Name" PropertyName="Name" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExElements.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Category" PropertyName="Category" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExElements.Category" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Data" PropertyName="Data" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExElements.Data" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ExElements" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.ExElements" OriginalDataType="Interfaces.GraphBackend.ExElements" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExElements" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Type" PropertyName="Type" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExElements.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Name" PropertyName="Name" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExElements.Name" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Category" PropertyName="Category" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExElements.Category" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Data" PropertyName="Data" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExElements.Data" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExElements.Type" />
+        <RightItems Items="ExElements.Type" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExElements.Name" />
+        <RightItems Items="ExElements.Name" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExElements.Category" />
+        <RightItems Items="ExElements.Category" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExElements.Data" />
+        <RightItems Items="ExElements.Data" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ExRelations_To_ExRelations" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ExRelations" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.ExRelations" OriginalDataType="Domain.ExRelations" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExRelations" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Type" PropertyName="Type" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExRelations.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ExRelations" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.ExRelations" OriginalDataType="Interfaces.GraphBackend.ExRelations" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExRelations" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Type" PropertyName="Type" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExRelations.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExRelations.Type" />
+        <RightItems Items="ExRelations.Type" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ExMessageSearchData_To_ExMessageSearchData" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ExMessageSearchData" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.ExMessageSearchData" OriginalDataType="Domain.ExMessageSearchData" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExMessageSearchData" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="LabelSearchType" PropertyName="LabelSearchType" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExMessageSearchData.LabelSearchType" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="DepthSearchLevel" PropertyName="DepthSearchLevel" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExMessageSearchData.DepthSearchLevel" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AlgorithmName" PropertyName="AlgorithmName" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExMessageSearchData.AlgorithmName" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="JsonResponseFormat" PropertyName="JsonResponseFormat" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExMessageSearchData.JsonResponseFormat" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="FindPathTypes" PropertyName="FindPathTypes" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExMessageSearchData.FindPathTypes" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AlgorithmOptimalPathParameters" PropertyName="AlgorithmOptimalPathParameters" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExMessageSearchData.AlgorithmOptimalPathParameters" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="ExSecurity" PropertyName="ExSecurity" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.ExSecurity" OriginalDataType="Domain.ExSecurity" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExMessageSearchData.ExSecurity" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ExMessageSearchData" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.ExMessageSearchData" OriginalDataType="Interfaces.GraphBackend.ExMessageSearchData" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExMessageSearchData" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="LabelSearchType" PropertyName="LabelSearchType" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExMessageSearchData.LabelSearchType" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="DepthSearchLevel" PropertyName="DepthSearchLevel" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExMessageSearchData.DepthSearchLevel" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="AlgorithmName" PropertyName="AlgorithmName" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExMessageSearchData.AlgorithmName" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="JsonResponseFormat" PropertyName="JsonResponseFormat" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExMessageSearchData.JsonResponseFormat" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="ExSecurity" PropertyName="ExSecurity" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.ExSecurity" OriginalDataType="Interfaces.GraphBackend.ExSecurity" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExMessageSearchData.ExSecurity" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExMessageSearchData.LabelSearchType" />
+        <RightItems Items="ExMessageSearchData.LabelSearchType" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExMessageSearchData.DepthSearchLevel" />
+        <RightItems Items="ExMessageSearchData.DepthSearchLevel" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExMessageSearchData.AlgorithmName" />
+        <RightItems Items="ExMessageSearchData.AlgorithmName" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExMessageSearchData.JsonResponseFormat" />
+        <RightItems Items="ExMessageSearchData.JsonResponseFormat" />
+      </Mapping>
+      <Mapping DetailedTransformation="ExSecurity_To_ExSecurity" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExMessageSearchData.ExSecurity" />
+        <RightItems Items="ExMessageSearchData.ExSecurity" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="ExSecurity_To_ExSecurity" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="ExSecurity" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.ExSecurity" OriginalDataType="Domain.ExSecurity" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExSecurity" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="ExAuthorization" PropertyName="ExAuthorization" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExSecurity.ExAuthorization" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="UserName" PropertyName="UserName" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExSecurity.UserName" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Passwd" PropertyName="Passwd" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="ExSecurity.Passwd" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="ExSecurity" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.ExSecurity" OriginalDataType="Interfaces.GraphBackend.ExSecurity" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExSecurity" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="ExAuthorization" PropertyName="ExAuthorization" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExSecurity.ExAuthorization" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="UserName" PropertyName="UserName" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExSecurity.UserName" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Passwd" PropertyName="Passwd" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="ExSecurity.Passwd" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExSecurity.ExAuthorization" />
+        <RightItems Items="ExSecurity.ExAuthorization" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExSecurity.UserName" />
+        <RightItems Items="ExSecurity.UserName" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="ExSecurity.Passwd" />
+        <RightItems Items="ExSecurity.Passwd" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="GraphBackendResponse_To_GraphBackendResponse" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="GraphBackendResponse" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.GraphBackendResponse" OriginalDataType="Domain.GraphBackendResponse" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="GraphBackendResponse" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Metadata" PropertyName="Metadata" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.Metadata" OriginalDataType="Domain.Metadata" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="GraphBackendResponse.Metadata" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Nodes" PropertyName="Nodes" ParentModel="GraphBackend" ParentModelId="0" DataType="Collection[Domain.Nodes]" OriginalDataType="Collection[Domain.Nodes]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="GraphBackendResponse.Nodes" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Links" PropertyName="Links" ParentModel="GraphBackend" ParentModelId="0" DataType="Collection[Domain.Links]" OriginalDataType="Collection[Domain.Links]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="DomainModel" Side="Left" Path="GraphBackendResponse.Links" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="GraphBackendResponse" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.GraphBackendResponse" OriginalDataType="Interfaces.GraphBackend.GraphBackendResponse" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="GraphBackendResponse" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Metadata" PropertyName="Metadata" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.Metadata" OriginalDataType="Interfaces.GraphBackend.Metadata" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="GraphBackendResponse.Metadata" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Nodes" PropertyName="Nodes" ParentModel="GraphBackend" ParentModelId="0" DataType="Array[Interfaces.GraphBackend.Nodes]" OriginalDataType="Array[Interfaces.GraphBackend.Nodes]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="GraphBackendResponse.Nodes" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Links" PropertyName="Links" ParentModel="GraphBackend" ParentModelId="0" DataType="Array[Interfaces.GraphBackend.Links]" OriginalDataType="Array[Interfaces.GraphBackend.Links]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="GraphBackendResponse.Links" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="Metadata_To_Metadata" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="GraphBackendResponse.Metadata" />
+        <RightItems Items="GraphBackendResponse.Metadata" />
+      </Mapping>
+      <Mapping DetailedTransformation="Nodes_To_Nodes" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="GraphBackendResponse.Nodes" />
+        <RightItems Items="GraphBackendResponse.Nodes" />
+      </Mapping>
+      <Mapping DetailedTransformation="Links_To_Links" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="GraphBackendResponse.Links" />
+        <RightItems Items="GraphBackendResponse.Links" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="UpdateResponse_To_UpdateResponse" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="UpdateResponse" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Domain.UpdateResponse" OriginalDataType="Domain.UpdateResponse" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="UpdateResponse" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Type" PropertyName="Type" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="UpdateResponse.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Desc" PropertyName="Desc" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="UpdateResponse.Desc" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="UpdateResponse" PropertyName="" ParentModel="GraphBackend" ParentModelId="0" DataType="Interfaces.GraphBackend.UpdateResponse" OriginalDataType="Interfaces.GraphBackend.UpdateResponse" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="UpdateResponse" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Type" PropertyName="Type" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="UpdateResponse.Type" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Desc" PropertyName="Desc" ParentModel="GraphBackend" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="UpdateResponse.Desc" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="UpdateResponse.Type" />
+        <RightItems Items="UpdateResponse.Type" />
+      </Mapping>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="UpdateResponse.Desc" />
+        <RightItems Items="UpdateResponse.Desc" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+</DataTransformation>

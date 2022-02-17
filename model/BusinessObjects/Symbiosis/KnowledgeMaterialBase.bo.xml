@@ -1,0 +1,91 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<BusinessObject DateCreated="" Model_Name="KnowledgeMaterialBase" Model_Description="" Version="" Comments="" Model_Creator="">
+  <Associations>
+    <Association ModelName="KnowledgeMaterialBase" Class1="MaterialCreateRequest" Class2="MaterialCreateStatements" Role1="MaterialCreateRequest" Role2="Statements" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.4756303287284001" Percent2="0.4990909960769304" Path="M 163 277 L 163 180" />
+    </Association>
+    <Association ModelName="KnowledgeMaterialBase" Class1="MaterialCreateStatements" Class2="MaterialCreateParameters" Role1="MaterialCreateStatements" Role2="Parameters" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.5333333333333333" Percent2="0.5555555555555556" Path="M 326 96 L 370 96 L 370 100 L 416 100" />
+    </Association>
+    <Association ModelName="KnowledgeMaterialBase" Class1="MaterialCreateParameters" Class2="MaterialCreateProps" Role1="MaterialCreateParameters" Role2="Props" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.5388888888888889" Percent2="0.5388888888888889" Path="M 743 97 L 834 97" />
+    </Association>
+    <Association ModelName="KnowledgeMaterialBase" Class1="KnowledgeBaseResult" Class2="KnowledgeBaseResults" Role1="KnowledgeBaseResult" Role2="Results" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.5555555555555556" Percent2="0.5388888888888889" Path="M 718.156005859375 382 L 815.89697265625 382" />
+    </Association>
+    <Association ModelName="KnowledgeMaterialBase" Class1="KnowledgeBaseResults" Class2="KnowledgeBaseData" Role1="KnowledgeBaseResults" Role2="Data" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Bottom" Edge2="Right" Percent1="0.06901385668841321" Percent2="0.3888888888888889" Path="M 836 465 L 836 560 L 780 560 L 780 659 L 709 659" />
+    </Association>
+    <Association ModelName="KnowledgeMaterialBase" Class1="KnowledgeBaseData" Class2="KnowledgeBaseRow" Role1="KnowledgeBaseData" Role2="Row" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.5222222222222223" Percent2="0.5722222222222222" Path="M 436.773010253906 683 L 260.18701171875 683" />
+    </Association>
+    <Association ModelName="KnowledgeMaterialBase" Class1="KnowledgeBaseData" Class2="KnowledgeBaseMeta" Role1="KnowledgeBaseData" Role2="Meta" Multiplicity1="ZeroOrOne" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="DoNothing" OnDelete2="DoNothing" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.7166666666666667" Percent2="0.7055555555555556" Path="M 709.252990722656 718 L 855.820007324219 718" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="KnowledgeMaterialBase" Name="MaterialCreateRequest" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="342.703125" Height="180" Top="277" Left="0" />
+      <Attributes />
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeMaterialBase" Name="MaterialCreateStatements" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="326.59375" Height="180" Top="0" Left="0" />
+      <Attributes>
+        <Attribute Name="Statement" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeMaterialBase" Name="MaterialCreateParameters" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="327.875" Height="180" Top="0" Left="416" />
+      <Attributes />
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeMaterialBase" Name="MaterialCreateProps" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="267.71875" Height="180" Top="0" Left="834" />
+      <Attributes>
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Decription" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="HsSpecific" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeMaterialBase" Name="KnowledgeBaseResult" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="298.0625" Height="180" Top="282" Left="418" />
+      <Attributes />
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeMaterialBase" Name="KnowledgeBaseResults" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="289.796875" Height="180" Top="285" Left="816" />
+      <Attributes />
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeMaterialBase" Name="KnowledgeBaseData" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="272.578125" Height="180" Top="589" Left="437" />
+      <Attributes />
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeMaterialBase" Name="KnowledgeBaseRow" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="260.484375" Height="180" Top="580" Left="0" />
+      <Attributes>
+        <Attribute Name="Decription" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="KnowledgeMaterialBase" Name="KnowledgeBaseMeta" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="268.34375" Height="180" Top="591" Left="856" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Type" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Deleted" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="0" Scale="0" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>

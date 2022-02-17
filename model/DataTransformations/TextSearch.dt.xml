@@ -1,0 +1,67 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<DataTransformation DateCreated="10/29/2020" Model_Name="TextSearch" Model_Description="" Version="" Comments="">
+  <Transformation Name="TextSearchRequest_To_TextSearchRequest" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="TextSearchRequest" PropertyName="" ParentModel="TextSearch" ParentModelId="0" DataType="Domain.TextSearchRequest" OriginalDataType="Domain.TextSearchRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="TextSearchRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Text" PropertyName="Text" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="TextSearchRequest.Text" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="TextSearchRequest" PropertyName="" ParentModel="TextSearch" ParentModelId="0" DataType="Interfaces.TextSearch.TextSearchRequest" OriginalDataType="Interfaces.TextSearch.TextSearchRequest" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="TextSearchRequest" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Text" PropertyName="Text" ParentModel="TextSearch" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="TextSearchRequest.Text" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="TextSearchRequest.Text" />
+        <RightItems Items="TextSearchRequest.Text" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+  <Transformation Name="TextSearchResponse_To_TextSearchResponse" LeftToRightPostProcess="false" RightToLeftPostProcess="false" LeftToRightPreProcess="false" RightToLeftPreProcess="false">
+    <Left>
+      <Struct Name="TextSearchResponse" PropertyName="" ParentModel="TextSearch" ParentModelId="0" DataType="Domain.TextSearchResponse" OriginalDataType="Domain.TextSearchResponse" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="TextSearchResponse" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Tags" PropertyName="Tags" ParentModel="" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="DomainModel" Side="Left" Path="TextSearchResponse.Tags" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Left>
+    <Right>
+      <Struct Name="TextSearchResponse" PropertyName="" ParentModel="TextSearch" ParentModelId="0" DataType="Interfaces.TextSearch.TextSearchResponse" OriginalDataType="Interfaces.TextSearch.TextSearchResponse" IsPrimitive="false" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="TextSearchResponse" IsEnum="false" SerializeAsXMLAttribute="false">
+        <Attributes>
+          <Struct Name="Phrases" PropertyName="Phrases" ParentModel="TextSearch" ParentModelId="0" DataType="Array[string]" OriginalDataType="Array[string]" IsPrimitive="false" IsCollection="true" Hidden="false" ModelType="ExternalApi" Side="Right" Path="TextSearchResponse.Phrases" IsEnum="false" SerializeAsXMLAttribute="false" />
+          <Struct Name="Tags" PropertyName="Tags" ParentModel="TextSearch" ParentModelId="0" DataType="string" OriginalDataType="string" IsPrimitive="true" IsCollection="false" Hidden="false" ModelType="ExternalApi" Side="Right" Path="TextSearchResponse.Tags" IsEnum="false" SerializeAsXMLAttribute="false" />
+        </Attributes>
+      </Struct>
+    </Right>
+    <Mappings>
+      <Mapping DetailedTransformation="" FromWizzard="false" MappingMode="Both">
+        <LeftToRight>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </LeftToRight>
+        <RightToLeft>
+          <Implementation IsAutoMapped="true">
+          </Implementation>
+        </RightToLeft>
+        <LeftItems Items="TextSearchResponse.Tags" />
+        <RightItems Items="TextSearchResponse.Tags" />
+      </Mapping>
+    </Mappings>
+  </Transformation>
+</DataTransformation>

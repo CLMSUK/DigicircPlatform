@@ -1,0 +1,109 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<ExternalApi DateCreated="11/17/2020" Model_Name="ElasticSearch" Model_Description="" Version="" Comments="">
+  <Endpoint TransportType="HTTP" ProtocolType="REST">
+    <Security SecurityType="None" />
+    <Class Name="ActorDoc" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="ID" OriginalName="" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Description" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Tags" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Name" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Country" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Sector" OriginalName="" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Resources" OriginalName="" Description="" Datatype="Collection[string]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="RequestedResources" OriginalName="" Description="" Datatype="Collection[string]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="SearchResponse" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Took" OriginalName="took" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="TimedOut" OriginalName="timed_out" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Shards" OriginalName="_shards" Description="" Datatype="Interfaces.ElasticSearch.Shards" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Hits" OriginalName="hits" Description="" Datatype="Interfaces.ElasticSearch.ResponseHits" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Shards" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Total" OriginalName="total" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Successful" OriginalName="successful" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Skipped" OriginalName="skipped" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Failed" OriginalName="failed" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Hit" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Index" OriginalName="_index" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Type" OriginalName="_type" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Id" OriginalName="_id" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Score" OriginalName="_score" Description="" Datatype="decimal" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Source" OriginalName="_source" Description="" Datatype="Interfaces.ElasticSearch.ActorDoc" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ResponseHits" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="MaxScore" OriginalName="max_score" Description="" Datatype="decimal" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Hits" OriginalName="hits" Description="" Datatype="Array[Interfaces.ElasticSearch.Hit]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Total" OriginalName="total" Description="" Datatype="Interfaces.ElasticSearch.Total" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Total" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Value" OriginalName="value" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Relation" OriginalName="relation" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="SearchRequest" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Query" OriginalName="query" Description="" Datatype="Interfaces.ElasticSearch.Query" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="MultiMatch" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Query" OriginalName="query" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Fields" OriginalName="fields" Description="" Datatype="Array[string]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Query" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="MutliMatch" OriginalName="multi_match" Description="" Datatype="Interfaces.ElasticSearch.MultiMatch" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Bool" OriginalName="bool" Description="" Datatype="Interfaces.ElasticSearch.BoolStatement" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="BoolStatement" OriginalName="bool" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Must" OriginalName="must" Description="" Datatype="Array[Interfaces.ElasticSearch.Must]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Must" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="MultiMatch" OriginalName="multi_match" Description="" Datatype="Interfaces.ElasticSearch.MultiMatch" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Operation Name="CreateDoc" Description="" Datatype="string" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="" Notes="" UserDefinedUrlMethod="true">
+      <Parameters>
+        <Parameter Name="id" DataType="int" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="UriPart" Alias="" />
+        <Parameter Name="doc" DataType="Interfaces.ElasticSearch.ActorDoc" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <GetUrlMethod>return "/" + Application.Settings.ElasticSearchIndex  + "/_doc/" + id;</GetUrlMethod>
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	int id,
+	Interfaces.ElasticSearch.ActorDoc doc,
+	string response
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+    <Operation Name="DeleteDoc" Description="" Datatype="string" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="DELETE" Text="" ContentType="JSON" Route="" Notes="" UserDefinedUrlMethod="true">
+      <Parameters>
+        <Parameter Name="id" DataType="int" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="UriPart" Alias="" />
+      </Parameters>
+      <Headers />
+      <GetUrlMethod>return "/" + Application.Settings.ElasticSearchIndex + "/_doc/" + id;</GetUrlMethod>
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	int id,
+	string response
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+    <Operation Name="Search" Description="" Datatype="Interfaces.ElasticSearch.SearchResponse" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="" Notes="" UserDefinedUrlMethod="true">
+      <Parameters>
+        <Parameter Name="Request" DataType="Interfaces.ElasticSearch.SearchRequest" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <GetUrlMethod>return "/" + Application.Settings.ElasticSearchIndex + "/_search/";</GetUrlMethod>
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Interfaces.ElasticSearch.SearchRequest Request,
+	Interfaces.ElasticSearch.SearchResponse response
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+  </Endpoint>
+  <RestEndpointDetails BaseUrl="https://es-graph.clmsuk.com/" IgnoringNullFields="false" />
+</ExternalApi>

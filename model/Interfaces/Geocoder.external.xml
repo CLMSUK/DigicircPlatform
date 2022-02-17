@@ -1,0 +1,69 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<ExternalApi DateCreated="8/3/2020" Model_Name="Geocoder" Model_Description="" Version="" Comments="">
+  <Endpoint TransportType="HTTP" ProtocolType="REST">
+    <Security SecurityType="None" />
+    <Class Name="Result" OriginalName="Result" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Documentation" OriginalName="documentation" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Licenses" OriginalName="licenses" Description="" Datatype="Collection[Interfaces.Geocoder.Licenses]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Rate" OriginalName="rate" Description="" Datatype="Interfaces.Geocoder.Rate" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Results" OriginalName="results" Description="" Datatype="Collection[Interfaces.Geocoder.ResultItems]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Status" OriginalName="status" Description="" Datatype="Interfaces.Geocoder.Status" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Thanks" OriginalName="thanks" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Timestamp" OriginalName="timestamp" Description="" Datatype="Interfaces.Geocoder.Timestamp" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="TotalResults" OriginalName="total_results" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Licenses" OriginalName="licenses" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Name" OriginalName="name" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Url" OriginalName="url" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Rate" OriginalName="rate" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Limit" OriginalName="limit" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Remaining" OriginalName="remaining" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Reset" OriginalName="reset" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="ResultItems" OriginalName="results" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Bounds" OriginalName="bounds" Description="" Datatype="Interfaces.Geocoder.Bounds" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Confidence" OriginalName="confidence" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Geometry" OriginalName="geometry" Description="" Datatype="Interfaces.Geocoder.Geometry" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Bounds" OriginalName="bounds" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Northeast" OriginalName="" Description="" Datatype="Interfaces.Geocoder.Northeast" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Southwest" OriginalName="" Description="" Datatype="Interfaces.Geocoder.Southwest" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Northeast" OriginalName="northeast" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Latitude" OriginalName="lat" Description="" Datatype="float" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Longitude" OriginalName="lng" Description="" Datatype="float" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Southwest" OriginalName="southwest" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Latitude" OriginalName="lat" Description="" Datatype="float" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Longitude" OriginalName="lng" Description="" Datatype="float" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Geometry" OriginalName="geometry" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Latitude" OriginalName="lat" Description="" Datatype="float" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Longitude" OriginalName="lng" Description="" Datatype="float" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Status" OriginalName="status" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Code" OriginalName="code" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Message" OriginalName="message" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="Timestamp" OriginalName="timestamp" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="CreatedHttp" OriginalName="created_http" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="CreatedUnix" OriginalName="created_unix" Description="" Datatype="int" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Operation Name="Query" Description="" Datatype="Interfaces.Geocoder.Result" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="GET" Text="" ContentType="JSON" Route="json" Notes="" UserDefinedUrlMethod="false">
+      <Parameters>
+        <Parameter Name="q" DataType="string" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="QueryParameter" Alias="" />
+        <Parameter Name="key" DataType="string" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="QueryParameter" Alias="" />
+      </Parameters>
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration()
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+  </Endpoint>
+  <RestEndpointDetails BaseUrl="https://api.opencagedata.com/geocode/v1/" IgnoringNullFields="false" />
+</ExternalApi>

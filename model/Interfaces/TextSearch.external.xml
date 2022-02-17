@@ -1,0 +1,32 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<ExternalApi DateCreated="10/29/2020" Model_Name="TextSearch" Model_Description="" Version="" Comments="">
+  <Endpoint TransportType="HTTP" ProtocolType="REST">
+    <Security SecurityType="Basic">
+      <BasicSecurityDetails Username="demo" Password="qwerty1@" />
+    </Security>
+    <Class Name="TextSearchRequest" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Text" OriginalName="text" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Class Name="TextSearchResponse" OriginalName="" Description="" Namespace="" BaseClass="" IsEnum="false">
+      <Attribute Name="Phrases" OriginalName="phrases" Description="" Datatype="Array[string]" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+      <Attribute Name="Tags" OriginalName="tags" Description="" Datatype="string" Length="0" IsPrimary="false" IsEncrypted="false" OriginalDataType="" SerializeAsXMLAttribute="false" />
+    </Class>
+    <Operation Name="GetKeywords" Description="" Datatype="Interfaces.TextSearch.TextSearchResponse" OriginalName="" ClientType="" IsStatic="false" AccessLog="false" Verb="POST" Text="" ContentType="JSON" Route="keywords" Notes="" UserDefinedUrlMethod="false">
+      <Parameters>
+        <Parameter Name="parameter" DataType="Interfaces.TextSearch.TextSearchRequest" IsRef="False" IsOut="False" DefaultValue="" Notes="" Type="RequestBody" Alias="" />
+      </Parameters>
+      <Headers />
+      <CachingOptions CachePerUser="false" OperationIsCached="false" OverrideDefaultCachingSettings="false" UseCustomExpirationMethod="false" HeadersToInlcudeInCacheKey="" ExpirationDays="0" ExpirationHours="0" ExpirationMinutes="3" ExpirationSeconds="0" ExpirationMilliseconds="0" CacheMode="None">function TimeSpan Expiration(
+	Interfaces.TextSearch.Request parameter,
+	Interfaces.TextSearch.Response response
+)
+{ 
+	 return CommonLib.Utilities.CreateTimeSpan(0, 1, 0); 
+}</CachingOptions>
+    </Operation>
+  </Endpoint>
+  <RestEndpointDetails BaseUrl="https://keyword-extraction.clms.io" IgnoringNullFields="false" />
+</ExternalApi>

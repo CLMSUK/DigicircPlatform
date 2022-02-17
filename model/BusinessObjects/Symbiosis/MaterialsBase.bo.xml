@@ -1,0 +1,565 @@
+<!--
+Copyright (c) CLMS UK. All rights reserved.
+Licensed under the Custom License. See LICENSE file in the project root for full license information.-->
+
+<BusinessObject DateCreated="10/30/2020" Model_Name="MaterialsBase" Model_Description="" Version="" Comments="" Model_Creator="">
+  <Associations>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="Process" Role1="Product" Role2="ConvertedBy" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.6927374301675978" Percent2="0.6870967741935484" Path="M 702 599 L 720 599 L 720 575 L 741 575" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="Process" Role1="Source" Role2="ConvertBy" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.35195530726256985" Percent2="0.4" Path="M 702 477 L 720 477 L 720 486 L 741 486" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="DigicircUser" Role1="Material" Role2="RequestedBy" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.1452513966480447" Percent2="0.1" Path="M 406 403 L 360 403 L 360 323 L 332 323" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="ProductType" Role1="Material" Role2="Type" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Top" Percent1="0.7793296089385475" Percent2="0.37962852007189934" Path="M 406 630 L 340 630 L 340 440 L 153 440 L 153 475" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="PhysicalForm" Role1="Material" Role2="PhysicalForm" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Top" Percent1="0.9357541899441341" Percent2="0.4956837434449375" Path="M 702 686 L 720 686 L 720 750 L 340 750 L 340 600 L 178 600 L 178 631" />
+    </Association>
+    <Association ModelName="MaterialsBase" Class1="Material" Class2="UnitOfMeasurement" Role1="Material" Role2="UnitOfMeasurement" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="false" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.5934668071654373" Percent2="0.542975835234919" Path="M 582 709 L 582 760 L 552 760 L 552 812" />
+    </Association>
+    <Association ModelName="SearchQuery" Class1="SearchQuery" Class2="Material" Role1="SearchQuery" Role2="SelectedMaterial" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="false" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Left" Edge2="Right" Percent1="0.49501455296351254" Percent2="0.5" Path="M 764 425 L 730 425 L 730 940 L 1370 940 L 1370 712 L 1343 712" />
+    </Association>
+    <Association ModelName="Product" Class1="Product" Class2="Material" Role1="Product" Role2="Resource" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.2202797202797203" Percent2="0.21367521367521367" Path="M 559 454 L 559 517" />
+    </Association>
+    <Association ModelName="Suggestions" Class1="Match" Class2="Material" Role1="Match" Role2="Resource" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.5203572528487835" Percent2="0.3504563233376793" Path="M 695 355 L 695 200 L 715 200 L 715 54" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="DigicircUser" Role1="Company" Role2="AddedBy" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.3686451289757075" Percent2="0.7268258450246637" Path="M 369 1262 L 307 1262" />
+    </Association>
+    <Association ModelName="Actors" Class1="Actor" Class2="DigicircUser" Role1="ActorsCanManage" Role2="Administrators" Multiplicity1="Many" Multiplicity2="Many" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.18317770383886087" Percent2="0.45185634414947146" Path="M 369 1271 L 369 1280 L 330 1280 L 330 1271 L 307 1271" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUser" Class2="ApplicationPermission" Role1="Users" Role2="Permissions" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUser" Class2="ApplicationRole" Role1="Users" Role2="Roles" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Restricted" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationClient" Class2="ApplicationUser" Role1="Clients" Role2="User" Multiplicity1="Many" Multiplicity2="One" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUser" Class2="ApplicationUserLogin" Role1="User" Role2="Logins" Multiplicity1="One" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="CascadeDelete" OnDelete2="Dissasociate" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="ApplicationUserClaim" Class2="ApplicationUser" Role1="Claims" Role2="User" Multiplicity1="Many" Multiplicity2="One" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="ApplicationSystemBO" Class1="Profile" Class2="ApplicationUser" Role1="Profile" Role2="ApplicationUser" Multiplicity1="ZeroOrOne" Multiplicity2="ZeroOrOne" Navigable1="true" Navigable2="false" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Restricted" OnDelete2="CascadeDelete" IsShadow="false" IsInherited="true" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="0" UnlimitedFileSize="false" AllowAllExtensions="false">
+      <DiagramInfo Edge1="Top" Edge2="Top" Percent1="" Percent2="" Path="" />
+    </Association>
+    <Association ModelName="Product" Class1="ProductType" Class2="ProductType" Role1="ParentType" Role2="SybTypes" Multiplicity1="Many" Multiplicity2="Many" Navigable1="true" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.23846153846153847" Percent2="0.48846153846153845" Path="M 154 517 L 154 480 L 50 480 L 50 720 L 219 720 L 219 697" />
+    </Association>
+    <Association ModelName="Product" Class1="Product" Class2="ProductType" Role1="Product" Role2="Type" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Bottom" Edge2="Top" Percent1="0.10434668071654372" Percent2="0.8658230708195613" Path="M 305 454 L 305 480 L 315 480 L 315 517" />
+    </Association>
+    <Association ModelName="Product" Class1="Product" Class2="PhysicalForm" Role1="Product" Role2="PhysicalForm" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Top" Edge2="Bottom" Percent1="0.46851949420442573" Percent2="0.49087979654094394" Path="M 413 120 L 413 59" />
+    </Association>
+    <Association ModelName="Product" Class1="Product" Class2="UnitOfMeasurement" Role1="Product" Role2="UnitOfMeasurement" Multiplicity1="Many" Multiplicity2="ZeroOrOne" Navigable1="false" Navigable2="true" IsExternal="true" Persisted="true" OrderByProperty1="" OrderByDirection1="Asc" OrderByProperty2="" OrderByDirection2="Asc" OnDelete1="Dissasociate" OnDelete2="Dissasociate" IsShadow="false" IsInherited="false" AllowedExtensions="" StorageMedium="FileSystem" MaxFileSize="1000" UnlimitedFileSize="true" AllowAllExtensions="true">
+      <DiagramInfo Edge1="Right" Edge2="Left" Percent1="0.16177185424073728" Percent2="0.516851806640625" Path="M 570 175 L 630 175" />
+    </Association>
+  </Associations>
+  <Classes>
+    <Class ModelName="MaterialsBase" Name="Material" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="296.37353515625" Height="358" Top="351" Left="406" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Description" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="HsSpecific" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PendingGraph" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="IsHazardous" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="MaterialsBase" Name="Process" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="292.77197265625" Height="310" Top="362" Left="741" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Notes" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Ref" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ProductName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="GetProductName" Setter="" />
+        <Attribute Name="SourceName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="false" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="GetSourceName" Setter="" />
+        <Attribute Name="EnvironmentalEffects" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="MAX" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="ShortEnvironmentalEffects" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="GetEnvironmentalEffects" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetProductName" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function string GetProductName() 
+{
+	Collection[string] productList;
+	foreach Domain.Material product in this.Product 
+	{
+		productList.Add(product.Name);
+	}
+
+	return string.Join(",", productList);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetSourceName" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function string GetSourceName() 
+{
+	Collection[string] productList;
+	foreach Domain.Material product in this.Source 
+	{
+		productList.Add(product.Name);
+	}
+
+	return string.Join(",", productList);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="GetEnvironmentalEffects" Description="" Syntax="" BaseInfo="" IsStatic="false" IsInherited="false" IsExternal="false">function string GetEnvironmentalEffects() 
+{
+	if(this.EnvironmentalEffects.Length &lt; 50) 
+	{
+		return this.EnvironmentalEffects;
+	} 
+	else
+	{
+		return this.EnvironmentalEffects.Substring(0,50) + "...";
+	}
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="MaterialsBase" Name="MaterialBackend" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="230.625" Height="180" Top="0" Left="0" />
+      <Attributes />
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="CreateKnowledgeMaterial" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void CreateKnowledgeMaterial(Domain.Material material)
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.MaterialCreateRequest req;
+	
+	Domain.MaterialCreateStatements stat;
+	
+	stat.Statement = "CREATE (n:Material $props) RETURN n";
+	
+	stat.Parameters = Domain.MaterialCreateParameters.Create();
+	stat.Parameters.Props = Domain.MaterialCreateProps.Create();
+	
+	stat.Parameters.Props.Id = material.Id;
+	stat.Parameters.Props.Name = material.Name;
+	stat.Parameters.Props.Decription = material.Description;
+	stat.Parameters.Props.HsSpecific = material.HsSpecific;
+	
+	req.Statements.Add(stat);
+	
+	var reqParsed = DataTransformations.KnowledgeBase.MaterialCreateRequest_To_MaterialCreateRequestReversed(req);
+	Interfaces.KnowledgeBase.API.CreateMaterial(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="DeleteKnowledgeMaterial" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void DeleteKnowledgeMaterial(Domain.Material material)
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.MaterialCreateRequest req;
+
+	req.Statements.Add(Domain.MaterialBackend.DeleteMaterialStatement(material));
+	
+	var reqParsed = DataTransformations.KnowledgeBase.MaterialCreateRequest_To_MaterialCreateRequestReversed(req);
+	Interfaces.KnowledgeBase.API.CreateMaterial(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="DeleteMaterialStatement" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.MaterialCreateStatements DeleteMaterialStatement(Domain.Material material) 
+{
+	Domain.MaterialCreateStatements stat;
+	
+	stat.Statement = "MATCH (n:Material {Id: $props.Id}) DETACH DELETE n";
+	
+	stat.Parameters = Domain.MaterialCreateParameters.Create();
+	stat.Parameters.Props = Domain.MaterialCreateProps.Create();
+	
+	stat.Parameters.Props.Id = material.Id;
+	
+	return stat;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="UpdateMaterialStatement" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.MaterialCreateStatements UpdateMaterialStatement(Domain.Material material)
+{
+	Domain.MaterialCreateStatements stat;
+	
+	stat.Statement = "MATCH (m:Material {Id: $props.Id}) SET m = $props RETURN m";
+	
+	stat.Parameters = Domain.MaterialCreateParameters.Create();
+	stat.Parameters.Props = Domain.MaterialCreateProps.Create();
+	
+	stat.Parameters.Props.Id = material.Id;
+	stat.Parameters.Props.Name = material.Name;
+	stat.Parameters.Props.Decription = material.Description;
+	stat.Parameters.Props.HsSpecific = material.HsSpecific;
+	
+	return stat;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="UpdateKnowledgeMaterial" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void UpdateKnowledgeMaterial(Domain.Material material)
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.MaterialCreateRequest req;
+
+	req.Statements.Add(Domain.MaterialBackend.UpdateMaterialStatement(material));
+	
+	var reqParsed = DataTransformations.KnowledgeBase.MaterialCreateRequest_To_MaterialCreateRequestReversed(req);
+	Interfaces.KnowledgeBase.API.CreateMaterial(reqParsed);
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="MaterialsBase" Name="ProcessBackend" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="221.828125" Height="180" Top="0" Left="264" />
+      <Attributes />
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="CreateKnowledgeProcess" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void CreateKnowledgeProcess(Domain.Process process)
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ProcessCreateRequest req;
+	
+
+	req.Statements.Add(Domain.ProcessBackend.CreateProcessStatement(process));
+	
+	var reqParsed = DataTransformations.KnowledgeBase.ProcessCreateRequest_To_ProcessCreateRequest(req);
+	Interfaces.KnowledgeBase.API.CreateProcess(reqParsed);
+
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="CreateKnowledgeProcessPlus" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void CreateKnowledgeProcessPlus(Domain.Process process, bool edit) 
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ProcessCreateRequest req;
+	
+	req.Statements.Add(Domain.ProcessBackend.CreateProcessStatement(process));
+	
+	var source = process.Source.First();
+	req.Statements.Add(Domain.ProcessBackend.CreateConvertByStatement(process, source));
+	
+	var product = process.Product.First();
+	req.Statements.Add(Domain.ProcessBackend.CreateConvertedByStatement(process, product));
+	
+	var reqParsed = DataTransformations.KnowledgeBase.ProcessCreateRequest_To_ProcessCreateRequest(req);
+	Interfaces.KnowledgeBase.API.CreateProcess(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="CreateProcessStatement" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.ProcessCreateStatements CreateProcessStatement(Domain.Process process) 
+{
+	Domain.ProcessCreateStatements stat;
+	stat.Statement = "CREATE (n:Process $props) RETURN n";
+	stat.Parameters = Domain.ProcessCreateParameters.Create();
+	stat.Parameters.Props = Domain.ProcessCreateProps.Create();
+	stat.Parameters.Props.Id = process.Id;
+	stat.Parameters.Props.Name = process.Name;
+	stat.Parameters.Props.Notes = process.Notes;
+	stat.Parameters.Props.Ref = process.Ref;
+	return stat;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="CreateConvertedByStatement" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.ProcessCreateStatements CreateConvertedByStatement(Domain.Process process, Domain.Material product) 
+{
+	Domain.ProcessCreateStatements stat;
+	stat.Statement = "MATCH (m:Material {Id: $props.ProductId}) MATCH (p:Process {Id: $props.Id}) MERGE (p)-[rel:CONVERTED_BY]-&gt;(m) RETURN m";
+	stat.Parameters = Domain.ProcessCreateParameters.Create();
+	stat.Parameters.Props = Domain.ProcessCreateProps.Create();
+	stat.Parameters.Props.Id = process.Id;
+	stat.Parameters.Props.ProductId = product.Id;
+	return stat;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="CreateConvertByStatement" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.ProcessCreateStatements CreateConvertByStatement(Domain.Process process, Domain.Material product) 
+{
+	Domain.ProcessCreateStatements stat;
+	stat.Statement = "MATCH (m:Material {Id: $props.SourceId}) MATCH (p:Process {Id: $props.Id}) MERGE (m)-[rel:CONVERT_BY]-&gt;(p) RETURN m";
+	stat.Parameters = Domain.ProcessCreateParameters.Create();
+	stat.Parameters.Props = Domain.ProcessCreateProps.Create();
+	stat.Parameters.Props.Id = process.Id;
+	stat.Parameters.Props.SourceId = product.Id;
+	return stat;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="DeleteKnowledgeProcess" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void DeleteKnowledgeProcess(Domain.Process process)
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ProcessCreateRequest req;
+
+	req.Statements.Add(Domain.ProcessBackend.DeleteProcessStatement(process));
+	var reqParsed = DataTransformations.KnowledgeBase.ProcessCreateRequest_To_ProcessCreateRequest(req);
+	Interfaces.KnowledgeBase.API.CreateProcess(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="DeleteProcessStatement" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.ProcessCreateStatements DeleteProcessStatement(Domain.Process process) 
+{
+	Domain.ProcessCreateStatements stat;
+	stat.Statement = "MATCH (n:Process {Id: $props.Id}) DETACH DELETE n";
+	stat.Parameters = Domain.ProcessCreateParameters.Create();
+	stat.Parameters.Props = Domain.ProcessCreateProps.Create();
+	stat.Parameters.Props.Id = process.Id;
+	return stat;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="UpdateKnowledgeProcess" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void UpdateKnowledgeProcess(Domain.Process process)
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ProcessCreateRequest req;
+
+	req.Statements.Add(Domain.ProcessBackend.UpdateProcessStatement(process));
+	var reqParsed = DataTransformations.KnowledgeBase.ProcessCreateRequest_To_ProcessCreateRequest(req);
+	Interfaces.KnowledgeBase.API.CreateProcess(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="UpdateProcessStatement" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.ProcessCreateStatements UpdateProcessStatement(Domain.Process process) 
+{
+	Domain.ProcessCreateStatements stat;
+	stat.Statement = "MATCH (m:Process {Id: $props.Id}) SET m = $props RETURN m";
+	stat.Parameters = Domain.ProcessCreateParameters.Create();
+	stat.Parameters.Props = Domain.ProcessCreateProps.Create();
+	stat.Parameters.Props.Id = process.Id;
+	stat.Parameters.Props.Name = process.Name;
+	stat.Parameters.Props.Notes = process.Notes;
+	stat.Parameters.Props.Ref = process.Ref;
+	return stat;
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="User" Name="DigicircUser" ShadowModel="User" ShadowClass="DigicircUser" Description="" Stereotype="Class" PK="UserName" ConcurencyControl="true" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="ApplicationUser" TableName="" BaseClasses="ApplicationUser" BaseModel="ApplicationSystemBO">
+      <DiagramInfo IsExpanded="false" Width="300.83642578125" Height="50" Top="318" Left="32" />
+      <Attributes>
+        <Attribute Name="UserName" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="true" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PasswordHash" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="2147483647" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SecurityStamp" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="2147483647" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="EmailConfirmed" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="LockoutEnabled" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PhoneNumberConfirmed" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="TwoFactorEnabled" IsValueClass="false" Description="" DataType="bool" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="AccessFailedCount" IsValueClass="false" Description="" DataType="int" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="256" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Email" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="PhoneNumber" IsValueClass="false" Description="" DataType="string" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="LockoutEndDate" IsValueClass="false" Description="" DataType="DateTime" BaseInfo="ApplicationSystemBO:ApplicationUser" Length="100" Precision="2" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="FirstName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="256" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="LastName" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="256" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="SubscribeToNewsLetter" IsValueClass="false" Description="" DataType="bool" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="IsInRole" Description="" Syntax="" BaseInfo="ApplicationSystemBO:ApplicationUser" IsStatic="false" IsInherited="true" IsExternal="true">function bool IsInRole(string roleName)
+{
+	return this.Roles.Any(r =&gt; r.Name == roleName);
+}            </Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="HasPermission" Description="" Syntax="" BaseInfo="ApplicationSystemBO:ApplicationUser" IsStatic="false" IsInherited="true" IsExternal="true">function bool HasPermission(string permission)
+{
+  bool hasPermissionfromRoles = this.Roles.Any(rr =&gt; rr.Permissions.Any(pp =&gt; pp.Name == permission));
+	return hasPermissionfromRoles || this.Permissions.Any(pp =&gt; pp.Name == permission);
+}            </Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="MaterialsBase" Name="ActorBackend" ShadowModel="" ShadowClass="" Description="" Stereotype="Class" PK="" ConcurencyControl="false" AutoAssignPrimaryKey="false" IdGeneratorType="HiLoGenerator" IsPersisted="false" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="true" Width="201.0625" Height="180" Top="0" Left="528" />
+      <Attributes />
+      <Operations>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="CreateKnowledgeActor" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void CreateKnowledgeActor(Domain.Actor actor) 
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ActorCreateRequest req;
+	
+	Domain.ActorCreateStatements stat;
+	
+	stat.Statement = "MERGE (n:Actor {Id: $props.Id}) SET n = $props RETURN n";
+	
+	stat.Parameters = Domain.ActorCreateParameters.Create();
+	stat.Parameters.Props = Domain.ActorCreateProps.Create();
+	
+	stat.Parameters.Props.Id = actor.Id;
+	stat.Parameters.Props.Name = actor.Name;
+	
+	req.Statements.Add(stat);
+	
+	var reqParsed = DataTransformations.KnowledgeBase.ActorCreateRequest_To_ActorCreateRequest(req);
+	Interfaces.KnowledgeBase.API.CreateActor(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="ConnectActorOfferedBy" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void ConnectActorOfferedBy(int actorId, Domain.Product product) 
+{ 
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ConnectActorMaterialRequest req;
+	
+	Domain.ConnectActorMaterialStatements stat;
+	
+	stat.Statement = "MATCH (a:Actor {Id: $props.ActorId}) MATCH (m:Material {Id: $props.MaterialId}) MERGE (a)-[rel:OFFERED_BY]-&gt;(m)";
+	
+	stat.Parameters = Domain.ConnectActorMaterialParameters.Create();
+	stat.Parameters.Props = Domain.ConnectActorMaterialProps.Create();
+	
+	stat.Parameters.Props.ActorId = actorId;
+	stat.Parameters.Props.MaterialId = product.Resource.Id;
+	
+	req.Statements.Add(stat);
+	
+	var reqParsed = DataTransformations.KnowledgeBase.ConnectActorMaterialRequest_To_ConnectActorMaterialRequest(req);
+	
+	CommonLib.Serializer[Interfaces.KnowledgeBase.ConnectActorMaterialRequest] ser;
+	DebugLib.Logger.WriteInfoLine("request " +  ser.ToJson(reqParsed));
+	
+	Interfaces.KnowledgeBase.API.ConnectActorOfferedBy(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="ConnectActorRequests" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void ConnectActorRequests(int actorId, Domain.Product product) 
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ConnectActorMaterialRequest req;
+	
+	Domain.ConnectActorMaterialStatements stat;
+	
+	stat.Statement = "MATCH (a:Actor {Id: $props.ActorId}) MATCH (m:Material {Id: $props.MaterialId}) MERGE (m)-[rel:REQUESTED_BY]-&gt;(a)";
+	
+	stat.Parameters = Domain.ConnectActorMaterialParameters.Create();
+	stat.Parameters.Props = Domain.ConnectActorMaterialProps.Create();
+	
+	stat.Parameters.Props.ActorId = actorId;
+	stat.Parameters.Props.MaterialId = product.Resource.Id;
+	
+	req.Statements.Add(stat);
+	
+	var reqParsed = DataTransformations.KnowledgeBase.ConnectActorMaterialRequest_To_ConnectActorMaterialRequest(req);
+	Interfaces.KnowledgeBase.API.ConnectActorRequests(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="DeleteKnowledgeActor" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void DeleteKnowledgeActor(Domain.Actor actor) 
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ActorCreateRequest req;
+
+	req.Statements.Add(Domain.ActorBackend.PrepareDeleteKnowledgeActor(actor));
+	
+	var reqParsed = DataTransformations.KnowledgeBase.ActorCreateRequest_To_ActorCreateRequest(req);
+	Interfaces.KnowledgeBase.API.CreateActor(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="PrepareDeleteKnowledgeActor" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.ActorCreateStatements PrepareDeleteKnowledgeActor(Domain.Actor actor) 
+{
+	Domain.ActorCreateStatements stat;
+	
+	stat.Statement = "MATCH (n:Actor {Id: $props.Id}) DETACH DELETE n";
+	
+	stat.Parameters = Domain.ActorCreateParameters.Create();
+	stat.Parameters.Props = Domain.ActorCreateProps.Create();
+	
+	stat.Parameters.Props.Id = actor.Id;
+	stat.Parameters.Props.Name = actor.Name;
+	
+	return stat;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="UpdateKnowledgeActor" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void UpdateKnowledgeActor(Domain.Actor actor) 
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ActorCreateRequest req;
+
+	req.Statements.Add(Domain.ActorBackend.PrepareUpdateKnowledgeActor(actor));
+	
+	var reqParsed = DataTransformations.KnowledgeBase.ActorCreateRequest_To_ActorCreateRequest(req);
+	Interfaces.KnowledgeBase.API.CreateActor(reqParsed);
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="PrepareUpdateKnowledgeActor" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function Domain.ActorCreateStatements PrepareUpdateKnowledgeActor(Domain.Actor actor) 
+{
+	Domain.ActorCreateStatements stat;
+	
+	stat.Statement = "MATCH (n:Actor {Id: $props.Id}) SET m = $props RETURN m";
+	
+	stat.Parameters = Domain.ActorCreateParameters.Create();
+	stat.Parameters.Props = Domain.ActorCreateProps.Create();
+	
+	stat.Parameters.Props.Id = actor.Id;
+	stat.Parameters.Props.Name = actor.Name;
+	
+	return stat;
+}</Operation>
+        <Operation RuleType="Default" EventName="" ApplyToAttribute="" Name="DeleteRelationShips" Description="" Syntax="" BaseInfo="" IsStatic="true" IsInherited="false" IsExternal="false">static function void DeleteRelationShips(int actorId, int resourceId) 
+{
+	if Application.Settings.DontCallKnowledgeGraph == "true"
+	{
+		return;
+	}
+	
+	Domain.ConnectActorMaterialRequest req;
+	
+	Domain.ConnectActorMaterialStatements stat;
+	
+	stat.Statement = "Match (a:Actor {Id: $props.ActorId})-[r]-&gt;(m:Material {Id: $props.MaterialId})  DELETE r";
+	
+	stat.Parameters = Domain.ConnectActorMaterialParameters.Create();
+	stat.Parameters.Props = Domain.ConnectActorMaterialProps.Create();
+	
+	stat.Parameters.Props.ActorId = actorId;
+	stat.Parameters.Props.MaterialId = resourceId;
+	
+	req.Statements.Add(stat);
+	
+	var reqParsed = DataTransformations.KnowledgeBase.ConnectActorMaterialRequest_To_ConnectActorMaterialRequest(req);
+	
+	CommonLib.Serializer[Interfaces.KnowledgeBase.ConnectActorMaterialRequest] ser;
+	DebugLib.Logger.WriteInfoLine("request " +  ser.ToJson(reqParsed));
+	
+	Interfaces.KnowledgeBase.API.DeleteRelationships(reqParsed);
+}</Operation>
+      </Operations>
+    </Class>
+    <Class ModelName="Product" Name="ProductType" ShadowModel="Product" ShadowClass="ProductType" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="" TableName="" BaseClasses="" BaseModel="">
+      <DiagramInfo IsExpanded="false" Width="260.609375" Height="50" Top="475" Left="54" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Name" IsValueClass="false" Description="" DataType="string" BaseInfo="" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="false" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ValueList" Name="PhysicalForm" ShadowModel="ValueList" ShadowClass="PhysicalForm" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="ValueType" TableName="" BaseClasses="ValueType" BaseModel="ValueList">
+      <DiagramInfo IsExpanded="true" Width="193.671875" Height="182" Top="631" Left="82" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="ValueList:ValueType" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+    <Class ModelName="ValueList" Name="UnitOfMeasurement" ShadowModel="ValueList" ShadowClass="UnitOfMeasurement" Description="" Stereotype="Class" PK="Id" ConcurencyControl="true" AutoAssignPrimaryKey="true" IdGeneratorType="HiLoGenerator" IsPersisted="true" IsStatic="false" BaseClass="ValueType" TableName="" BaseClasses="ValueType" BaseModel="ValueList">
+      <DiagramInfo IsExpanded="true" Width="267.046875" Height="182" Top="812" Left="407" />
+      <Attributes>
+        <Attribute Name="Id" IsValueClass="false" Description="" DataType="int" BaseInfo="ValueList:ValueType" Length="100" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Code" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+        <Attribute Name="Value" IsValueClass="false" Description="" DataType="string" BaseInfo="ValueList:ValueType" Length="255" Precision="8" Scale="2" InitValue="" IsRequired="false" IsInherited="true" Persisted="true" ColumnName="" IsEncrypted="false" IsStatic="false" ReadOnly="false" IsExternal="false" CustomValidation="" IsCreditCard="false" IsURL="false" IsEmail="false" MinLength="0" MaxLength="100" MinValue="" MaxValue="" Getter="" Setter="" />
+      </Attributes>
+      <Operations />
+    </Class>
+  </Classes>
+  <Resources />
+</BusinessObject>
