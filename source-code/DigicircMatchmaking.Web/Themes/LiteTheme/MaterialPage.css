@@ -1,0 +1,17 @@
+[jb-type="FieldSetHeader"] {
+    display: flex !important;
+    align-items: center  !important;
+    align-content: center !important;
+}
+
+
+[jb-type="FieldSetHeader"] [jb-type="Button"],
+[jb-type="FieldSetHeader"] [jb-type="DataPickList"] {
+    margin-left: auto !important;
+}
+
+[jb-type="FormGroupLabelContainer"] {
+    display: flex !important;
+    align-items: center  !important;
+    align-content: center !important;
+}

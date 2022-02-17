@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <Copyright>Copyright © CLMS UK 2018</Copyright>
+    <Company>CLMS UK</Company>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <AssemblyName>DigicircMatchmaking.ExternalStructs</AssemblyName>
+    <RootNamespace>DigicircMatchmaking</RootNamespace>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Model\ElasticSearchStructs.cs" />
+    <Compile Include="Model\GeocoderStructs.cs" />
+    <Compile Include="Model\GraphBackendStructs.cs" />
+    <Compile Include="Model\KnowledgeBaseStructs.cs" />
+    <Compile Include="Model\TextSearchStructs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+  </ItemGroup>
+  <ItemGroup Label="PackageReference">
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+</Project>

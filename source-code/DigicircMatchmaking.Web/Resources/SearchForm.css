@@ -1,0 +1,43 @@
+[jb-partial-name="Bubble"] {
+    background-color: white;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 0;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    width: 300px;
+}
+
+
+[jb-partial-name="Bubble"] {
+    display: none;
+}
+
+.jb-control[jb-type='FormGroup'].jb-horizontal {
+    grid-template-columns: 120px auto !important;
+}
+
+.pretty {
+    margin-right: 0em !important;
+}
+
+[jb-id="Row3"] {
+    height: 100%;
+}
+
+[jb-id="Row"] {
+    display: flex;
+}
+
+[jb-id="Cell"] {
+    max-width: 460px;
+}
+
+[jb-id="Panel1"] {
+    box-shadow: none !important;
+}
+
+[jb-id="PanelHeader"] {
+    text-align: center;
+    padding: 0;
+}

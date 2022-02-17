@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net472</TargetFrameworks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <Copyright>Copyright © CLMS UK 2018</Copyright>
+    <Company>CLMS UK</Company>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <AssemblyName>DigicircMatchmaking.Backend.Tests</AssemblyName>
+    <RootNamespace>DigicircMatchmaking</RootNamespace>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net5.0'">
+    <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivitiesTests.cs" />
+    <Compile Include="ActorNamesTests.cs" />
+    <Compile Include="ActorTests.cs" />
+    <Compile Include="AddressTests.cs" />
+    <Compile Include="ApplicationClientTests.cs" />
+    <Compile Include="ApplicationLanguageTests.cs" />
+    <Compile Include="ApplicationOperationTests.cs" />
+    <Compile Include="ApplicationPermissionTests.cs" />
+    <Compile Include="ApplicationRoleTests.cs" />
+    <Compile Include="ApplicationSettingTests.cs" />
+    <Compile Include="ApplicationThemeTests.cs" />
+    <Compile Include="ApplicationUserActionTests.cs" />
+    <Compile Include="ApplicationUserClaimTests.cs" />
+    <Compile Include="ApplicationUserExternalProfileTests.cs" />
+    <Compile Include="ApplicationUserLoginTests.cs" />
+    <Compile Include="ApplicationUserTests.cs" />
+    <Compile Include="AuditEntityConfigurationTests.cs" />
+    <Compile Include="AuditLogEntryTests.cs" />
+    <Compile Include="AuditLogEntryTypeTests.cs" />
+    <Compile Include="AuditLogPropertyActionTypeTests.cs" />
+    <Compile Include="AuditPropertyConfigurationTests.cs" />
+    <Compile Include="BusinessFunctionTests.cs" />
+    <Compile Include="BusinessTypeTests.cs" />
+    <Compile Include="CircularEconomyProviderReportTests.cs" />
+    <Compile Include="CircularEconomyReportTests.cs" />
+    <Compile Include="Common\BaseFixture.cs" />
+    <Compile Include="Common\NHConfigurator.cs" />
+    <Compile Include="Common\NHibernateFixture.cs" />
+    <Compile Include="Common\TestConnectionProvider.cs" />
+    <Compile Include="CompanyTests.cs" />
+    <Compile Include="CountryTests.cs" />
+    <Compile Include="DateTimeFormatTests.cs" />
+    <Compile Include="DigicircUserTests.cs" />
+    <Compile Include="EntityTypeTests.cs" />
+    <Compile Include="FileDataTests.cs" />
+    <Compile Include="GeographicalAreaTests.cs" />
+    <Compile Include="MatchTests.cs" />
+    <Compile Include="MaterialTests.cs" />
+    <Compile Include="ProcessTests.cs" />
+    <Compile Include="ProductTests.cs" />
+    <Compile Include="ProductTypeTests.cs" />
+    <Compile Include="ProfileSettingTests.cs" />
+    <Compile Include="ProfileTests.cs" />
+    <Compile Include="SearchResponseTests.cs" />
+    <Compile Include="ValueTypeTests.cs" />
+    <Compile Include="WorkflowContextBaseTests.cs" />
+    <Compile Include="WorkflowScheduleTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+    <PackageReference Include="NHibernate" Version="5.2.1" />
+    <PackageReference Include="NHibernate.Caches.SysCache" Version="5.5.1" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.11.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.109.2" />
+    <PackageReference Include="System.Memory" Version="4.5.3" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.1" />
+    <PackageReference Include="zAppDev.DotNet.Framework" Version="7.6.61" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Projects\Domain\POCO\DigicircMatchmaking.Backend.csproj" />
+  </ItemGroup>
+</Project>

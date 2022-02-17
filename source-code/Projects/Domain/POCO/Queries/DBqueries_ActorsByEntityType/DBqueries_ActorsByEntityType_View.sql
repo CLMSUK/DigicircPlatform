@@ -1,0 +1,3 @@
+IF  EXISTS ( SELECT * FROM sys.views WHERE object_id = OBJECT_ID(N'DBqueries_ActorsByEntityTypeQuery')) DROP VIEW [DBqueries_ActorsByEntityTypeQuery];GO_POWER_RANGERS CREATE VIEW [DBqueries_ActorsByEntityTypeQuery]  AS SELECT ROW_NUMBER() OVER(ORDER BY Value) AS __UniqueId, ValueTypes.[Value], Count(*) as [Count] From Actors inner join ValueTypes 
+on ValueTypes.Id = Actors.EntityType
+Group By ValueTypes.[Value]
